@@ -37,6 +37,7 @@ import org.apache.xerces.impl.xs.util.ObjectListImpl;
 import org.apache.xerces.impl.xs.util.ShortListImpl;
 import org.apache.xerces.impl.xs.util.StringListImpl;
 import org.apache.xerces.impl.xs.util.XSObjectListImpl;
+import org.apache.xerces.util.XML11Char;
 import org.apache.xerces.util.XMLChar;
 import org.apache.xerces.xni.NamespaceContext;
 import org.apache.xerces.xs.ShortList;
@@ -63,37 +64,39 @@ import org.w3c.dom.TypeInfo;
  */
 public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
 
-    protected static final short DV_STRING        = PRIMITIVE_STRING;
-    protected static final short DV_BOOLEAN       = PRIMITIVE_BOOLEAN;
-    protected static final short DV_DECIMAL       = PRIMITIVE_DECIMAL;
-    protected static final short DV_FLOAT         = PRIMITIVE_FLOAT;
-    protected static final short DV_DOUBLE        = PRIMITIVE_DOUBLE;
-    protected static final short DV_DURATION      = PRIMITIVE_DURATION;
-    protected static final short DV_DATETIME      = PRIMITIVE_DATETIME;
-    protected static final short DV_TIME          = PRIMITIVE_TIME;
-    protected static final short DV_DATE          = PRIMITIVE_DATE;
-    protected static final short DV_GYEARMONTH    = PRIMITIVE_GYEARMONTH;
-    protected static final short DV_GYEAR         = PRIMITIVE_GYEAR;
-    protected static final short DV_GMONTHDAY     = PRIMITIVE_GMONTHDAY;
-    protected static final short DV_GDAY          = PRIMITIVE_GDAY;
-    protected static final short DV_GMONTH        = PRIMITIVE_GMONTH;
-    protected static final short DV_HEXBINARY     = PRIMITIVE_HEXBINARY;
-    protected static final short DV_BASE64BINARY  = PRIMITIVE_BASE64BINARY;
-    protected static final short DV_ANYURI        = PRIMITIVE_ANYURI;
-    protected static final short DV_QNAME         = PRIMITIVE_QNAME;
-    protected static final short DV_PRECISIONDECIMAL = PRIMITIVE_PRECISIONDECIMAL;
-    protected static final short DV_NOTATION      = PRIMITIVE_NOTATION;
+    protected static final short DV_STRING            = PRIMITIVE_STRING;
+    protected static final short DV_BOOLEAN           = PRIMITIVE_BOOLEAN;
+    protected static final short DV_DECIMAL           = PRIMITIVE_DECIMAL;
+    protected static final short DV_FLOAT             = PRIMITIVE_FLOAT;
+    protected static final short DV_DOUBLE            = PRIMITIVE_DOUBLE;
+    protected static final short DV_DURATION          = PRIMITIVE_DURATION;
+    protected static final short DV_DATETIME          = PRIMITIVE_DATETIME;
+    protected static final short DV_TIME              = PRIMITIVE_TIME;
+    protected static final short DV_DATE              = PRIMITIVE_DATE;
+    protected static final short DV_GYEARMONTH        = PRIMITIVE_GYEARMONTH;
+    protected static final short DV_GYEAR             = PRIMITIVE_GYEAR;
+    protected static final short DV_GMONTHDAY         = PRIMITIVE_GMONTHDAY;
+    protected static final short DV_GDAY              = PRIMITIVE_GDAY;
+    protected static final short DV_GMONTH            = PRIMITIVE_GMONTH;
+    protected static final short DV_HEXBINARY         = PRIMITIVE_HEXBINARY;
+    protected static final short DV_BASE64BINARY      = PRIMITIVE_BASE64BINARY;
+    protected static final short DV_ANYURI            = PRIMITIVE_ANYURI;
+    protected static final short DV_QNAME             = PRIMITIVE_QNAME;
+    protected static final short DV_PRECISIONDECIMAL  = PRIMITIVE_PRECISIONDECIMAL;
+    protected static final short DV_NOTATION          = PRIMITIVE_NOTATION;
 
-    protected static final short DV_ANYSIMPLETYPE = 0;
-    protected static final short DV_ID            = DV_NOTATION + 1;
-    protected static final short DV_IDREF         = DV_NOTATION + 2;
-    protected static final short DV_ENTITY        = DV_NOTATION + 3;
-    protected static final short DV_INTEGER       = DV_NOTATION + 4;
-    protected static final short DV_LIST          = DV_NOTATION + 5;
-    protected static final short DV_UNION         = DV_NOTATION + 6;
+    protected static final short DV_ANYSIMPLETYPE     = 0;
+    protected static final short DV_ID                = DV_NOTATION + 1;
+    protected static final short DV_IDREF             = DV_NOTATION + 2;
+    protected static final short DV_ENTITY            = DV_NOTATION + 3;
+    protected static final short DV_INTEGER           = DV_NOTATION + 4;
+    protected static final short DV_LIST              = DV_NOTATION + 5;
+    protected static final short DV_UNION             = DV_NOTATION + 6;
     protected static final short DV_YEARMONTHDURATION = DV_NOTATION + 7;
-    protected static final short DV_DAYTIMEDURATION	= DV_NOTATION + 8;
-    protected static final short DV_ANYATOMICTYPE = DV_NOTATION + 9;
+    protected static final short DV_DAYTIMEDURATION	  = DV_NOTATION + 8;
+    protected static final short DV_ANYATOMICTYPE     = DV_NOTATION + 9;
+    protected static final short DV_ERROR             = DV_NOTATION + 10;
+    protected static final short DV_DATETIMESTAMP     = DV_NOTATION + 11;
 
     private static final TypeValidator[] gDVs = {
         new AnySimpleDV(),
@@ -125,7 +128,9 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         new UnionDV(),
         new YearMonthDurationDV(), // XML Schema 1.1 type
         new DayTimeDurationDV(), // XML Schema 1.1 type
-        new AnyAtomicDV() // XML Schema 1.1 type
+        new AnyAtomicDV(), // XML Schema 1.1 type
+        new ErrorDV(), // XML Schema 1.1 type
+        new DateTimeStampDV() //XML Schema 1.1 type
     };
 
     static final short NORMALIZE_NONE = 0;
@@ -162,6 +167,8 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         NORMALIZE_TRIM, //YearMonthDurationDV() (Schema 1.1)
         NORMALIZE_TRIM, //DayTimeDurationDV() (Schema 1.1)
         NORMALIZE_NONE, //AnyAtomicDV() (Schema 1.1)
+        NORMALIZE_NONE, //ErrorDV() (Schema 1.1)
+        NORMALIZE_TRIM, //DateTimeStampDV(), (Schema 1.1)
     };
 
     static final short SPECIAL_PATTERN_NONE     = 0;
@@ -177,6 +184,10 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         "preserve", "replace", "collapse"
     };
 
+    static final String[] ET_FACET_STRING = {
+        "optional", "required", "prohibited"
+    };
+    
     static final String URI_SCHEMAFORSCHEMA = "http://www.w3.org/2001/XMLSchema";
     static final String ANY_TYPE = "anyType";
 
@@ -185,6 +196,8 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     public static final short DAYTIMEDURATION_DT        = 47;   
     public static final short PRECISIONDECIMAL_DT       = 48;
     public static final short ANYATOMICTYPE_DT          = 49;
+    public static final short ERROR_DT                  = 50;
+    public static final short DATETIMESTAMP_DT          = 51;
 
     // DOM Level 3 TypeInfo Derivation Method constants
     static final int DERIVATION_ANY = 0;
@@ -228,6 +241,12 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         public Locale getLocale() {
             return Locale.getDefault();
         }
+        public TypeValidatorHelper getTypeValidatorHelper() {
+            return TypeValidatorHelper.getInstance(Constants.SCHEMA_VERSION_1_0);
+        }
+        public short getDatatypeXMLVersion() {
+            return Constants.XML_VERSION_1_0;
+        }
     };
 
     protected static TypeValidator[] getGDVs() {
@@ -238,6 +257,10 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         fDVs = dvs;
     }
     
+
+    // Default TypeValidatorHelper
+    private static TypeValidatorHelper fDefaultTypeValidatorHelper = TypeValidatorHelper.getInstance(Constants.SCHEMA_VERSION_1_0);
+
     // this will be true if this is a static XSSimpleTypeDecl
     // and hence must remain immutable (i.e., applyFacets
     // may not be permitted to have any effect).
@@ -260,11 +283,14 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
 
     //for constraining facets
     private short fWhiteSpace = 0;
+    private short fExplicitTimezone = ET_OPTIONAL; //for XML Schema 1.1
     private int fLength = -1;
     private int fMinLength = -1;
     private int fMaxLength = -1;
     private int fTotalDigits = -1;
     private int fFractionDigits = -1;
+    private int fMaxScale; //for XML Schema 1.1     
+    private int fMinScale; //for XML Schema 1.1
     private Vector fPattern;
     private Vector fPatternStr;
     private ValidatedInfo[] fEnumeration;
@@ -278,6 +304,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     private Object fMaxExclusive;
     private Object fMinExclusive;
     private Object fMinInclusive;
+    private Vector fAssertion; // added for XML Schema 1.1, assertions
 
     // annotations for constraining facets
     public XSAnnotation lengthAnnotation;
@@ -292,6 +319,9 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     public XSAnnotation maxExclusiveAnnotation;
     public XSAnnotation minInclusiveAnnotation;
     public XSAnnotation minExclusiveAnnotation;
+    public XSAnnotation maxScaleAnnotation;     
+    public XSAnnotation minScaleAnnotation;   
+    public XSAnnotation explicitTimezoneAnnotation;
 
     // facets as objects
     private XSObjectListImpl fFacets;
@@ -313,6 +343,9 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     // The namespace schema information item corresponding to the target namespace 
     // of the simple type definition, if it is globally declared; or null otherwise.
     private XSNamespaceItem fNamespaceItem = null;
+    
+    // context
+    XSObject fContext = null;
 
     // default constructor
     public XSSimpleTypeDecl(){}
@@ -387,6 +420,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         fPatternStr = fBase.fPatternStr;
         fEnumeration = fBase.fEnumeration;
         fEnumerationSize = fBase.fEnumerationSize;
+        fAssertion = fBase.fAssertion; // added for XML Schema 1.1
         fWhiteSpace = fBase.fWhiteSpace;
         fMaxExclusive = fBase.fMaxExclusive;
         fMaxInclusive = fBase.fMaxInclusive;
@@ -397,6 +431,9 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         fPatternType = fBase.fPatternType;
         fFixedFacet = fBase.fFixedFacet;
         fFacetsDefined = fBase.fFacetsDefined;
+        fMaxScale = fBase.fMaxScale;
+        fMinScale = fBase.fMinScale;
+        fExplicitTimezone = fBase.fExplicitTimezone;
 
         // always inherit facet annotations in case applyFacets is not called.
         lengthAnnotation = fBase.lengthAnnotation;
@@ -411,6 +448,9 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         minInclusiveAnnotation = fBase.minInclusiveAnnotation;
         totalDigitsAnnotation = fBase.totalDigitsAnnotation;
         fractionDigitsAnnotation = fBase.fractionDigitsAnnotation;
+        maxScaleAnnotation = fBase.maxScaleAnnotation;
+        minScaleAnnotation = fBase.minScaleAnnotation;
+        explicitTimezoneAnnotation = fBase.explicitTimezoneAnnotation;
 
         //we also set fundamental facets information in case applyFacets is not called.
         calcFundamentalFacets();
@@ -421,8 +461,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     }
 
     //Create a new simple type for list.
-    protected XSSimpleTypeDecl(String name, String uri, short finalSet, XSSimpleTypeDecl itemType, boolean isImmutable,
-            XSObjectList annotations) {
+    protected XSSimpleTypeDecl(String name, String uri, short finalSet, XSSimpleTypeDecl itemType, boolean isImmutable, XSObjectList annotations) {
         fBase = fAnySimpleType;
         fTypeName = name;
         fTargetNamespace = uri;
@@ -430,7 +469,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         fAnnotations = annotations;
 
         fVariety = VARIETY_LIST;
-        fItemType = (XSSimpleTypeDecl)itemType;
+        fItemType = itemType;
         fValidationDV = DV_LIST;
         fFacetsDefined = FACET_WHITESPACE;
         fFixedFacet = FACET_WHITESPACE;
@@ -517,6 +556,9 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         fPatternType = fBase.fPatternType;
         fFixedFacet = fBase.fFixedFacet;
         fFacetsDefined = fBase.fFacetsDefined;
+        fMaxScale = fBase.fMaxScale;
+        fMinScale = fBase.fMinScale;
+        fExplicitTimezone = fBase.fExplicitTimezone;
 
         //we also set fundamental facets information in case applyFacets is not called.
         calcFundamentalFacets();
@@ -528,8 +570,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     }
 
     //set values for list.
-    protected XSSimpleTypeDecl setListValues(String name, String uri, short finalSet, XSSimpleTypeDecl itemType,
-            XSObjectList annotations) {
+    protected XSSimpleTypeDecl setListValues(String name, String uri, short finalSet, XSSimpleTypeDecl itemType, XSObjectList annotations) {
         //decline to do anything if the object is immutable.
         if(fIsImmutable) return null;
         fBase = fAnySimpleType;
@@ -540,7 +581,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         fAnnotations = annotations;
 
         fVariety = VARIETY_LIST;
-        fItemType = (XSSimpleTypeDecl)itemType;
+        fItemType = itemType;
         fValidationDV = DV_LIST;
         fFacetsDefined = FACET_WHITESPACE;
         fFixedFacet = FACET_WHITESPACE;
@@ -610,6 +651,10 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         return fFinalSet;
     }
 
+    public TypeValidator getTypeValidator() {
+        return fDVs[fValidationDV];
+    }
+    
     public boolean isFinal(short derivation) {
         return (fFinalSet & derivation) != 0;
     }
@@ -650,7 +695,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     }
 
     public short getPrimitiveKind() {
-        if (fVariety == VARIETY_ATOMIC && fValidationDV != DV_ANYSIMPLETYPE) {
+        if (fVariety == VARIETY_ATOMIC && fValidationDV != DV_ANYSIMPLETYPE && fValidationDV != DV_ANYATOMICTYPE) {
             if (fValidationDV == DV_ID || fValidationDV == DV_IDREF || fValidationDV == DV_ENTITY) {
                 return DV_STRING;
             }
@@ -682,14 +727,15 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     /**
      * If variety is <code>atomic</code> the primitive type definition (a
      * built-in primitive datatype definition or the simple ur-type
-     * definition) is available, otherwise <code>null</code>.
+     * definition) if available, otherwise <code>null</code>.
      */
     public XSSimpleTypeDefinition getPrimitiveType() {
-        if (fVariety == VARIETY_ATOMIC && fValidationDV != DV_ANYSIMPLETYPE) {
+        if (fVariety == VARIETY_ATOMIC && fValidationDV != DV_ANYSIMPLETYPE && fValidationDV != DV_ANYATOMICTYPE) {
             XSSimpleTypeDecl pri = this;
             // recursively get base, until we reach anySimpleType
-            while (pri.fBase != fAnySimpleType)
+            while (pri.fBase != fAnySimpleType && pri.fBase != fAnyAtomicType) {
                 pri = pri.fBase;
+            }
             return pri;
         }
         else {
@@ -700,7 +746,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
 
     /**
      * If variety is <code>list</code> the item type definition (an atomic or
-     * union simple type definition) is available, otherwise
+     * union simple type definition) if available, otherwise
      * <code>null</code>.
      */
     public XSSimpleTypeDefinition getItemType() {
@@ -715,7 +761,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
 
     /**
      * If variety is <code>union</code> the list of member type definitions (a
-     * non-empty sequence of simple type definitions) is available,
+     * non-empty sequence of simple type definitions) if available,
      * otherwise an empty <code>XSObjectList</code>.
      */
     public XSObjectList getMemberTypes() {
@@ -730,7 +776,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     /**
      * If <restriction> is chosen
      */
-    public void applyFacets(XSFacets facets, short presentFacet, short fixedFacet, ValidationContext context)
+    public void applyFacets(XSFacets facets, int presentFacet, int fixedFacet, ValidationContext context)
     throws InvalidDatatypeFacetException {
         if (context == null) {
             context = fEmptyContext;
@@ -741,7 +787,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     /**
      * built-in derived types by restriction
      */
-    void applyFacets1(XSFacets facets, short presentFacet, short fixedFacet) {
+    void applyFacets1(XSFacets facets, int presentFacet, int fixedFacet) {
 
         try {
             applyFacets(facets, presentFacet, fixedFacet, SPECIAL_PATTERN_NONE, fDummyContext);
@@ -756,7 +802,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     /**
      * built-in derived types by restriction
      */
-    void applyFacets1(XSFacets facets, short presentFacet, short fixedFacet, short patternType) {
+    void applyFacets1(XSFacets facets, int presentFacet, int fixedFacet, short patternType) {
 
         try {
             applyFacets(facets, presentFacet, fixedFacet, patternType, fDummyContext);
@@ -771,9 +817,9 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     /**
      * If <restriction> is chosen, or built-in derived types by restriction
      */
-    void applyFacets(XSFacets facets, short presentFacet, short fixedFacet, short patternType, ValidationContext context)
+    void applyFacets(XSFacets facets, int presentFacet, int fixedFacet, short patternType, ValidationContext context)
     throws InvalidDatatypeFacetException {
-
+        
         // if the object is immutable, should not apply facets...
         if(fIsImmutable) return;
         ValidatedInfo tempInfo = new ValidatedInfo();
@@ -791,7 +837,12 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         int result = 0 ;
 
         // step 1: parse present facets
-        short allowedFacet = fDVs[fValidationDV].getAllowedFacets();
+        TypeValidatorHelper typeValidatorHelper = context.getTypeValidatorHelper();
+        if (typeValidatorHelper == null) {
+            // fall back to 1.0 simple types
+            typeValidatorHelper = fDefaultTypeValidatorHelper;
+        }
+        int allowedFacet = typeValidatorHelper.getAllowedFacets(fValidationDV);
 
         // length
         if ((presentFacet & FACET_LENGTH) != 0) {
@@ -836,8 +887,11 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
             } else {
                 patternAnnotations = facets.patternAnnotations;
                 RegularExpression regex = null;
+                // In schema 1.1, enable the new behavior for '-' and
+                // unrecognized block names.
+                final String options = context.getTypeValidatorHelper().isXMLSchema11() ? "Xbh" : "X";
                 try {
-                    regex = new RegularExpression(facets.pattern, "X", context.getLocale());
+                    regex = new RegularExpression(facets.pattern, options, context.getLocale(), context.getDatatypeXMLVersion());
                 } catch (Exception e) {
                     reportError("InvalidRegex", new Object[]{facets.pattern, e.getLocalizedMessage()});
                 }
@@ -894,6 +948,31 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
             }
         }
 
+        // assertion. added for XML Schema 1.1
+        if ((presentFacet & FACET_ASSERT) != 0) {
+            fAssertion = new Vector();
+            Vector asserts = facets.assertFacets;
+            for (int i = 0; i < asserts.size(); i++) {
+                fAssertion.addElement(asserts.elementAt(i));
+            }
+            fFacetsDefined |= FACET_ASSERT;
+            if ((fixedFacet & FACET_ASSERT) != 0)
+                fFixedFacet |= FACET_ASSERT;
+        }
+
+        //explicitTimezone
+        if ((presentFacet & FACET_EXPLICITTIMEZONE) != 0) {
+            if ((allowedFacet & FACET_EXPLICITTIMEZONE) == 0) {
+                reportError("cos-applicable-facets", new Object[]{"explicitTimezone", fTypeName});
+            } else {
+                fExplicitTimezone = facets.explicitTimezone;
+                explicitTimezoneAnnotation = facets.explicitTimezoneAnnotation;
+                fFacetsDefined |= FACET_EXPLICITTIMEZONE;
+                if ((fixedFacet & FACET_EXPLICITTIMEZONE) != 0)
+                    fFixedFacet |= FACET_EXPLICITTIMEZONE;
+            }
+        }
+        
         // maxInclusive
         if ((presentFacet & FACET_MAXINCLUSIVE) != 0) {
             if ((allowedFacet & FACET_MAXINCLUSIVE) == 0) {
@@ -901,7 +980,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
             } else {
                 maxInclusiveAnnotation = facets.maxInclusiveAnnotation;
                 try {
-                    fMaxInclusive = fBase.getActualValue(facets.maxInclusive, context, tempInfo, true);
+                    fMaxInclusive = fBase.getActualValue(facets.maxInclusive, context, tempInfo, true, false);
                     fFacetsDefined |= FACET_MAXINCLUSIVE;
                     if ((fixedFacet & FACET_MAXINCLUSIVE) != 0)
                         fFixedFacet |= FACET_MAXINCLUSIVE;
@@ -937,7 +1016,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
             } else {
                 maxExclusiveAnnotation = facets.maxExclusiveAnnotation;
                 try {
-                    fMaxExclusive = fBase.getActualValue(facets.maxExclusive, context, tempInfo, true);
+                    fMaxExclusive = fBase.getActualValue(facets.maxExclusive, context, tempInfo, true, false);
                     fFacetsDefined |= FACET_MAXEXCLUSIVE;
                     if ((fixedFacet & FACET_MAXEXCLUSIVE) != 0)
                         fFixedFacet |= FACET_MAXEXCLUSIVE;
@@ -984,7 +1063,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
             } else {
                 minExclusiveAnnotation = facets.minExclusiveAnnotation;
                 try {
-                    fMinExclusive = fBase.getActualValue(facets.minExclusive, context, tempInfo, true);
+                    fMinExclusive = fBase.getActualValue(facets.minExclusive, context, tempInfo, true, false);
                     fFacetsDefined |= FACET_MINEXCLUSIVE;
                     if ((fixedFacet & FACET_MINEXCLUSIVE) != 0)
                         fFixedFacet |= FACET_MINEXCLUSIVE;
@@ -1030,7 +1109,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
             } else {
                 minInclusiveAnnotation = facets.minInclusiveAnnotation;
                 try {
-                    fMinInclusive = fBase.getActualValue(facets.minInclusive, context, tempInfo, true);
+                    fMinInclusive = fBase.getActualValue(facets.minInclusive, context, tempInfo, true, false);
                     fFacetsDefined |= FACET_MININCLUSIVE;
                     if ((fixedFacet & FACET_MININCLUSIVE) != 0)
                         fFixedFacet |= FACET_MININCLUSIVE;
@@ -1083,6 +1162,31 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
             }
         }
 
+        //maxScale      
+        if ((presentFacet & FACET_MAXSCALE) !=0 ){
+            if ((allowedFacet & FACET_MAXSCALE) == 0) {
+                reportError("cos-applicable-facets", new Object[]{"maxScale", fTypeName});
+            }else {
+                maxScaleAnnotation = facets.maxScaleAnnotation;
+                fMaxScale = facets.maxScale;
+                fFacetsDefined |= FACET_MAXSCALE;
+                if ((fixedFacet & FACET_MAXSCALE) != 0)
+                    fFixedFacet |= FACET_MAXSCALE;
+                }
+        }
+        //minScale 
+        if ((presentFacet & FACET_MINSCALE) !=0 ){
+            if ((allowedFacet & FACET_MINSCALE) == 0) {
+                reportError("cos-applicable-facets", new Object[]{"minScale", fTypeName});
+            }else {
+                minScaleAnnotation = facets.minScaleAnnotation;
+                fMinScale = facets.minScale;
+                fFacetsDefined |= FACET_MINSCALE;
+                if ((fixedFacet & FACET_MINSCALE) != 0)
+                    fFixedFacet |= FACET_MINSCALE;
+            }
+        }           
+        
         // token type: internal use, so do less checking
         if (patternType != SPECIAL_PATTERN_NONE) {
             fPatternType = patternType;
@@ -1139,6 +1243,12 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
                     ((fFacetsDefined & FACET_TOTALDIGITS) != 0)) {
                 if (fFractionDigits > fTotalDigits)
                     reportError( "fractionDigits-totalDigits", new Object[]{Integer.toString(fFractionDigits), Integer.toString(fTotalDigits), fTypeName});
+            }
+            
+            // check 4.3.14.4 must: minScale <= maxScale           
+            if (((fFacetsDefined & FACET_MAXSCALE) != 0 ) && ((fFacetsDefined & FACET_MINSCALE) != 0)) {
+                if (fMinScale > fMaxScale)
+                    reportError ("minScale-totalDigits", new Object[]{Integer.toString(fMinScale), Integer.toString(fMaxScale), fTypeName});
             }
 
             // step 3: check facets against base
@@ -1371,7 +1481,43 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
                     }
                 }
             }
-
+            
+            //check maxScale > fBase.maxScale
+            if ( (fFacetsDefined & FACET_MAXSCALE) != 0 ) {
+                if ( (fBase.fFacetsDefined & FACET_MAXSCALE) != 0 ){
+                    if(( (fBase.fFixedFacet & FACET_MAXSCALE) != 0 )&& fMaxScale != fBase.fMaxScale ) {
+                        reportError( "FixedFacetValue", new Object[]{"maxScale", Integer.toString(fMaxScale), Integer.toString(fBase.fMaxScale), fTypeName});
+                    }
+                    if ( fMaxScale > fBase.fMaxScale) {
+                        reportError( "maxScale-valid-restriction", new Object[]{Integer.toString(fMaxScale), Integer.toString(fBase.fMaxScale), fTypeName});
+                    }
+                }
+            }
+            //check minScale < fBase.minScale
+            if ( (fFacetsDefined & FACET_MINSCALE) != 0 ) {
+                if ( (fBase.fFacetsDefined & FACET_MINSCALE) != 0 ){
+                    if(( (fBase.fFixedFacet & FACET_MINSCALE) != 0 )&& fMinScale != fBase.fMinScale ) {
+                        reportError( "FixedFacetValue", new Object[]{"minScale", Integer.toString(fMinScale), Integer.toString(fBase.fMinScale), fTypeName});
+                    }
+                    if (fMinScale < fBase.fMinScale) {
+                        reportError( "minScale-valid-restriction", new Object[]{Integer.toString(fMinScale), Integer.toString(fBase.fMinScale), fTypeName});
+                    }
+                }
+            }
+            //check must maxScale >= fBase.minScale            
+            if ( ((fFacetsDefined & FACET_MAXSCALE ) != 0 ) && ((fBase.fFacetsDefined & FACET_MINSCALE ) != 0 )) {
+                if ( fMaxScale < fBase.fMinScale) {
+                    reportError ("minScale-totalDigits", new Object[]{Integer.toString(fBase.fMinScale), Integer.toString(fMaxScale), fTypeName});
+                }
+            }
+            
+            //check must minScale <= fBase.maxScale            
+            if ( ((fFacetsDefined & FACET_MINSCALE ) != 0 ) && ((fBase.fFacetsDefined & FACET_MAXSCALE ) != 0 )) {
+                if ( fMinScale > fBase.fMaxScale) {
+                    reportError ("minScale-totalDigits", new Object[]{Integer.toString(fMinScale), Integer.toString(fBase.fMaxScale), fTypeName});
+                }
+            }
+            
             // check 4.3.12.c1 must: fractionDigits <= base.totalDigits
             if ((fFacetsDefined & FACET_FRACTIONDIGITS) != 0) {
                 if ((fBase.fFacetsDefined & FACET_TOTALDIGITS) != 0) {
@@ -1416,6 +1562,26 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
                     reportError( "whiteSpace-valid-restriction.2", new Object[]{fTypeName});
                 }
             }
+
+            if ((fFacetsDefined & FACET_EXPLICITTIMEZONE) != 0) {
+                if ((fBase.fFacetsDefined & FACET_EXPLICITTIMEZONE ) != 0 && fExplicitTimezone != fBase.fExplicitTimezone){
+                    final String explicitTZStr = explicitTimezoneValue(fExplicitTimezone);
+                    final String baseExplicitTZStr = explicitTimezoneValue(fBase.fExplicitTimezone);
+                    if ((fBase.fFixedFacet & FACET_EXPLICITTIMEZONE) != 0) {
+                        reportError( "FixedFacetValue", new Object[]{"explicitTimezone", explicitTZStr, baseExplicitTZStr, fTypeName});
+                    }
+                    //check 4.3.16.4 error:
+                    //(explicitTimezone != prohibited && fBase.explicitTimezone = prohibited)
+                    //or (explicitTimezone != required && fBase.explicitTimezone = required)
+                    if (fBase.fExplicitTimezone != ET_OPTIONAL) {
+                        reportError("timezone-valid-restriction", new Object[]{fTypeName, explicitTZStr, baseExplicitTZStr});
+                    }                
+                }
+                if ( (fValidationDV == DV_DATETIMESTAMP) && fExplicitTimezone != XSSimpleType.ET_REQUIRED){
+                    reportError( "FixedFacetValue", new Object[]{"explicitTimezone", explicitTimezoneValue(fExplicitTimezone), explicitTimezoneValue(ET_REQUIRED), fTypeName});
+                }
+            }
+            
         }//fFacetsDefined != null
 
         // step 4: inherit other facets from base (including fTokeyType)
@@ -1469,6 +1635,14 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
             fWhiteSpace = fBase.fWhiteSpace;
             whiteSpaceAnnotation = fBase.whiteSpaceAnnotation;
         }
+        
+        //inherit explicitTimezone
+        if ( (fFacetsDefined & FACET_EXPLICITTIMEZONE) == 0 &&  (fBase.fFacetsDefined & FACET_EXPLICITTIMEZONE) != 0 ) {
+            fFacetsDefined |= FACET_EXPLICITTIMEZONE;
+            fExplicitTimezone = fBase.fExplicitTimezone;
+            explicitTimezoneAnnotation = fBase.explicitTimezoneAnnotation;
+        }
+        
         // inherit enumeration
         if ((fFacetsDefined & FACET_ENUMERATION) == 0 && (fBase.fFacetsDefined & FACET_ENUMERATION) != 0) {
             fFacetsDefined |= FACET_ENUMERATION;
@@ -1504,6 +1678,22 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
             fMinInclusive = fBase.fMinInclusive;
             minInclusiveAnnotation = fBase.minInclusiveAnnotation;
         }
+        
+        //inherit maxScale
+        if ((( fBase.fFacetsDefined & FACET_MAXSCALE) != 0) &&
+                !((fFacetsDefined & FACET_MAXSCALE) != 0)) {
+            fFacetsDefined |= FACET_MAXSCALE;
+            fMaxScale = fBase.fMaxScale;
+            maxScaleAnnotation = fBase.maxScaleAnnotation;
+        }
+        //inherit minScale
+        if ((( fBase.fFacetsDefined & FACET_MINSCALE) != 0) &&
+                !((fFacetsDefined & FACET_MINSCALE) != 0)) {
+            fFacetsDefined |= FACET_MINSCALE;
+            fMinScale = fBase.fMinScale;
+            minScaleAnnotation = fBase.minScaleAnnotation;
+        }
+        
         // inherit totalDigits
         if ((( fBase.fFacetsDefined & FACET_TOTALDIGITS) != 0) &&
                 !((fFacetsDefined & FACET_TOTALDIGITS) != 0)) {
@@ -1518,6 +1708,14 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
             fFractionDigits = fBase.fFractionDigits;
             fractionDigitsAnnotation = fBase.fractionDigitsAnnotation;
         }
+        
+        // inherit assertion. added for XML Schema 1.1
+        if (((fBase.fFacetsDefined & FACET_ASSERT) != 0)
+                && !((fFacetsDefined & FACET_ASSERT) != 0)) {
+            fFacetsDefined |= FACET_ASSERT;
+            fAssertion = fBase.fAssertion; 
+        }
+       
         //inherit tokeytype
         if ((fPatternType == SPECIAL_PATTERN_NONE ) && (fBase.fPatternType != SPECIAL_PATTERN_NONE)) {
             fPatternType = fBase.fPatternType ;
@@ -1546,7 +1744,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
 
         // first normalize string value, and convert it to actual value
         boolean needNormalize = context==null||context.needToNormalize();
-        Object ob = getActualValue(content, context, validatedInfo, needNormalize);
+        Object ob = getActualValue(content, context, validatedInfo, needNormalize, false);
 
         validate(context, validatedInfo);
 
@@ -1556,13 +1754,18 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
 
     protected ValidatedInfo getActualEnumValue(String lexical, ValidationContext ctx, ValidatedInfo info)
     throws InvalidDatatypeValueException {
-        return fBase.validateWithInfo(lexical, ctx, info);
+        return fBase.validateWithInfo(lexical, ctx, info, true);
     }
 
     /**
      * validate a value, and return the compiled form
      */
     public ValidatedInfo validateWithInfo(String content, ValidationContext context, ValidatedInfo validatedInfo) throws InvalidDatatypeValueException {
+        return validateWithInfo(content, context, validatedInfo, false);
+    }
+    
+    private ValidatedInfo validateWithInfo(String content, ValidationContext context,
+            ValidatedInfo validatedInfo, boolean enumerationValidation) throws InvalidDatatypeValueException {
 
         if (context == null)
             context = fEmptyContext;
@@ -1574,7 +1777,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
 
         // first normalize string value, and convert it to actual value
         boolean needNormalize = context==null||context.needToNormalize();
-        getActualValue(content, context, validatedInfo, needNormalize);
+        getActualValue(content, context, validatedInfo, needNormalize, enumerationValidation);
 
         validate(context, validatedInfo);
 
@@ -1597,7 +1800,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
 
         // first normalize string value, and convert it to actual value
         boolean needNormalize = context==null||context.needToNormalize();
-        Object ob = getActualValue(content, context, validatedInfo, needNormalize);
+        Object ob = getActualValue(content, context, validatedInfo, needNormalize, false);
 
         validate(context, validatedInfo);
 
@@ -1620,7 +1823,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         // then validate the actual value against the facets
         if (context.needFacetChecking() &&
                 (fFacetsDefined != 0 && fFacetsDefined != FACET_WHITESPACE)) {
-            checkFacets(validatedInfo);
+            checkFacets(validatedInfo, context);
         }
 
         // now check extra rules: for ID/IDREF/ENTITY
@@ -1630,12 +1833,11 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
 
     }
 
-    private void checkFacets(ValidatedInfo validatedInfo) throws InvalidDatatypeValueException {
+    private void checkFacets(ValidatedInfo validatedInfo, ValidationContext context) throws InvalidDatatypeValueException {
 
         Object ob = validatedInfo.actualValue;
         String content = validatedInfo.normalizedValue;
-        short type = validatedInfo.actualValueType;
-        ShortList itemType = validatedInfo.itemValueTypes;
+        final short schemaVersion = (context.getTypeValidatorHelper().isXMLSchema11()) ? Constants.SCHEMA_VERSION_1_1 : Constants.SCHEMA_VERSION_1_0;
 
         // For QName and NOTATION types, we don't check length facets
         if (fValidationDV != DV_QNAME && fValidationDV != DV_NOTATION) {
@@ -1670,42 +1872,13 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         if ( ((fFacetsDefined & FACET_ENUMERATION) != 0 ) ) {
             boolean present = false;
             final int enumSize = fEnumerationSize;
-            final short primitiveType1 = convertToPrimitiveKind(type);
             for (int i = 0; i < enumSize; i++) {
-                final short primitiveType2 = convertToPrimitiveKind(fEnumeration[i].actualValueType);
-                if ((primitiveType1 == primitiveType2 ||
-                        primitiveType1 == XSConstants.ANYSIMPLETYPE_DT && primitiveType2 == XSConstants.STRING_DT ||
-                        primitiveType1 == XSConstants.STRING_DT && primitiveType2 == XSConstants.ANYSIMPLETYPE_DT)
-                        && fEnumeration[i].actualValue.equals(ob)) {
-                    if (primitiveType1 == XSConstants.LIST_DT || primitiveType1 == XSConstants.LISTOFUNION_DT) {
-                        ShortList enumItemType = fEnumeration[i].itemValueTypes;
-                        final int typeList1Length = itemType != null ? itemType.getLength() : 0;
-                        final int typeList2Length = enumItemType != null ? enumItemType.getLength() : 0;
-                        if (typeList1Length == typeList2Length) {
-                            int j;
-                            for (j = 0; j < typeList1Length; ++j) {
-                                final short primitiveItem1 = convertToPrimitiveKind(itemType.item(j));
-                                final short primitiveItem2 = convertToPrimitiveKind(enumItemType.item(j));
-                                if (primitiveItem1 != primitiveItem2) {
-                                    if (primitiveItem1 == XSConstants.ANYSIMPLETYPE_DT && primitiveItem2 == XSConstants.STRING_DT ||
-                                            primitiveItem1 == XSConstants.STRING_DT && primitiveItem2 == XSConstants.ANYSIMPLETYPE_DT) {
-                                        continue;
-                                    }
-                                    break;
-                                }
-                            }
-                            if (j == typeList1Length) {
-                                present = true;
-                                break;
-                            }
-                        }
-                    }
-                    else {
-                        present = true;
-                        break;
-                    }
+                if (EqualityHelper.isEqual(validatedInfo, fEnumeration[i], schemaVersion)) {
+                    present = true;
+                    break;
                 }
             }
+
             if(!present){
                 StringBuffer sb = new StringBuffer();
                 appendEnumString(sb);
@@ -1716,10 +1889,10 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
 
         //fractionDigits
         if ((fFacetsDefined & FACET_FRACTIONDIGITS) != 0) {
-            int scale = fDVs[fValidationDV].getFractionDigits(ob);
-            if (scale > fFractionDigits) {
+            int fracDigits = fDVs[fValidationDV].getFractionDigits(ob);
+            if (fracDigits > fFractionDigits) {
                 throw new InvalidDatatypeValueException("cvc-fractionDigits-valid",
-                        new Object[] {content, Integer.toString(scale), Integer.toString(fFractionDigits)});
+                        new Object[] {content, Integer.toString(fracDigits), Integer.toString(fFractionDigits)});
             }
         }
 
@@ -1731,7 +1904,44 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
                         new Object[] {content, Integer.toString(totalDigits), Integer.toString(fTotalDigits)});
             }
         }
-
+        
+        //maxScale      
+        if ((fFacetsDefined & FACET_MAXSCALE) != 0) {
+            if (fDVs[fValidationDV].hasPrecision(ob)) {
+                int precision = fDVs[fValidationDV].getPrecision(ob);
+                if (precision > fMaxScale){
+                    throw new InvalidDatatypeValueException("cvc-maxScale-valid",
+                            new Object[] {content, Integer.toString(fMaxScale), fTypeName, Integer.toString(precision)});
+                }
+            }
+        } 
+        
+        //minScale      
+        if ((fFacetsDefined & FACET_MINSCALE) != 0) {            
+            if (fDVs[fValidationDV].hasPrecision(ob)) {
+                int precision = fDVs[fValidationDV].getPrecision(ob);
+                if (precision < fMinScale){
+                    throw new InvalidDatatypeValueException("cvc-minScale-valid",
+                            new Object[] {content, Integer.toString(fMinScale), fTypeName, Integer.toString(precision)} );
+                }
+            }
+        }
+        
+        //explicitTimezone
+        if ( ( fFacetsDefined & FACET_EXPLICITTIMEZONE) !=0 ) {
+            boolean hasTimezone = fDVs[fValidationDV].hasTimeZone(ob);
+            if (hasTimezone) {
+                if (fExplicitTimezone == ET_PROHIBITED ) {
+                    throw new InvalidDatatypeValueException("cvc-explicitTimezone-valid",
+                        new Object[] {content, "prohibited", fTypeName});
+                }
+            }
+            else if (fExplicitTimezone == ET_REQUIRED) {
+                throw new InvalidDatatypeValueException("cvc-explicitTimezone-valid",
+                        new Object[] {content, "required", fTypeName});
+            }
+        }
+        
         int compare;
 
         //maxinclusive
@@ -1815,9 +2025,9 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
 
     //we can still return object for internal use.
     private Object getActualValue(Object content, ValidationContext context,
-            ValidatedInfo validatedInfo, boolean needNormalize)
-    throws InvalidDatatypeValueException{
-
+            ValidatedInfo validatedInfo, boolean needNormalize,
+            boolean enumerationValidation)
+    throws InvalidDatatypeValueException{        
         String nvalue;
         if (needNormalize) {
             nvalue = normalize(content, fWhiteSpace);
@@ -1844,17 +2054,19 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
             if (fPatternType != SPECIAL_PATTERN_NONE) {
 
                 boolean seenErr = false;
+                final boolean isXML11 = context.getDatatypeXMLVersion() == Constants.XML_VERSION_1_1;
+                // if using XSD 1.1, use the XML 1.1 rules of validating the NMTOKEN, Name and NCName else use the XML 1.0 rules 
                 if (fPatternType == SPECIAL_PATTERN_NMTOKEN) {
                     // PATTERN "\\c+"
-                    seenErr = !XMLChar.isValidNmtoken(nvalue);
+                    seenErr = (isXML11) ? !XML11Char.isXML11ValidNmtoken(nvalue) : !XMLChar.isValidNmtoken(nvalue);
                 }
                 else if (fPatternType == SPECIAL_PATTERN_NAME) {
-                    // PATTERN "\\i\\c*"
-                    seenErr = !XMLChar.isValidName(nvalue);
+                    // PATTERN "\\i\\c*"                
+                    seenErr = (isXML11) ? !XML11Char.isXML11ValidName(nvalue) : !XMLChar.isValidName(nvalue);
                 }
                 else if (fPatternType == SPECIAL_PATTERN_NCNAME) {
                     // PATTERN "[\\i-[:]][\\c-[:]]*"
-                    seenErr = !XMLChar.isValidNCName(nvalue);
+                    seenErr = (isXML11) ? !XML11Char.isXML11ValidNCName(nvalue) : !XMLChar.isValidNCName(nvalue);
                 }
                 if (seenErr) {
                     throw new InvalidDatatypeValueException("cvc-datatype-valid.1.2.1",
@@ -1863,6 +2075,18 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
             }
 
             validatedInfo.normalizedValue = nvalue;
+            
+            // XML Schema 1.1
+            // xs:Notation cannot be used directly to validate values
+            // without enumeration facet - exception is enumeration values
+            if (context.getTypeValidatorHelper().isXMLSchema11()) {
+                if (fValidationDV == DV_NOTATION &&
+                    (getDefinedFacets() & XSSimpleType.FACET_ENUMERATION) == 0 &&
+                    !enumerationValidation) {
+                    throw new InvalidDatatypeValueException("cvc-datatype-valid.1.2.4",
+                            new Object[]{fTypeName, content});
+                }
+            }
             Object avalue = fDVs[fValidationDV].getActualValue(nvalue, context);
             validatedInfo.actualValue = avalue;
             validatedInfo.actualValueType = fBuiltInKind;
@@ -1887,10 +2111,10 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
                 // so we take two steps to get the actual value:
                 // 1. fItemType.getActualValue()
                 // 2. fItemType.chekcFacets()
-                avalue[i] = fItemType.getActualValue(parsedList.nextToken(), context, validatedInfo, false);
+                avalue[i] = fItemType.getActualValue(parsedList.nextToken(), context, validatedInfo, false, enumerationValidation);
                 if (context.needFacetChecking() &&
                         (fItemType.fFacetsDefined != 0 && fItemType.fFacetsDefined != FACET_WHITESPACE)) {
-                    fItemType.checkFacets(validatedInfo);
+                    fItemType.checkFacets(validatedInfo, context);
                 }
                 memberTypes[i] = (XSSimpleTypeDecl)validatedInfo.memberType;
                 if (isUnion)
@@ -1919,12 +2143,16 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
                     // so we take two steps to get the actual value:
                     // 1. fMemberType[i].getActualValue()
                     // 2. fMemberType[i].chekcFacets()
-                    Object aValue = fMemberTypes[i].getActualValue(_content, context, validatedInfo, true);
+                    Object aValue = fMemberTypes[i].getActualValue(_content, context, validatedInfo, true, enumerationValidation);
                     if (context.needFacetChecking() &&
                             (fMemberTypes[i].fFacetsDefined != 0 && fMemberTypes[i].fFacetsDefined != FACET_WHITESPACE)) {
-                        fMemberTypes[i].checkFacets(validatedInfo);
+                        fMemberTypes[i].checkFacets(validatedInfo, context);
                     }
-                    validatedInfo.memberType = fMemberTypes[i];
+
+                    if (fMemberTypes[i].fVariety != VARIETY_UNION) {
+                        validatedInfo.memberType = fMemberTypes[i];
+                    }
+
                     // Need to set it here or it will become the member type
                     validatedInfo.actualType = this;
                     return aValue;
@@ -2092,6 +2320,10 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         return WS_FACET_STRING[ws];
     }
 
+    private String explicitTimezoneValue(short et){
+        return ET_FACET_STRING[et];
+    }
+    
     /**
      *  Fundamental Facet: ordered.
      */
@@ -2220,6 +2452,12 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
                 return (fMinInclusive == null)?null:fMinInclusive.toString();
             case FACET_TOTALDIGITS:
                 return (fTotalDigits == -1)?null:Integer.toString(fTotalDigits);
+            case FACET_MAXSCALE:
+                return ((fFacetsDefined & FACET_MAXSCALE) == 0)?null:Integer.toString(fMaxScale);
+            case FACET_MINSCALE:
+                return ((fFacetsDefined & FACET_MINSCALE) == 0)?null:Integer.toString(fMinScale);
+            case FACET_EXPLICITTIMEZONE:
+                return ET_FACET_STRING[fExplicitTimezone];
             case FACET_FRACTIONDIGITS:
                 if (fValidationDV == DV_INTEGER) {
                     return "0";
@@ -2398,27 +2636,36 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
                 this.fOrdered = ORDERED_PARTIAL;
                 return;
             }
-            // we need to process the first member type before entering the loop
-            short ancestorId = getPrimitiveDV(fMemberTypes[0].fValidationDV);
-            boolean commonAnc = ancestorId != DV_ANYSIMPLETYPE;
-            boolean allFalse = fMemberTypes[0].fOrdered == ORDERED_FALSE;
-            // for the other member types, check whether the value is false
-            // and whether they have the same ancestor as the first one
-            for (int i = 1; i < fMemberTypes.length && (commonAnc || allFalse); i++) {
-                if (commonAnc)
-                    commonAnc = ancestorId == getPrimitiveDV(fMemberTypes[i].fValidationDV);
-                if (allFalse)
-                    allFalse = fMemberTypes[i].fOrdered == ORDERED_FALSE;
-            }
-            if (commonAnc) {
-                // REVISIT: all member types should have the same ordered value
-                //          just use the first one. Can we assume this?
-                this.fOrdered = fMemberTypes[0].fOrdered;
-            } else if (allFalse) {
-                this.fOrdered = ORDERED_FALSE;
-            } else {
+
+            short firstMemberOrderVal = fMemberTypes[0].fOrdered;   
+            // if any one of the memberTypes have partial order, set the order of this union to partial
+            if (firstMemberOrderVal==ORDERED_PARTIAL) {
                 this.fOrdered = ORDERED_PARTIAL;
+                return;
             }
+
+            // if any of the memberTypes are of different order, set the order of this union to partial
+            short ancestorId = getPrimitiveDV(getFirstExpandedSimpleTypeValidationDV(fMemberTypes[0]));
+            boolean commonAnc = true;
+            for (int i=1; i<fMemberTypes.length; i++) {
+                if (fMemberTypes[i].fOrdered != firstMemberOrderVal) {
+                    this.fOrdered = ORDERED_PARTIAL;
+                    return;
+                }
+                if (commonAnc) {
+                    commonAnc = (getPrimitiveDV(getFirstExpandedSimpleTypeValidationDV(fMemberTypes[i])) == ancestorId);
+                }
+            }
+
+            // if all the memberTypes are false order, set the order of this union to false
+            if (firstMemberOrderVal == ORDERED_FALSE) {
+                this.fOrdered = ORDERED_FALSE;
+                return;
+            }
+
+            // all the memberTypes are total order
+            // if they're from the same primitive type, set the order of this union to total, otherwise partial            
+            this.fOrdered = commonAnc ? ORDERED_TOTAL : ORDERED_PARTIAL;
         }
 
     }//setOrdered
@@ -2469,11 +2716,11 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
             short ancestorId = 0 ;
 
             if(memberTypes.length > 0){
-                ancestorId = getPrimitiveDV(memberTypes[0].fValidationDV);
+                ancestorId = getPrimitiveDV(getFirstExpandedSimpleTypeValidationDV(memberTypes[0]));
             }
 
             for(int i = 0 ; i < memberTypes.length ; i++){
-                if(!memberTypes[i].getBounded() || (ancestorId != getPrimitiveDV(memberTypes[i].fValidationDV)) ){
+                if(!memberTypes[i].getBounded() || (ancestorId != getPrimitiveDV(getFirstExpandedSimpleTypeValidationDV(memberTypes[i]))) ){
                     this.fBounded = false;
                     return;
                 }
@@ -2482,6 +2729,20 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         }
 
     }//setBounded
+
+    // returns the validation DV of the first simple type not a union
+    private short getFirstExpandedSimpleTypeValidationDV(XSSimpleTypeDecl simpleType) {
+        if (simpleType.fVariety == VARIETY_UNION) {            
+            for (int i=0; i<simpleType.fMemberTypes.length; i++) {
+                short validationDV = getFirstExpandedSimpleTypeValidationDV(simpleType.fMemberTypes[i]);
+                if (validationDV != -1) {
+                    return validationDV;
+                }
+            }            
+            return -1;
+        }
+        return simpleType.fValidationDV;
+    } // getFirstPrimitiveValidationDV()
 
     private boolean specialCardinalityCheck(){
         if( (fBase.fValidationDV == XSSimpleTypeDecl.DV_DATE) || (fBase.fValidationDV == XSSimpleTypeDecl.DV_GYEARMONTH)
@@ -2600,7 +2861,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
                 ((ancestorNS == null && type.getNamespace() == null) ||
                         (ancestorNS != null && ancestorNS.equals(type.getNamespace())))) &&   // compare with ancestor
                         type != fAnySimpleType) {  // reached anySimpleType
-            type = (XSTypeDefinition)type.getBaseType();
+            type = type.getBaseType();
         }
 
         return type != fAnySimpleType;
@@ -2834,6 +3095,8 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     static final XSSimpleTypeDecl fAnySimpleType = new XSSimpleTypeDecl(null, "anySimpleType", DV_ANYSIMPLETYPE, ORDERED_FALSE, false, true, false, true, XSConstants.ANYSIMPLETYPE_DT);
 
     static final XSSimpleTypeDecl fAnyAtomicType = new XSSimpleTypeDecl(fAnySimpleType, "anyAtomicType", DV_ANYATOMICTYPE, ORDERED_FALSE, false, true, false, true, XSSimpleTypeDecl.ANYATOMICTYPE_DT);
+    
+    static final XSSimpleTypeDecl fError = new XSSimpleTypeDecl(fAnySimpleType, "error", DV_ERROR, ORDERED_FALSE, false, true, false, true, XSSimpleTypeDecl.ERROR_DT);
 
     /**
      * Validation context used to validate facet values.
@@ -2881,6 +3144,14 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         
         public Locale getLocale() {
             return Locale.getDefault();
+        }
+        
+        public TypeValidatorHelper getTypeValidatorHelper() {
+            return TypeValidatorHelper.getInstance(Constants.SCHEMA_VERSION_1_0);
+        }
+        
+        public short getDatatypeXMLVersion() {
+            return Constants.XML_VERSION_1_0;
         }
     };
 
@@ -2954,6 +3225,14 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         public Locale getLocale() {
             return fExternal.getLocale();
         }
+        
+        public TypeValidatorHelper getTypeValidatorHelper() {
+            return fExternal.getTypeValidatorHelper();
+        }
+
+        public short getDatatypeXMLVersion() {
+             return fExternal.getDatatypeXMLVersion();
+        }
     }
 
     public void reset(){
@@ -2975,6 +3254,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
 
         //for constraining facets
         fWhiteSpace = 0;
+        fExplicitTimezone = ET_OPTIONAL;
         fLength = -1;
         fMinLength = -1;
         fMaxLength = -1;
@@ -2992,6 +3272,8 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         fMaxExclusive = null;
         fMinExclusive = null;
         fMinInclusive = null;
+        fMaxScale = 0;
+        fMinScale = 0;
         lengthAnnotation = null;
         minLengthAnnotation = null;
         maxLengthAnnotation = null;
@@ -3004,10 +3286,15 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         maxExclusiveAnnotation = null;
         minInclusiveAnnotation = null;
         minExclusiveAnnotation = null;
+        maxScaleAnnotation = null;
+        minScaleAnnotation = null;
+        explicitTimezoneAnnotation = null;
 
         fPatternType = SPECIAL_PATTERN_NONE;
         fAnnotations = null;
         fFacets = null;
+
+        fContext = null;
 
         // REVISIT: reset for fundamental facets
     }
@@ -3021,6 +3308,17 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     
     public void setNamespaceItem(XSNamespaceItem namespaceItem) {
         fNamespaceItem = namespaceItem;
+    }
+    
+    /**
+     * 
+     */
+    public void setContext(XSObject context) {
+        fContext = context;
+    }
+    
+    public XSObject getContext() {
+        return fContext;
     }
 
     /**
@@ -3040,7 +3338,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         if (fFacets == null &&
                 (fFacetsDefined != 0 || fValidationDV == DV_INTEGER)) {
 
-            XSFacetImpl[] facets = new XSFacetImpl[10];
+            XSFacetImpl[] facets = new XSFacetImpl[13];
             int count = 0;
             if ((fFacetsDefined & FACET_WHITESPACE) != 0 &&
                 fValidationDV != DV_ANYSIMPLETYPE &&
@@ -3165,6 +3463,39 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
                             minInclusiveAnnotation);
                 count++;
             }
+            if ((fFacetsDefined & FACET_EXPLICITTIMEZONE) != 0) {
+                facets[count] = 
+                    new XSFacetImpl (
+                            FACET_EXPLICITTIMEZONE,
+                            ET_FACET_STRING[fExplicitTimezone],
+                            0,
+                            null,
+                            (fFixedFacet & FACET_EXPLICITTIMEZONE) != 0,
+                            explicitTimezoneAnnotation);
+                count++;
+            }
+            if ((fFacetsDefined & FACET_MAXSCALE) != 0) {
+                facets[count] = 
+                    new XSFacetImpl (
+                            FACET_MAXSCALE,
+                            Integer.toString(fMaxScale),
+                            fMaxScale,
+                            null,
+                            (fFixedFacet & FACET_MAXSCALE) != 0,
+                            maxScaleAnnotation);
+                count++;
+            }
+            if ((fFacetsDefined & FACET_MINSCALE) != 0) {
+                facets[count] = 
+                    new XSFacetImpl (
+                            FACET_MINSCALE,
+                            Integer.toString(fMinScale),
+                            fMinScale,
+                            null,
+                            (fFixedFacet & FACET_MINSCALE) != 0,
+                            minScaleAnnotation);
+                count++;
+            }           
             fFacets = (count > 0) ? new XSObjectListImpl(facets, count) : XSObjectListImpl.EMPTY_LIST;
         }
         return (fFacets != null) ? fFacets : XSObjectListImpl.EMPTY_LIST;
@@ -3199,11 +3530,12 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
     public XSObjectList getMultiValueFacets() {
         if (fMultiValueFacets == null &&
                 ((fFacetsDefined & FACET_ENUMERATION) != 0 ||
+                        (fFacetsDefined & FACET_ASSERT) != 0 ||
                         (fFacetsDefined & FACET_PATTERN) != 0 ||
                         fPatternType != SPECIAL_PATTERN_NONE ||
                         fValidationDV == DV_INTEGER)) {
 
-            XSMVFacetImpl[] facets = new XSMVFacetImpl[2];
+            XSMVFacetImpl[] facets = new XSMVFacetImpl[3];
             int count = 0;
             if ((fFacetsDefined & FACET_PATTERN) != 0 ||
                     fPatternType != SPECIAL_PATTERN_NONE ||
@@ -3223,6 +3555,10 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
                             this.getLexicalEnumeration(),
                             new ObjectListImpl(fEnumeration, fEnumerationSize),
                             enumerationAnnotations);
+                count++;
+            }
+            if (fAssertion != null) {
+                facets[count] = new XSMVFacetImpl(FACET_ASSERT, fAssertion);
                 count++;
             }
             fMultiValueFacets = new XSObjectListImpl(facets, count);
@@ -3315,7 +3651,7 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
 
         public Object getActualFacetValue() {
             if (avalue == null) {
-                if (kind == FACET_WHITESPACE) {
+                if (kind == FACET_WHITESPACE || kind == FACET_EXPLICITTIMEZONE) {
                     avalue = svalue;
                 }
                 else {
@@ -3373,13 +3709,25 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         final XSObjectList annotations;
         final StringList svalues;
         final ObjectList avalues;
+        final Vector asserts;
 
         public XSMVFacetImpl(short kind, StringList svalues, ObjectList avalues, XSObjectList annotations) {
             this.kind = kind;
             this.svalues = svalues;
             this.avalues = avalues;
             this.annotations = (annotations != null) ? annotations : XSObjectListImpl.EMPTY_LIST;
+            this.asserts = null;
         }		
+        /*
+         * overloaded constructor. added to support assertions.
+         */
+        public XSMVFacetImpl(short kind, Vector asserts) {
+            this.kind = kind;
+            this.asserts = asserts;
+            this.svalues = null;
+            this.avalues = null;
+            this.annotations = null;
+        }
 
         /* (non-Javadoc)
          * @see org.apache.xerces.xs.XSFacet#getFacetKind()
@@ -3434,6 +3782,10 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
         public short getType() {
             return XSConstants.MULTIVALUE_FACET;
         }
+        
+        public Vector getAsserts() {
+            return asserts;
+        }
     }
     
     private static abstract class AbstractObjectList extends AbstractList implements ObjectList {
@@ -3454,23 +3806,6 @@ public class XSSimpleTypeDecl implements XSSimpleType, TypeInfo {
 
     public boolean isDerivedFrom(String typeNamespaceArg, String typeNameArg, int derivationMethod) {
         return isDOMDerivedFrom(typeNamespaceArg, typeNameArg, derivationMethod);
-    }
-
-    private short convertToPrimitiveKind(short valueType) {
-        /** Primitive datatypes. */
-        if (valueType <= XSConstants.NOTATION_DT) {
-            return valueType;
-        }
-        /** Types derived from string. */
-        if (valueType <= XSConstants.ENTITY_DT) {
-            return XSConstants.STRING_DT;
-        }
-        /** Types derived from decimal. */
-        if (valueType <= XSConstants.POSITIVEINTEGER_DT) {
-            return XSConstants.DECIMAL_DT;
-        }
-        /** Other types. */
-        return valueType;
     }
 
     private void appendEnumString(StringBuffer sb) {

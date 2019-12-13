@@ -51,8 +51,8 @@ v.validate(instanceDocument);
          and do the subsequent validation. 
       </p>
       <p>You can also refer to the JAXP sample, SourceValidator, where you
-         can validate XML documents against 1.1 schemas by specifying the "-xsd11"
-         flag when running the sample.</p>
+         can validate XML documents against 1.1 schemas by specifying an option "-xsd11"
+         when running the sample.</p>
       <p>Each document that uses XML Schema grammars must specify the location of the
 	grammars it uses by using an xsi:schemaLocation attribute if they use
 	namespaces, and an xsi:noNamespaceSchemaLocation attribute
@@ -77,7 +77,7 @@ v.validate(instanceDocument);
 	Schema grammar.</p>
       
     </a>
-  </faq>
+  </faq>  
   <faq title="XPath 2.0 support for XML Schema 1.1 validation">
   	<q>How an XPath 2.0 engine is used for XML Schema 1.1 assertions and CTAs?</q>
   	<a>
