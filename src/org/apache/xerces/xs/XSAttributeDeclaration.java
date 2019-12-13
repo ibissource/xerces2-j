@@ -117,11 +117,6 @@ public interface XSAttributeDeclaration extends XSObject {
     public XSValue getValueConstraintValue();
 
     /**
-     * The actual value of the default or fixed value constraint.
-     */
-    public XSValue getValueConstraintValue();
-
-    /**
      * An annotation if it exists, otherwise <code>null</code>. 
      * If not null then the first [annotation] from the sequence of annotations.
      */
