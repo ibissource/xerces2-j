@@ -89,7 +89,7 @@ import org.xml.sax.ext.LexicalHandler;
  * 
  * @version $Id$
  */
-final class ValidatorHandlerImpl extends ValidatorHandler implements
+public final class ValidatorHandlerImpl extends ValidatorHandler implements
     DTDHandler, EntityState, LexicalHandler, PSVIProvider, ValidatorHelper, XMLDocumentHandler {
     
     // feature identifiers
