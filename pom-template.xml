@@ -56,6 +56,11 @@
             <version>1.2</version>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>com.rackspace.eclipse.webtools.sourceediting</groupId>
+            <artifactId>org.eclipse.wst.xml.xpath2.processor</artifactId>
+            <version>2.1.100</version>
+        </dependency>
     </dependencies>
 
     <developers>
