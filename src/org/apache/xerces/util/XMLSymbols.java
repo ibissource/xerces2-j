@@ -21,7 +21,7 @@ package org.apache.xerces.util;
  * All internalized xml symbols. They can be compared using "==".
  * 
  * @author Sandy Gao, IBM
- * @version $Id$
+ * @version $Id: XMLSymbols.java 447241 2006-09-18 05:12:57Z mrglavas $
  */
 public class XMLSymbols {
     

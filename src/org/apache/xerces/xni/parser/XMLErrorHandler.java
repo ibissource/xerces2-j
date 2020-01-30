@@ -28,7 +28,7 @@ import org.apache.xerces.xni.XNIException;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: XMLErrorHandler.java 570137 2007-08-27 14:17:57Z mrglavas $
  */
 public interface XMLErrorHandler {
 

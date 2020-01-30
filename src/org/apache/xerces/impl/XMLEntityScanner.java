@@ -37,7 +37,7 @@ import org.apache.xerces.xni.XMLString;
  * 
  * @author Andy Clark, IBM
  * @author Neil Graham, IBM
- * @version $Id$
+ * @version $Id: XMLEntityScanner.java 1707347 2015-10-07 17:46:24Z mrglavas $
  */
 public class XMLEntityScanner implements XMLLocator {
 

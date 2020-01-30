@@ -31,7 +31,7 @@ import java.util.Enumeration;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: NamespaceContext.java 1868214 2019-10-10 05:15:17Z mukulg $
  */
 public interface NamespaceContext {
 
@@ -107,6 +107,17 @@ public interface NamespaceContext {
      * @see #getDeclaredPrefixAt
      */
     public boolean declarePrefix(String prefix, String uri);
+    
+    /**
+     * Delete a namespace binding, corresponding to a namespace prefix.
+     * 
+     * @param prefix The prefix corresponding to which, namespace binding
+     *        is to be deleted.
+     *        
+     * @return true if namespace binding is successfully deleted, false
+     *         otherwise.       
+     */
+    public boolean deletePrefix(String prefix);
     
 
     /**

@@ -30,7 +30,7 @@ import java.util.ResourceBundle;
  *
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: DatatypeException.java 809243 2009-08-30 03:35:05Z mrglavas $
  */
 public class DatatypeException extends Exception {
 

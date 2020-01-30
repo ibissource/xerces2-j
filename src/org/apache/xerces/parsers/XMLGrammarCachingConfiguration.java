@@ -59,7 +59,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  *
  * @author Neil Graham, IBM
  *
- * @version $Id$
+ * @version $Id: XMLGrammarCachingConfiguration.java 447239 2006-09-18 05:08:26Z mrglavas $
  */
 public class XMLGrammarCachingConfiguration 
     extends XIncludeAwareParserConfiguration {

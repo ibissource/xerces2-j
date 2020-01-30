@@ -34,7 +34,7 @@ import org.apache.xerces.xni.XMLResourceIdentifier;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: XMLInputSource.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class XMLInputSource {
 

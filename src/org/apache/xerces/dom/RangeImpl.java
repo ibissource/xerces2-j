@@ -33,7 +33,7 @@ import org.w3c.dom.ranges.RangeException;
  *  
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: RangeImpl.java 515302 2007-03-06 21:07:10Z mrglavas $
  */
 public class RangeImpl implements Range {
     

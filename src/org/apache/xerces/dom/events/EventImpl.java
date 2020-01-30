@@ -30,7 +30,7 @@ import org.w3c.dom.events.EventTarget;
  *   
  * @xerces.internal 
  *
- * @version $Id$
+ * @version $Id: EventImpl.java 533533 2007-04-29 17:30:08Z mrglavas $
  */
 public class EventImpl implements Event {
     

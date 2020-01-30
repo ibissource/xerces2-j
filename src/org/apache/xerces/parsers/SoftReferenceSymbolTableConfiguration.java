@@ -33,7 +33,7 @@ import org.apache.xerces.xni.parser.XMLComponentManager;
  * 
  * @author Peter McCracken, IBM
  *
- * @version $Id$
+ * @version $Id: SoftReferenceSymbolTableConfiguration.java 478344 2006-11-22 22:19:56Z mrglavas $
  */
 public class SoftReferenceSymbolTableConfiguration extends
     XIncludeAwareParserConfiguration {

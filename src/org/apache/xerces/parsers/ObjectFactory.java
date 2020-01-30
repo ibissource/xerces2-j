@@ -37,7 +37,7 @@ import java.util.Properties;
  * when bundled as part of the JDK.
  * <p>
  *
- * @version $Id$
+ * @version $Id: ObjectFactory.java 1391589 2012-09-28 18:40:44Z mrglavas $
  */
 final class ObjectFactory {
 

@@ -20,7 +20,7 @@ package org.apache.xerces.impl.dv.xs;
 /**
  * @xerces.internal 
  *  
- * @version $Id$
+ * @version $Id: SchemaDateTimeException.java 446745 2006-09-15 21:43:58Z mrglavas $
  */
 public class SchemaDateTimeException extends RuntimeException {
     

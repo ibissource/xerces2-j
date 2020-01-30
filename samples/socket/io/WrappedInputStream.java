@@ -34,7 +34,7 @@ import java.io.InputStream;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: WrappedInputStream.java 699898 2008-09-28 21:31:55Z mrglavas $
  */
 public class WrappedInputStream
     extends FilterInputStream {

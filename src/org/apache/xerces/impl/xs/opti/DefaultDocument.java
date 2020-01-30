@@ -39,7 +39,7 @@ import org.w3c.dom.Text;
  * 
  * @author Rahul Srivastava, Sun Microsystems Inc.
  *
- * @version $Id$
+ * @version $Id: DefaultDocument.java 705597 2008-10-17 13:05:37Z mrglavas $
  */
 public class DefaultDocument extends NodeImpl
                              implements Document {

@@ -30,7 +30,7 @@ import org.apache.xerces.util.XML11Char;
  * @author Sandy Gao, IBM
  * @author Neil Graham, IBM
  * 
- * @version $Id$
+ * @version $Id: XML11NMTOKENDatatypeValidator.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class XML11NMTOKENDatatypeValidator extends NMTOKENDatatypeValidator {
 

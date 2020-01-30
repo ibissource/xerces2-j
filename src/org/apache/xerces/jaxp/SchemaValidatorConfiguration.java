@@ -29,7 +29,7 @@ import org.apache.xerces.xni.parser.XMLConfigurationException;
 /**
  * <p>Parser configuration for Xerces' XMLSchemaValidator.</p>
  * 
- * @version $Id$
+ * @version $Id: SchemaValidatorConfiguration.java 447237 2006-09-18 05:03:10Z mrglavas $
  */
 final class SchemaValidatorConfiguration implements XMLComponentManager {
     

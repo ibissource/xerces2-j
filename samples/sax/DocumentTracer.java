@@ -51,7 +51,7 @@ import org.xml.sax.helpers.XMLReaderFactory;
  * @author Andy Clark, IBM
  * @author Arnaud Le Hors, IBM
  *
- * @version $Id$
+ * @version $Id: DocumentTracer.java 699898 2008-09-28 21:31:55Z mrglavas $
  */
 public class DocumentTracer
     extends DefaultHandler

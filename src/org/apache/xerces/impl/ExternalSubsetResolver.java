@@ -38,7 +38,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  * 
  * @author Michael Glavassevich, IBM
  *
- * @version $Id$
+ * @version $Id: ExternalSubsetResolver.java 446761 2006-09-15 21:59:29Z mrglavas $
  */
 public interface ExternalSubsetResolver 
     extends XMLEntityResolver {

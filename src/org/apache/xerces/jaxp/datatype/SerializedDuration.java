@@ -24,7 +24,7 @@ import java.io.Serializable;
  * <p>Serialized form of <code>javax.xml.datatype.Duration</code>.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: SerializedDuration.java 756262 2009-03-19 23:36:08Z mrglavas $
  */
 final class SerializedDuration implements Serializable {
 

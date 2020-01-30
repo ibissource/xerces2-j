@@ -35,7 +35,7 @@ import org.apache.xerces.xs.XSTypeDefinition;
  * in document order that has a matching NCName as an identifier.
  * </p>
  *
- * @version $Id$
+ * @version $Id: ShortHandPointer.java 883493 2009-11-23 20:39:18Z knoaman $
  */
 final class ShortHandPointer implements XPointerPart {
     

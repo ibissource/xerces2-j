@@ -40,7 +40,7 @@ import org.w3c.dom.ls.LSResourceResolver;
  * @author Gopal Sharma, SUN MicroSystems Inc.
  * @author Elena Litani, IBM 
  * @author Ramesh Mandava, Sun Microsystems
- * @version $Id$
+ * @version $Id: DOMEntityResolverWrapper.java 1368778 2012-08-03 02:18:13Z mrglavas $
  */
 public class DOMEntityResolverWrapper
     implements XMLEntityResolver {

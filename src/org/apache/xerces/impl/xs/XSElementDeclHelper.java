@@ -22,9 +22,8 @@ import org.apache.xerces.xni.QName;
 /**
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: XSElementDeclHelper.java 1031717 2010-11-05 19:04:41Z sandygao $
  */
 public interface XSElementDeclHelper {
-
     public XSElementDecl getGlobalElementDecl(QName element);
 }

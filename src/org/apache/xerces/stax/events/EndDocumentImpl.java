@@ -28,7 +28,7 @@ import javax.xml.stream.events.EndDocument;
  * 
  * @author Lucian Holland
  *
- * @version $Id$
+ * @version $Id: EndDocumentImpl.java 730472 2008-12-31 20:45:51Z mrglavas $
  */
 public final class EndDocumentImpl extends XMLEventImpl implements EndDocument {
 

@@ -42,7 +42,7 @@ import org.w3c.dom.Element;
  *
  * @author Rahul Srivastava, Sun Microsystems Inc.
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: XSDNotationTraverser.java 884566 2009-11-26 14:30:01Z knoaman $
  */
 class  XSDNotationTraverser extends XSDAbstractTraverser {
     

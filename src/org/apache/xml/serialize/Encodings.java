@@ -33,7 +33,7 @@ import org.apache.xerces.util.EncodingMap;
  * that new applications use the DOM Level 3 LSSerializer or JAXP's Transformation 
  * API for XML (TrAX) for serializing XML. See the Xerces documentation for more 
  * information.
- * @version $Id$
+ * @version $Id: Encodings.java 476047 2006-11-17 04:27:45Z mrglavas $
  * @author <a href="mailto:arkin@intalio.com">Assaf Arkin</a>
  */
 public class Encodings

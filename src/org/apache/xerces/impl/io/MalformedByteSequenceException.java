@@ -31,7 +31,7 @@ import org.apache.xerces.util.MessageFormatter;
  *
  * @author Michael Glavassevich, IBM
  *
- * @version $Id$
+ * @version $Id: MalformedByteSequenceException.java 718096 2008-11-16 20:00:58Z mrglavas $
  */
 public final class MalformedByteSequenceException extends CharConversionException {
 

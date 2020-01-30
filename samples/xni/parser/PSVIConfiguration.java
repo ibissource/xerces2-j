@@ -30,7 +30,7 @@ import xni.PSVIWriter;
  * configuration including XML Schema Validator in the pipeline.
  * 
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: PSVIConfiguration.java 447690 2006-09-19 02:41:53Z mrglavas $
  */
 public class PSVIConfiguration extends XIncludeAwareParserConfiguration {
 

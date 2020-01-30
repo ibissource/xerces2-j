@@ -21,7 +21,7 @@ package org.apache.xerces.xs.datatypes;
  * 
  * @author Ankit Pasricha, IBM
  * 
- * @version $Id$
+ * @version $Id: XSDouble.java 447250 2006-09-18 05:27:17Z mrglavas $
  */
 public interface XSDouble {
     

@@ -55,7 +55,7 @@ import org.w3c.dom.DOMException;
  * @deprecated
  * @author Pavani Mukthipudi
  * @author Neil Graham
- * @version $Id$
+ * @version $Id: ASModelImpl.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class ASModelImpl implements ASModel {
 

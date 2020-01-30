@@ -32,7 +32,7 @@ import org.apache.xerces.xni.QName;
  * @xerces.internal
  *
  * @author Andy Clark, IBM
- * @version $Id$
+ * @version $Id: XPath.java 965252 2010-07-18 16:05:34Z mrglavas $
  */
 public class XPath {
 
@@ -681,7 +681,7 @@ public class XPath {
      * @author Glenn Marcy, IBM
      * @author Andy Clark, IBM
      *
-     * @version $Id$
+     * @version $Id: XPath.java 965252 2010-07-18 16:05:34Z mrglavas $
      */
     private static final class Tokens {
 
@@ -1214,7 +1214,7 @@ public class XPath {
      * @author Glenn Marcy, IBM
      * @author Andy Clark, IBM
      *
-     * @version $Id$
+     * @version $Id: XPath.java 965252 2010-07-18 16:05:34Z mrglavas $
      */
     private static class Scanner {
 

@@ -31,7 +31,7 @@ package org.apache.xerces.xni;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: XMLAttributes.java 570130 2007-08-27 14:10:55Z mrglavas $
  */
 public interface XMLAttributes {
 

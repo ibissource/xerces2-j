@@ -65,7 +65,7 @@ import org.apache.xerces.xni.parser.XMLDocumentScanner;
  *
  * @author Elena Litani, IBM
  *
- * @version $Id$
+ * @version $Id: IntegratedParserConfiguration.java 447239 2006-09-18 05:08:26Z mrglavas $
  */
 public class IntegratedParserConfiguration
 extends StandardParserConfiguration {

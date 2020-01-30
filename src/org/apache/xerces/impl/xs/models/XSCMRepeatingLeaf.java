@@ -23,7 +23,7 @@ package org.apache.xerces.impl.xs.models;
  * @xerces.internal 
  *
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: XSCMRepeatingLeaf.java 575864 2007-09-15 03:12:34Z mrglavas $
  */
 public final class XSCMRepeatingLeaf extends XSCMLeaf {
     

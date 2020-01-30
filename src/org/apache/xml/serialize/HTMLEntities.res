@@ -1,6 +1,6 @@
-# $Id$
+# $Id: HTMLEntities.res 316040 2000-08-30 18:59:22Z arkin $
 #
-# @version $Revision$ $Date$
+# @version $Revision: 316040 $ $Date: 2000-08-31 00:29:22 +0530 (Thu, 31 Aug 2000) $
 # @author <a href="mailto:arkin@intalio.com">Assaf Arkin</a>
 #
 # Character entity references for markup-significant

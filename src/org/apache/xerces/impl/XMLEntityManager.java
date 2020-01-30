@@ -86,7 +86,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  * @author Andy Clark, IBM
  * @author Arnaud  Le Hors, IBM
  *
- * @version $Id$
+ * @version $Id: XMLEntityManager.java 1513560 2013-08-13 15:42:54Z mrglavas $
  */
 public class XMLEntityManager
     implements XMLComponent, XMLEntityResolver {

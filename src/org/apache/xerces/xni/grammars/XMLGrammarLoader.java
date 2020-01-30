@@ -34,7 +34,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  * will be provided for user applications to interact with these implementations.
  * 
  * @author Neil Graham, IBM
- * @version $Id$
+ * @version $Id: XMLGrammarLoader.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 
 public interface XMLGrammarLoader {

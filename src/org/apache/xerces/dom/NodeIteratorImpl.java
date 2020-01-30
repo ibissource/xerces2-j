@@ -35,7 +35,7 @@ import org.w3c.dom.traversal.NodeIterator;
  *  
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: NodeIteratorImpl.java 447266 2006-09-18 05:57:49Z mrglavas $
  */
 public class NodeIteratorImpl implements NodeIterator {
     

@@ -28,7 +28,7 @@ import org.apache.xerces.xni.parser.XMLParseException;
  * XPointer error's are thrown so that they may be caught by the XInclude 
  * implementation and reported as resource errors.
  *
- * @version $Id$
+ * @version $Id: XPointerErrorHandler.java 883493 2009-11-23 20:39:18Z knoaman $
  */
 final class XPointerErrorHandler implements XMLErrorHandler {
 

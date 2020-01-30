@@ -29,7 +29,7 @@ import org.apache.xerces.impl.dv.DatatypeValidator;
  *
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: DTDDVFactoryImpl.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class DTDDVFactoryImpl extends DTDDVFactory {
 

@@ -28,7 +28,7 @@ import org.apache.xerces.xni.XNIException;
  * @xerces.internal
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: BalancedDTDGrammar.java 965321 2010-07-18 23:26:25Z mrglavas $
  */
 final class BalancedDTDGrammar extends DTDGrammar {
     

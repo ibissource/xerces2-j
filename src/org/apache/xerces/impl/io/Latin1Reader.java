@@ -28,7 +28,7 @@ import java.io.Reader;
  * 
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: Latin1Reader.java 718096 2008-11-16 20:00:58Z mrglavas $
  */
 public final class Latin1Reader 
     extends Reader {

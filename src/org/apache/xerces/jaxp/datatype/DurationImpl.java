@@ -93,7 +93,7 @@ import org.apache.xerces.util.DatatypeMessageFormatter;
  *  
  * @author <a href="mailto:Kohsuke.Kawaguchi@Sun.com">Kohsuke Kawaguchi</a>
  * @author <a href="mailto:Joseph.Fialli@Sun.com">Joseph Fialli</a>
- * @version $Id$
+ * @version $Id: DurationImpl.java 1747634 2016-06-10 04:57:39Z mukulg $
  * @see XMLGregorianCalendar#add(Duration)
  */
 class DurationImpl
@@ -420,7 +420,7 @@ class DurationImpl
     protected DurationImpl(String lexicalRepresentation)
         throws IllegalArgumentException {
         // only if I could use the JDK1.4 regular expression ....
-             
+        
         final String s = lexicalRepresentation;
         boolean positive;
         int[] idx = new int[1];
@@ -428,7 +428,7 @@ class DurationImpl
         boolean timeRequired = false;
         
         if (lexicalRepresentation == null) {
-            throw new NullPointerException();
+           throw new NullPointerException();
         }
 
         idx[0] = 0;

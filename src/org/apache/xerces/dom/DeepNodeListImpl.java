@@ -68,7 +68,7 @@ import org.w3c.dom.NodeList;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: DeepNodeListImpl.java 883487 2009-11-23 20:28:10Z knoaman $
  * @since  PR-DOM-Level-1-19980818.
  */
 public class DeepNodeListImpl 

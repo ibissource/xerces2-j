@@ -20,7 +20,7 @@ package org.apache.xerces.impl.dtd;
 /**
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: XMLEntityDecl.java 446755 2006-09-15 21:56:27Z mrglavas $
  */
 public class XMLEntityDecl {
 

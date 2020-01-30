@@ -49,7 +49,7 @@ import org.xml.sax.helpers.XMLReaderFactory;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: DelayedInput.java 447688 2006-09-19 02:39:49Z mrglavas $
  */
 public class DelayedInput
     extends DefaultHandler {

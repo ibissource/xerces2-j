@@ -35,7 +35,7 @@ import org.apache.xerces.stax.ImmutableLocation;
  * 
  * @author Lucian Holland
  *
- * @version $Id$
+ * @version $Id: XMLEventImpl.java 956313 2010-06-20 00:47:48Z mrglavas $
  */
 abstract class XMLEventImpl implements XMLEvent {
 

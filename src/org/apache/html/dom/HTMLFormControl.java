@@ -22,7 +22,7 @@ package org.apache.html.dom;
  * collection. All form control elements implement this empty interface.
  * 
  * @xerces.internal
- * @version $Revision$ $Date$
+ * @version $Revision: 1029426 $ $Date: 2010-10-31 22:55:00 +0530 (Sun, 31 Oct 2010) $
  * @author <a href="mailto:arkin@exoffice.com">Assaf Arkin</a>
  */
 public interface HTMLFormControl

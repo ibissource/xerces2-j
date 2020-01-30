@@ -33,7 +33,7 @@ import org.w3c.dom.bootstrap.DOMImplementationRegistry;
  * use XML Schema API (org.apache.xerces.xs) to navigate XML Schema components.
  *
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: QueryXS.java 1358669 2012-07-07 23:03:56Z mrglavas $
  */
 public class QueryXS implements DOMErrorHandler {
 

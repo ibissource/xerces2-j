@@ -42,7 +42,7 @@ import org.apache.xerces.xni.QName;
  * 
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: SimpleContentModel.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class SimpleContentModel
     implements ContentModelValidator {

@@ -34,7 +34,7 @@ package org.apache.xerces.impl.dtd.models;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: CMStateSet.java 446752 2006-09-15 21:55:19Z mrglavas $
  */
 // made this class public so it can be accessed by
 // the XS content models from the schema package -neilg.

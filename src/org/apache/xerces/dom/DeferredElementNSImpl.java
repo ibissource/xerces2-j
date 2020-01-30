@@ -21,7 +21,7 @@
  * duplicated. If you're changing this file you probably want to change
  * DeferredElementImpl.java at the same time.
  *
- * @version $Id$
+ * @version $Id: DeferredElementNSImpl.java 765973 2009-04-17 12:43:14Z mrglavas $
  */
 
 package org.apache.xerces.dom;

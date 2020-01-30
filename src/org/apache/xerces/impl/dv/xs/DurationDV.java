@@ -33,7 +33,7 @@ import org.apache.xerces.impl.dv.ValidationContext;
  *
  * @author Elena Litani
  * @author Gopal Sharma, SUN Microsystem Inc.
- * @version $Id$
+ * @version $Id: DurationDV.java 937742 2010-04-25 04:26:18Z mrglavas $
  */
 public class DurationDV extends AbstractDateTimeDV {
 

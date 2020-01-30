@@ -31,7 +31,7 @@ import org.apache.xerces.impl.dv.ValidationContext;
  * @author Elena Litani
  * @author Gopal Sharma, SUN Microsystem Inc.
  *
- * @version $Id$
+ * @version $Id: TimeDV.java 1170728 2011-09-14 17:35:03Z knoaman $
  */
 public class TimeDV extends AbstractDateTimeDV {
 
@@ -43,7 +43,7 @@ public class TimeDV extends AbstractDateTimeDV {
      */
     public Object getActualValue(String content, ValidationContext context) throws InvalidDatatypeValueException{
         try{
-            return parse(content);
+            return parse(content, context.getTypeValidatorHelper().isXMLSchema11());
         } catch(Exception ex){
             throw new InvalidDatatypeValueException("cvc-datatype-valid.1.2.1", new Object[]{content, "time"});
         }
@@ -58,7 +58,7 @@ public class TimeDV extends AbstractDateTimeDV {
      * @return normalized time representation
      * @exception SchemaDateTimeException Invalid lexical representation
      */
-    protected DateTimeData parse(String str) throws SchemaDateTimeException{
+    protected DateTimeData parse(String str, boolean isXMLSchema11) throws SchemaDateTimeException{
         DateTimeData date = new DateTimeData(str, this);
         int len = str.length();
 
@@ -71,14 +71,19 @@ public class TimeDV extends AbstractDateTimeDV {
 
         //validate and normalize
 
-        validateDateTime(date);
+        validateDateTime(date, isXMLSchema11);
+        
+        // reset back day
+        date.day = 15;
 
         //save unnormalized values
         saveUnnormalized(date);
         
         if ( date.utc!=0 && date.utc != 'Z') {
             normalize(date);
-            date.day = 15;
+            if (!isXMLSchema11) {
+                date.day = 15;
+            }
         }
         date.position = 2;
         return date;

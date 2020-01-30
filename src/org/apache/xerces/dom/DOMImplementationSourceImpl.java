@@ -34,7 +34,7 @@ import org.w3c.dom.DOMImplementationSource;
  * 
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: DOMImplementationSourceImpl.java 883487 2009-11-23 20:28:10Z knoaman $
  */
 public class DOMImplementationSourceImpl
     implements DOMImplementationSource {

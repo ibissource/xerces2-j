@@ -54,7 +54,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  * 
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: SecureProcessingConfiguration.java 1718452 2015-12-07 20:17:51Z mrglavas $
  */
 public final class SecureProcessingConfiguration extends
         XIncludeAwareParserConfiguration {

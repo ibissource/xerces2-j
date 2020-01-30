@@ -19,7 +19,7 @@ package ui;
 /**
  * command line invocation wrapper for TreeViewer
  *
- * @version $Id$
+ * @version $Id: TreeViewer.java 950356 2010-06-02 03:43:43Z mrglavas $
  */
 public class TreeViewer {
 

@@ -22,7 +22,7 @@ import java.util.Vector;
 /**
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: Op.java 572108 2007-09-02 18:48:31Z mrglavas $
  */
 class Op {
     static final int DOT = 0;

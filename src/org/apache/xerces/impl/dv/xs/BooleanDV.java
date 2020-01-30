@@ -28,13 +28,9 @@ import org.apache.xerces.impl.dv.ValidationContext;
  * @author Neeraj Bajaj, Sun Microsystems, inc.
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: BooleanDV.java 885800 2009-12-01 15:37:29Z knoaman $
  */
 public class BooleanDV extends TypeValidator {
-
-    public short getAllowedFacets() {
-        return (XSSimpleTypeDecl.FACET_PATTERN | XSSimpleTypeDecl.FACET_WHITESPACE);
-    }
 
     public Object getActualValue(String content, ValidationContext context) throws InvalidDatatypeValueException {
         if ("false".equals(content) || "0".equals(content)) {

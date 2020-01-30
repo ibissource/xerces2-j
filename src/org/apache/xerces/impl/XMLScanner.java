@@ -56,7 +56,7 @@ import org.apache.xerces.xni.parser.XMLConfigurationException;
  * @author Arnaud  Le Hors, IBM
  * @author Eric Ye, IBM
  *
- * @version $Id$
+ * @version $Id: XMLScanner.java 1499507 2013-07-03 18:30:12Z mrglavas $
  */
 public abstract class XMLScanner 
     implements XMLComponent {

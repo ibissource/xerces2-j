@@ -35,7 +35,7 @@ import org.xml.sax.SAXException;
  * for working with the OpenXML HTML parser.
  * 
  * 
- * @version $Revision$ $Date$
+ * @version $Revision: 1029426 $ $Date: 2010-10-31 22:55:00 +0530 (Sun, 31 Oct 2010) $
  * @author <a href="mailto:arkin@openxml.org">Assaf Arkin</a>
  */
 public class HTMLBuilder

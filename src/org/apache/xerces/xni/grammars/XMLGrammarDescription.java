@@ -24,7 +24,7 @@ import org.apache.xerces.xni.XMLResourceIdentifier;
  * physical location and their type. </p>
  *
  * @author Neil Graham, IBM
- * @version $Id$
+ * @version $Id: XMLGrammarDescription.java 447245 2006-09-18 05:22:10Z mrglavas $
  */
 public interface XMLGrammarDescription extends XMLResourceIdentifier {
 

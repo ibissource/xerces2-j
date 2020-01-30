@@ -25,7 +25,7 @@ import org.apache.xerces.xni.XMLAttributes;
  *
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: XMLSchemaDescription.java 570134 2007-08-27 14:14:28Z mrglavas $
  */
 public interface XMLSchemaDescription extends XMLGrammarDescription {
 

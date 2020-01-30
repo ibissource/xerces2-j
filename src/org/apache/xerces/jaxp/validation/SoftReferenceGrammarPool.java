@@ -34,7 +34,7 @@ import org.apache.xerces.xni.grammars.XMLSchemaDescription;
  * the target namespace for the schema and schema location.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: SoftReferenceGrammarPool.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 final class SoftReferenceGrammarPool implements XMLGrammarPool {
     

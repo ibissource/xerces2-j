@@ -38,7 +38,7 @@ import org.apache.xerces.xni.XMLAttributes;
  * @author Elena Litani, IBM
  * @author Michael Glavassevich, IBM
  *
- * @version $Id$
+ * @version $Id: XMLAttributesImpl.java 1357382 2012-07-04 19:56:40Z mrglavas $
  */
 public class XMLAttributesImpl
     implements XMLAttributes {
@@ -329,6 +329,7 @@ public class XMLAttributesImpl
         }
         fLength--;
     } // removeAttributeAt(int)
+    
 
     /**
      * Sets the name of the attribute at the specified index.

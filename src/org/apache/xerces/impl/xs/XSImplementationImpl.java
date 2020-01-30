@@ -37,7 +37,7 @@ import org.w3c.dom.ls.LSInput;
  * @xerces.internal 
  *
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: XSImplementationImpl.java 726376 2008-12-14 05:49:25Z mrglavas $
  */
 public class XSImplementationImpl extends PSVIDOMImplementationImpl 
  								  implements XSImplementation {

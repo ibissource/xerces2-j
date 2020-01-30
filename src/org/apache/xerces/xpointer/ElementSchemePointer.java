@@ -35,7 +35,7 @@ import org.apache.xerces.xni.parser.XMLErrorHandler;
  *
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: ElementSchemePointer.java 883493 2009-11-23 20:39:18Z knoaman $
  */
 final class ElementSchemePointer implements XPointerPart {
 
@@ -494,7 +494,7 @@ final class ElementSchemePointer implements XPointerPart {
      * @xerces.internal
      * 
      * @author Neil Delima, IBM
-     * @version $Id$
+     * @version $Id: ElementSchemePointer.java 883493 2009-11-23 20:39:18Z knoaman $
      * 
      */
     private final class Tokens {
@@ -660,7 +660,7 @@ final class ElementSchemePointer implements XPointerPart {
      * 
      * @xerces.internal
      * 
-     * @version $Id$
+     * @version $Id: ElementSchemePointer.java 883493 2009-11-23 20:39:18Z knoaman $
      */
     private class Scanner {
 

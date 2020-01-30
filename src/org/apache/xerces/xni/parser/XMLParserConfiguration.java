@@ -72,7 +72,7 @@ import org.apache.xerces.xni.XNIException;
  * @author Arnaud  Le Hors, IBM
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: XMLParserConfiguration.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public interface XMLParserConfiguration
     extends XMLComponentManager {

@@ -37,7 +37,7 @@ import org.w3c.dom.Notation;
  *  DOMTree class to enter every DOM node into a Swing JTree tree.
  *  The forward and backward mappings between Nodes to TreeNodes are kept.
  *
- * @version $Id$
+ * @version $Id: DOMTreeFull.java 447689 2006-09-19 02:40:36Z mrglavas $
  */
 public class DOMTreeFull
     extends JTree 

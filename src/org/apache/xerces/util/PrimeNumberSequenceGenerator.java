@@ -24,7 +24,7 @@ import java.util.Random;
  * 
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: PrimeNumberSequenceGenerator.java 1357391 2012-07-04 20:20:31Z mrglavas $
  */
 final class PrimeNumberSequenceGenerator {
     

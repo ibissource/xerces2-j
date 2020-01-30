@@ -40,7 +40,7 @@ import org.apache.xerces.impl.dv.ValidationContext;
  * @author Jeffrey Rodriguez, IBM
  * @author Sandy Gao, IBM
  * 
- * @version $Id$
+ * @version $Id: ENTITYDatatypeValidator.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class ENTITYDatatypeValidator implements DatatypeValidator {
 

@@ -30,7 +30,7 @@ import org.apache.xerces.impl.dv.DatatypeValidator;
  *
  * @author Neil Graham, IBM
  *
- * @version $Id$
+ * @version $Id: XML11DTDDVFactoryImpl.java 704574 2008-10-14 16:11:51Z mrglavas $
  */
 public class XML11DTDDVFactoryImpl extends DTDDVFactoryImpl {
 

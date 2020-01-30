@@ -26,7 +26,7 @@ import org.w3c.dom.views.AbstractView;
  * 
  * @xerces.internal 
  * 
- * @version $Id$
+ * @version $Id: MouseEventImpl.java 533574 2007-04-30 00:29:47Z mrglavas $
  */
 public class MouseEventImpl 
     extends UIEventImpl 

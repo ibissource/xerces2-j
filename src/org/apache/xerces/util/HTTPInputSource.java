@@ -36,7 +36,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  * 
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: HTTPInputSource.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public final class HTTPInputSource extends XMLInputSource {
 

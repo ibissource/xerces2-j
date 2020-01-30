@@ -174,7 +174,7 @@ import org.apache.xerces.util.DatatypeMessageFormatter;
  * 
  * @author <a href="mailto:Kohsuke.Kawaguchi@Sun.com">Kohsuke Kawaguchi</a>
  * @author <a href="mailto:Joseph.Fialli@Sun.com">Joseph Fialli</a>
- * @version $Id$
+ * @version $Id: XMLGregorianCalendarImpl.java 759810 2009-03-30 00:44:49Z mrglavas $
  * @see javax.xml.datatype.Duration
  */
 class XMLGregorianCalendarImpl

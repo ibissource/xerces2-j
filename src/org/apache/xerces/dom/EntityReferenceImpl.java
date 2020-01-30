@@ -77,7 +77,7 @@ import org.w3c.dom.Node;
  * @author Joe Kesselman, IBM
  * @author Andy Clark, IBM
  * @author Ralf Pfeiffer, IBM
- * @version $Id$
+ * @version $Id: EntityReferenceImpl.java 447266 2006-09-18 05:57:49Z mrglavas $
  * @since  PR-DOM-Level-1-19980818.
  */
 public class EntityReferenceImpl 

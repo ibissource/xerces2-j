@@ -43,7 +43,7 @@ import org.w3c.dom.NodeList;
  * - How to attach user defined Objects to Nodes using method setUserData
  * This example relies on the following:
  * - Turning off the "fast" DOM so we can use set expansion to FULL 
- * @version $Id$
+ * @version $Id: DOMAddLines.java 447683 2006-09-19 02:36:31Z mrglavas $
  */
 
 public class DOMAddLines extends DOMParser  {

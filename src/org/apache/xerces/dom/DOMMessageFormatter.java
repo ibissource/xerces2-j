@@ -27,7 +27,7 @@ import java.util.ResourceBundle;
  * @xerces.internal
  *
  * @author Sandy Gao, IBM
- * @version $Id$
+ * @version $Id: DOMMessageFormatter.java 813089 2009-09-09 19:40:36Z mrglavas $
  */
 public class DOMMessageFormatter {
     

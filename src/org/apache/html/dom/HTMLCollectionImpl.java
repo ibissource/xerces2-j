@@ -56,7 +56,7 @@ import org.w3c.dom.html.HTMLTableSectionElement;
  * 
  * @xerces.internal
  * 
- * @version $Revision$ $Date$
+ * @version $Revision: 1035043 $ $Date: 2010-11-15 00:12:11 +0530 (Mon, 15 Nov 2010) $
  * @author <a href="mailto:arkin@exoffice.com">Assaf Arkin</a>
  * @see org.w3c.dom.html.HTMLCollection
  */

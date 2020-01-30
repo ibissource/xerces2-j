@@ -36,7 +36,7 @@ import org.apache.xerces.xni.QName;
  * 
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: DFAContentModel.java 572057 2007-09-02 18:03:20Z mrglavas $
  */
 public class DFAContentModel
     implements ContentModelValidator {

@@ -28,7 +28,7 @@ import org.w3c.dom.Node;
  * 
  * @author Rahul Srivastava, Sun Microsystems Inc.
  *
- * @version $Id$
+ * @version $Id: NamedNodeMapImpl.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class NamedNodeMapImpl implements NamedNodeMap {
 

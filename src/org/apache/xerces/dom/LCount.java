@@ -37,7 +37,7 @@ package org.apache.xerces.dom;
 /**
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: LCount.java 447266 2006-09-18 05:57:49Z mrglavas $
  */
 
 class LCount 

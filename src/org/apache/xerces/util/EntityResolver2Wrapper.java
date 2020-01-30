@@ -36,7 +36,7 @@ import org.xml.sax.ext.EntityResolver2;
  * 
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: EntityResolver2Wrapper.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class EntityResolver2Wrapper 
     implements ExternalSubsetResolver {

@@ -31,7 +31,7 @@ import javax.xml.stream.events.EndElement;
  * 
  * @author Lucian Holland
  *
- * @version $Id$
+ * @version $Id: EndElementImpl.java 730798 2009-01-02 17:37:02Z mrglavas $
  */
 public final class EndElementImpl extends ElementImpl implements EndElement {
 

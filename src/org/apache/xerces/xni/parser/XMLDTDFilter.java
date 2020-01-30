@@ -25,7 +25,7 @@ import org.apache.xerces.xni.XMLDTDHandler;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: XMLDTDFilter.java 447244 2006-09-18 05:20:40Z mrglavas $
  */
 public interface XMLDTDFilter 
     extends XMLDTDHandler, XMLDTDSource {

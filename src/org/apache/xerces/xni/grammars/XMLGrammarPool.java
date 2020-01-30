@@ -39,7 +39,7 @@ package org.apache.xerces.xni.grammars;
  * it may return some grammars that were retrieved from the GrammarPool in earlier operations). </li> </ul> </p>
  *
  * @author Neil Graham, IBM
- * @version $Id$
+ * @version $Id: XMLGrammarPool.java 447245 2006-09-18 05:22:10Z mrglavas $
  */
 
 public interface XMLGrammarPool {

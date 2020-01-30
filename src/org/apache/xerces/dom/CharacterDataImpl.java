@@ -35,7 +35,7 @@ import org.w3c.dom.NodeList;
  * 
  * @xerces.internal 
  *
- * @version $Id$
+ * @version $Id: CharacterDataImpl.java 1057477 2011-01-11 03:32:03Z mrglavas $
  * @since  PR-DOM-Level-1-19980818.
  */
 public abstract class CharacterDataImpl

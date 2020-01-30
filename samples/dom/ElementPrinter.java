@@ -31,7 +31,7 @@ import org.w3c.dom.ElementTraversal;
  * 
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: ElementPrinter.java 950354 2010-06-02 03:35:24Z mrglavas $
  */
 public class ElementPrinter {
     

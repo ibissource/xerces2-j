@@ -27,7 +27,7 @@ import org.apache.xerces.xni.parser.XMLComponentManager;
  * @xerces.internal
  *
  * @author Neil Graham
- * @version $Id$
+ * @version $Id: XML11DTDValidator.java 446755 2006-09-15 21:56:27Z mrglavas $
  */
 public class XML11DTDValidator extends XMLDTDValidator {
 

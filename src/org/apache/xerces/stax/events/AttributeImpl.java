@@ -30,7 +30,7 @@ import javax.xml.stream.events.Attribute;
  * 
  * @author Lucian Holland
  * 
- * @version $Id$
+ * @version $Id: AttributeImpl.java 730472 2008-12-31 20:45:51Z mrglavas $
  */
 public class AttributeImpl extends XMLEventImpl implements Attribute {
 

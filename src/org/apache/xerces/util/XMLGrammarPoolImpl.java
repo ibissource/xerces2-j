@@ -35,7 +35,7 @@ import org.apache.xerces.xni.grammars.XMLGrammarPool;
  * @author Pavani Mukthipudi, Sun Microsystems
  * @author Neeraj Bajaj, SUN Microsystems
  *
- * @version $Id$
+ * @version $Id: XMLGrammarPoolImpl.java 447241 2006-09-18 05:12:57Z mrglavas $
  */
 public class XMLGrammarPoolImpl implements XMLGrammarPool {
 

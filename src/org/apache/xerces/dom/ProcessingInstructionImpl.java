@@ -29,7 +29,7 @@ import org.w3c.dom.ProcessingInstruction;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: ProcessingInstructionImpl.java 890195 2009-12-14 06:33:43Z mrglavas $
  * @since  PR-DOM-Level-1-19980818.
  */
 public class ProcessingInstructionImpl

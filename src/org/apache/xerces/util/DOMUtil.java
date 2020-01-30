@@ -39,7 +39,7 @@ import org.w3c.dom.ls.LSException;
  * (such as a DTM), we should easily be able to convert our schema
  * parsing to utilize it.
  *
- * @version $Id$
+ * @version $Id: DOMUtil.java 1163737 2011-08-31 18:38:10Z knoaman $
  */
 public class DOMUtil {
     
@@ -803,6 +803,12 @@ public class DOMUtil {
     // with the given name
     public static String getAttrValue(Element elem, String name) {
         return elem.getAttribute(name);
+    } // getAttr(Element, String):Attr
+    
+    // return the value of the attribute of the given element
+    // with the given name
+    public static String getAttrValueTrimmed(Element elem, String name) {
+        return XMLChar.trim(elem.getAttribute(name));
     } // getAttr(Element, String):Attr
     
     // return the value of the attribute of the given element

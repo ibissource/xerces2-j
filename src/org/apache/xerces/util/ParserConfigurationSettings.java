@@ -37,7 +37,7 @@ import org.apache.xerces.xni.parser.XMLConfigurationException;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: ParserConfigurationSettings.java 447241 2006-09-18 05:12:57Z mrglavas $
  */
 public class ParserConfigurationSettings
     implements XMLComponentManager {

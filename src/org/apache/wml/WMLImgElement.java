@@ -25,7 +25,7 @@ package org.apache.wml;
  * <p>'img' specifies an image in a text flow
  * (Section 11.9, WAP WML Version 16-Jun-1999)</p>
  *
- * @version $Id$
+ * @version $Id: WMLImgElement.java 447258 2006-09-18 05:41:23Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 public interface WMLImgElement extends WMLElement {

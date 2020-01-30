@@ -22,7 +22,7 @@ import org.apache.xerces.xni.QName;
 /**
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: XMLAttributeDecl.java 446755 2006-09-15 21:56:27Z mrglavas $
  */
 public class XMLAttributeDecl {
 

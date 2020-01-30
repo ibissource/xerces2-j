@@ -23,7 +23,7 @@ import org.apache.xerces.util.SymbolTable;
 import org.apache.xerces.xni.parser.XMLParserConfiguration;
 
 /**
- * @version $Id$
+ * @version $Id: XMLGrammarParser.java 447239 2006-09-18 05:08:26Z mrglavas $
  */
 public abstract class XMLGrammarParser
     extends XMLParser {

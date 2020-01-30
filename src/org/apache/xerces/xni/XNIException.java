@@ -29,7 +29,7 @@ package org.apache.xerces.xni;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: XNIException.java 766580 2009-04-20 05:32:20Z mrglavas $
  */
 public class XNIException 
     extends RuntimeException {

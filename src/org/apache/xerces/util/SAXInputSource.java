@@ -27,7 +27,7 @@ import org.xml.sax.XMLReader;
 /**
  * <p>An <code>XMLInputSource</code> analogue to <code>javax.xml.transform.sax.SAXSource</code>.</p>
  * 
- * @version $Id$
+ * @version $Id: SAXInputSource.java 447241 2006-09-18 05:12:57Z mrglavas $
  */
 public final class SAXInputSource extends XMLInputSource {
     

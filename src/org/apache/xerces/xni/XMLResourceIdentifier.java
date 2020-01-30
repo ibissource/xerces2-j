@@ -22,7 +22,7 @@ package org.apache.xerces.xni;
  * XML resource (a Schema grammar, a DTD, a general entity etc.) </p>
  *
  * @author Neil Graham, IBM
- * @version $Id$
+ * @version $Id: XMLResourceIdentifier.java 570132 2007-08-27 14:12:43Z mrglavas $
  */
 
 public interface XMLResourceIdentifier {

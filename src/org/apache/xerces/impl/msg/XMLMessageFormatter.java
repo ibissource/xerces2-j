@@ -30,7 +30,7 @@ import org.apache.xerces.util.MessageFormatter;
  * @xerces.internal
  *
  * @author Eric Ye, IBM
- * @version $Id$
+ * @version $Id: XMLMessageFormatter.java 813089 2009-09-09 19:40:36Z mrglavas $
  *
  */
 public class XMLMessageFormatter implements MessageFormatter {

@@ -23,7 +23,7 @@ package org.apache.xerces.parsers;
  *
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: XML11Configurable.java 447239 2006-09-18 05:08:26Z mrglavas $
  */
 public interface XML11Configurable {}
 

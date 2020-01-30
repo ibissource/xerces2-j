@@ -21,7 +21,7 @@ package org.apache.xerces.xni.grammars;
  * All information specific to DTD grammars.  
  * 
  * @author Sandy Gao, IBM
- * @version $Id$
+ * @version $Id: XMLDTDDescription.java 447245 2006-09-18 05:22:10Z mrglavas $
  */
 public interface XMLDTDDescription extends XMLGrammarDescription {
 

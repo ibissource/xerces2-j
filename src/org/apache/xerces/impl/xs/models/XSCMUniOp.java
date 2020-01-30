@@ -28,7 +28,7 @@ import org.apache.xerces.impl.xs.XSParticleDecl;
  * @xerces.internal 
  *
  * @author Neil Graham, IBM
- * @version $Id$
+ * @version $Id: XSCMUniOp.java 476309 2006-11-17 20:49:31Z mrglavas $
  */
 public class XSCMUniOp extends CMNode {
     // -------------------------------------------------------------------

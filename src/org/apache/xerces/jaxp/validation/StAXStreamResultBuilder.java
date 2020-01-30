@@ -44,7 +44,7 @@ import org.apache.xerces.xni.parser.XMLDocumentSource;
  * <p>StAX stream result builder.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: StAXStreamResultBuilder.java 699764 2008-09-28 02:59:14Z mrglavas $
  */
 final class StAXStreamResultBuilder implements StAXDocumentHandler {
     

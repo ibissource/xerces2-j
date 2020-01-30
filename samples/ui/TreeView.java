@@ -74,7 +74,7 @@ import org.xml.sax.SAXParseException;
  * A sample DOM Tree Viewer. This sample program illustrates how to
  * traverse a DOM tree and display it in a Swing JTree View.
  *
- * @version $Id$
+ * @version $Id: TreeView.java 778249 2009-05-24 22:39:58Z mrglavas $
  */
 public class TreeView extends JFrame implements ActionListener, TextListener {
 

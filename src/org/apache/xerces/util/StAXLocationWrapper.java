@@ -27,7 +27,7 @@ import org.apache.xerces.xni.XMLLocator;
  * 
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: StAXLocationWrapper.java 683681 2008-08-07 19:16:36Z mrglavas $
  */
 public final class StAXLocationWrapper implements XMLLocator {
 

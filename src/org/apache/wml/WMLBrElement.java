@@ -24,7 +24,7 @@ package org.apache.wml;
  *
  * <p>'br' element starts a new line</p>
  *
- * @version $Id$
+ * @version $Id: WMLBrElement.java 447258 2006-09-18 05:41:23Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 

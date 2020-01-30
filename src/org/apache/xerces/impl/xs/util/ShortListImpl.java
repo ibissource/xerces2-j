@@ -29,7 +29,7 @@ import org.apache.xerces.xs.XSException;
  *
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: ShortListImpl.java 725841 2008-12-11 22:19:31Z mrglavas $
  */
 public final class ShortListImpl extends AbstractList implements ShortList {
 

@@ -23,7 +23,7 @@ package org.apache.xerces.impl.dtd.models;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: CMAny.java 572057 2007-09-02 18:03:20Z mrglavas $
  */
 public class CMAny
     extends CMNode {

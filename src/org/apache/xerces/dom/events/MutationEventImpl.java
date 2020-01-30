@@ -25,7 +25,7 @@ import org.w3c.dom.events.MutationEvent;
  * 
  * @xerces.internal 
  * 
- * @version $Id$
+ * @version $Id: MutationEventImpl.java 533531 2007-04-29 17:24:58Z mrglavas $
  */
 public class MutationEventImpl 
     extends EventImpl 

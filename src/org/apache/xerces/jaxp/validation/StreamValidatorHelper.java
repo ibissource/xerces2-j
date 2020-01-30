@@ -47,7 +47,7 @@ import org.xml.sax.SAXException;
  * <p>A validator helper for <code>StreamSource</code>s.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: StreamValidatorHelper.java 933583 2010-04-13 12:39:36Z mrglavas $
  */
 final class StreamValidatorHelper implements ValidatorHelper {
     

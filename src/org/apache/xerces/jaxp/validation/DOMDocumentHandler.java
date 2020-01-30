@@ -31,7 +31,7 @@ import org.w3c.dom.Text;
  * <p>An extension to XMLDocumentHandler for building DOM structures.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: DOMDocumentHandler.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 interface DOMDocumentHandler extends XMLDocumentHandler {
     

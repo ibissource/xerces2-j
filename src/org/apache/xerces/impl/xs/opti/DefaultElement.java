@@ -29,7 +29,7 @@ import org.w3c.dom.TypeInfo;
  * 
  * @author Rahul Srivastava, Sun Microsystems Inc.
  *
- * @version $Id$
+ * @version $Id: DefaultElement.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class DefaultElement extends NodeImpl 
                             implements Element {

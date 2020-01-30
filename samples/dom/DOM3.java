@@ -36,7 +36,7 @@ import org.w3c.dom.traversal.NodeFilter;
  * DOMBuilder, DOMBuilderFilter DOMWriter and other DOM L3 functionality
  * to preparse, revalidate and safe document.
  * 
- * @version $Id$
+ * @version $Id: DOM3.java 950356 2010-06-02 03:43:43Z mrglavas $
  */
 public class DOM3 implements DOMErrorHandler, LSParserFilter {
 

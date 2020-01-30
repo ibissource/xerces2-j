@@ -22,7 +22,7 @@ import org.apache.xerces.impl.dv.DatatypeValidator;
 /**
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: XMLSimpleType.java 446755 2006-09-15 21:56:27Z mrglavas $
  */
 public class XMLSimpleType {
 

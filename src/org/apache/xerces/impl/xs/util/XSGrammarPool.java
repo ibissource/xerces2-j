@@ -32,10 +32,10 @@ import org.apache.xerces.xs.XSModel;
  * 
  * @xerces.internal  
  * 
- * @version $Id$
+ * @version $Id: XSGrammarPool.java 770964 2009-05-02 15:28:25Z mrglavas $
  */
 public class XSGrammarPool extends XMLGrammarPoolImpl {
-
+    
     /**
      * Return an <code>XSModel</code> that represents components in
      * the schema grammars in this pool implementation.
@@ -43,7 +43,7 @@ public class XSGrammarPool extends XMLGrammarPoolImpl {
      * @return  an <code>XSModel</code> representing this schema grammar
      */
     public XSModel toXSModel() {
-    	return toXSModel(Constants.SCHEMA_VERSION_1_0);
+        return toXSModel(Constants.SCHEMA_VERSION_1_0);
     }
     
     public XSModel toXSModel(short schemaVersion) {

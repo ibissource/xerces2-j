@@ -27,7 +27,7 @@ package org.apache.xerces.impl;
  *
  * @author Neil Graham, IBM
  *
- * @version $Id$
+ * @version $Id: XML11NamespaceBinder.java 446761 2006-09-15 21:59:29Z mrglavas $
  */
 public class XML11NamespaceBinder extends XMLNamespaceBinder {
 

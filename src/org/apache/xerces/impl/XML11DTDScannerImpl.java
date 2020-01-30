@@ -49,7 +49,7 @@ import org.apache.xerces.xni.XNIException;
  * @author Glenn Marcy, IBM
  * @author Eric Ye, IBM
  *
- * @version $Id$
+ * @version $Id: XML11DTDScannerImpl.java 572055 2007-09-02 17:55:43Z mrglavas $
  */
 public class XML11DTDScannerImpl
     extends XMLDTDScannerImpl {

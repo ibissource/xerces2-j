@@ -40,7 +40,7 @@ import java.io.Writer;
  * that new applications use the DOM Level 3 LSSerializer or JAXP's Transformation 
  * API for XML (TrAX) for serializing XML. See the Xerces documentation for more 
  * information.
- * @version $Revision$ $Date$
+ * @version $Revision: 699902 $ $Date: 2008-09-29 03:10:49 +0530 (Mon, 29 Sep 2008) $
  * @author <a href="mailto:arkin@intalio.com">Assaf Arkin</a>
  */
 public class Printer

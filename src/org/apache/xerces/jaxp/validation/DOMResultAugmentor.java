@@ -54,7 +54,7 @@ import org.w3c.dom.Text;
  * <p>DOM result augmentor.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: DOMResultAugmentor.java 542522 2007-05-29 13:59:56Z mrglavas $
  */
 final class DOMResultAugmentor implements DOMDocumentHandler {
 

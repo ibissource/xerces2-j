@@ -25,7 +25,7 @@ package org.apache.wml;
  * <p>'small' render the text with small font
  * (Section 11.8.1, WAP WML Version 16-Jun-1999)</p>
  *
- * @version $Id$
+ * @version $Id: WMLSmallElement.java 450517 2006-09-27 17:48:28Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 public interface WMLSmallElement extends WMLElement {

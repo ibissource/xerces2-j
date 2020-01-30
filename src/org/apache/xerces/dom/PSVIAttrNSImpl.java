@@ -41,7 +41,7 @@ import org.apache.xerces.xs.XSValue;
  * 
  * @author Sandy Gao, IBM
  * 
- * @version $Id$
+ * @version $Id: PSVIAttrNSImpl.java 1065754 2011-01-31 20:31:18Z mrglavas $
  */
 public class PSVIAttrNSImpl extends AttrNSImpl implements AttributePSVI {
 

@@ -24,7 +24,7 @@ import org.xml.sax.Attributes;
  * than the attribute list helper supplied with the standard SAX2
  * distribution.
  * 
- * @version $Id$
+ * @version $Id: AttributesImpl.java 950356 2010-06-02 03:43:43Z mrglavas $
  */
 public class AttributesImpl
     implements Attributes {

@@ -41,7 +41,7 @@ import org.apache.xerces.xni.XNIException;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: XMLPullParserConfiguration.java 447244 2006-09-18 05:20:40Z mrglavas $
  */
 public interface XMLPullParserConfiguration
     extends XMLParserConfiguration {

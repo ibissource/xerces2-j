@@ -35,7 +35,7 @@ import org.apache.xerces.xni.XNIException;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: UpperCaseFilter.java 1358671 2012-07-07 23:12:17Z mrglavas $
  */
 public class UpperCaseFilter
     extends PassThroughFilter {

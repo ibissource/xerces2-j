@@ -38,7 +38,7 @@ import org.w3c.dom.Node;
  *
  * @author Neil Graham, IBM
  *
- * @version $Id$
+ * @version $Id: SchemaNamespaceSupport.java 446734 2006-09-15 20:51:23Z mrglavas $
  */
 public class SchemaNamespaceSupport 
     extends NamespaceSupport {

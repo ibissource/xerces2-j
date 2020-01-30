@@ -53,7 +53,7 @@ import org.w3c.dom.TypeInfo;
  * @author Andy Clark, IBM
  * @author Ralf Pfeiffer, IBM
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: ElementImpl.java 938636 2010-04-27 20:24:07Z mrglavas $
  * @since  PR-DOM-Level-1-19980818.
  */
 public class ElementImpl

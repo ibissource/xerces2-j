@@ -61,7 +61,7 @@ import ui.DOMTreeFull;
  * which allow the user to create and view the progress of a TreeWalker
  * in the DOM tree.
  * 
- * @version $Id$
+ * @version $Id: TreeWalkerView.java 950356 2010-06-02 03:43:43Z mrglavas $
  */
 public class TreeWalkerView 
     extends JFrame 

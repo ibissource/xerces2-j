@@ -22,7 +22,7 @@ package org.apache.xerces.impl.xs.opti;
  * 
  * @author Rahul Srivastava, Sun Microsystems Inc.
  *
- * @version $Id$
+ * @version $Id: NodeImpl.java 705597 2008-10-17 13:05:37Z mrglavas $
  */
 public class NodeImpl extends DefaultNode {
     

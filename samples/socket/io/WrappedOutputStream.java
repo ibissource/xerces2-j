@@ -49,7 +49,7 @@ import java.io.OutputStream;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: WrappedOutputStream.java 447688 2006-09-19 02:39:49Z mrglavas $
  */
 public class WrappedOutputStream
     extends FilterOutputStream {

@@ -29,7 +29,7 @@ import org.apache.xerces.util.MessageFormatter;
  * 
  * @author Peter McCracken, IBM
  * 
- * @version $Id$
+ * @version $Id: XIncludeMessageFormatter.java 813089 2009-09-09 19:40:36Z mrglavas $
  */
 public class XIncludeMessageFormatter implements MessageFormatter {
     

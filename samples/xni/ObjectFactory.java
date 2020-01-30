@@ -40,7 +40,7 @@ import java.util.Properties;
  * class and modified to be used as a general utility for creating objects
  * dynamically.
  *
- * @version $Id$
+ * @version $Id: ObjectFactory.java 1391590 2012-09-28 18:40:58Z mrglavas $
  */
 final class ObjectFactory {
 

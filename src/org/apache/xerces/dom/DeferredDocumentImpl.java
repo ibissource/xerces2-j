@@ -37,7 +37,7 @@ import org.w3c.dom.Node;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: DeferredDocumentImpl.java 965321 2010-07-18 23:26:25Z mrglavas $
  * @since  PR-DOM-Level-1-19980818.
  */
 public class DeferredDocumentImpl

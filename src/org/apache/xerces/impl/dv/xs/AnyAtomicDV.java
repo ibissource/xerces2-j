@@ -27,14 +27,10 @@ import org.apache.xerces.impl.dv.ValidationContext;
  *
  * @author Ankit Pasricha, IBM
  * 
- * @version $Id$
+ * @version $Id: AnyAtomicDV.java 885800 2009-12-01 15:37:29Z knoaman $
  */
 class AnyAtomicDV extends TypeValidator {
-    
-    public short getAllowedFacets() {
-        return 0;
-    }
-    
+
     public Object getActualValue(String content, ValidationContext context) throws InvalidDatatypeValueException {
         return content;
     }

@@ -34,7 +34,7 @@ import org.w3c.dom.ls.LSSerializer;
  * - Generates a DOM from scratch.
  * - Writes the DOM to a String using an LSSerializer
  * @author Jeffrey Rodriguez
- * @version $Id$
+ * @version $Id: DOMGenerate.java 546623 2007-06-12 20:25:08Z mrglavas $
  */
 public class DOMGenerate {
     

@@ -55,7 +55,7 @@ import org.apache.xerces.xni.XNIException;
  *
  * @author Elena Litani, IBM
  *
- * @version $Id$
+ * @version $Id: XMLNSDTDValidator.java 572055 2007-09-02 17:55:43Z mrglavas $
  */
 public class XMLNSDTDValidator
               extends XMLDTDValidator{

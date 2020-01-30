@@ -33,10 +33,10 @@ import org.apache.xerces.xs.XSObjectList;
  *
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: XSObjectListImpl.java 776080 2009-05-18 20:22:50Z mrglavas $
  */
 public class XSObjectListImpl extends AbstractList implements XSObjectList {
-    
+
     /**
      * An immutable empty list.
      */

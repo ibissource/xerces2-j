@@ -41,7 +41,7 @@ import org.w3c.dom.ls.LSInput;
  * @deprecated
  * @author Pavani Mukthipudi, Sun Microsystems Inc.
  * @author Neil Graham, IBM
- * @version $Id$
+ * @version $Id: DOMASBuilderImpl.java 447239 2006-09-18 05:08:26Z mrglavas $
  *
  */
 

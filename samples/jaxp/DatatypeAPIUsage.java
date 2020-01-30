@@ -26,7 +26,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 /**
  * <p>A sample which demonstrates usage of the JAXP 1.3 Datatype API.</p>
  * 
- * @version $Id$
+ * @version $Id: DatatypeAPIUsage.java 447685 2006-09-19 02:37:49Z mrglavas $
  */
 public class DatatypeAPIUsage {
     

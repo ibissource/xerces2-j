@@ -29,7 +29,7 @@ import javax.xml.stream.events.NotationDeclaration;
  * 
  * @author Lucian Holland
  *
- * @version $Id$
+ * @version $Id: NotationDeclarationImpl.java 730472 2008-12-31 20:45:51Z mrglavas $
  */
 public final class NotationDeclarationImpl extends XMLEventImpl implements
         NotationDeclaration {

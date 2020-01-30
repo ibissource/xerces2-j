@@ -26,7 +26,7 @@ import org.apache.xerces.xni.grammars.XMLGrammarPool;
  * contains schema components from one target namespace.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: SimpleXMLSchema.java 598686 2007-11-27 16:49:14Z knoaman $
  */
 final class SimpleXMLSchema extends AbstractXMLSchema implements XMLGrammarPool {
     
@@ -37,7 +37,8 @@ final class SimpleXMLSchema extends AbstractXMLSchema implements XMLGrammarPool 
     private final Grammar[] fGrammars;
     private final XMLGrammarDescription fGrammarDescription;
     
-    public SimpleXMLSchema(Grammar grammar) {
+    public SimpleXMLSchema(Grammar grammar, String xsdVersion) {
+        super(xsdVersion);
         fGrammar = grammar;
         fGrammars = new Grammar[] {grammar};
         fGrammarDescription = grammar.getGrammarDescription();

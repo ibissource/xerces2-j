@@ -60,7 +60,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  * @author Neil Graham, IBM
  * @author Michael Glavassevich, IBM
  *
- * @version $Id$
+ * @version $Id: XMLDTDLoader.java 1375057 2012-08-20 15:26:19Z mrglavas $
  */
 public class XMLDTDLoader
         extends XMLDTDProcessor 

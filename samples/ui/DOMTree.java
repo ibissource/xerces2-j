@@ -34,7 +34,7 @@ import org.w3c.dom.NodeList;
  * Displays a DOM document in a tree control.
  *
  * @author  Andy Clark, IBM
- * @version $Id$
+ * @version $Id: DOMTree.java 447689 2006-09-19 02:40:36Z mrglavas $
  */
 public class DOMTree
     extends JTree 

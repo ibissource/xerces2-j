@@ -27,7 +27,7 @@ import java.util.Vector;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: RegexParser.java 1210650 2011-12-05 21:34:37Z sandygao $
  */
 class RegexParser {
     static final int T_CHAR = 0;
@@ -805,7 +805,14 @@ class RegexParser {
               case 'p':
                 int pstart = this.offset;
                 tok = processBacksolidus_pP(this.chardata);
-                if (tok == null)  throw this.ex("parser.atom.5", pstart);
+                if (tok == null) {
+                    if (this.isSet(RegularExpression.ALLOW_UNRECOGNIZED_BLOCK_NAME)) {
+                        tok = Token.token_all;
+                    }
+                    else {
+                        throw this.ex("parser.atom.5", pstart);
+                    }
+                }
                 break;
 
               default:
@@ -912,7 +919,14 @@ class RegexParser {
                   case 'P':
                     int pstart = this.offset;
                     RangeToken tok2 = this.processBacksolidus_pP(c);
-                    if (tok2 == null)  throw this.ex("parser.atom.5", pstart);
+                    if (tok2 == null) {
+                        if (this.isSet(RegularExpression.ALLOW_UNRECOGNIZED_BLOCK_NAME)) {
+                            tok2 = Token.token_all;
+                        }
+                        else {
+                            throw this.ex("parser.atom.5", pstart);
+                        }
+                    }
                     tok.mergeRanges(tok2);
                     end = true;
                     break;

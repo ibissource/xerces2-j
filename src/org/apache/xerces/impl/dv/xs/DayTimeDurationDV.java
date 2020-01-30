@@ -32,7 +32,7 @@ import org.apache.xerces.impl.dv.ValidationContext;
  * 
  * @author Ankit Pasricha, IBM
  * 
- * @version $Id$
+ * @version $Id: DayTimeDurationDV.java 937742 2010-04-25 04:26:18Z mrglavas $
  */
 class DayTimeDurationDV extends DurationDV {
     

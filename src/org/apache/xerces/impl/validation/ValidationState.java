@@ -20,9 +20,13 @@ package org.apache.xerces.impl.validation;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.Locale;
 
+import org.apache.xerces.impl.Constants;
 import org.apache.xerces.impl.dv.ValidationContext;
+import org.apache.xerces.impl.dv.xs.TypeValidatorHelper;
 import org.apache.xerces.util.SymbolTable;
 import org.apache.xerces.xni.NamespaceContext;
 
@@ -33,7 +37,7 @@ import org.apache.xerces.xni.NamespaceContext;
  * @xerces.internal
  *
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: ValidationState.java 1380447 2012-09-04 04:46:01Z mrglavas $
  */
 public class ValidationState implements ValidationContext {
 
@@ -52,8 +56,11 @@ public class ValidationState implements ValidationContext {
 
     //REVISIT: Should replace with a lighter structure.
     private final HashMap fIdTable    = new HashMap();
-    private final HashMap fIdRefTable = new HashMap();
+    private final LinkedHashMap fIdRefTable = new LinkedHashMap();
     private final static Object fNullValue = new Object();
+    
+    private TypeValidatorHelper fTypeValidatorHelper = null;
+    private short fXMLVersion = Constants.XML_VERSION_1_0;
 
     //
     // public methods
@@ -92,14 +99,14 @@ public class ValidationState implements ValidationContext {
      * a matching ID value.
      */
     public Iterator checkIDRefID() {
-        HashSet missingIDs = null;
+        LinkedHashSet missingIDs = null;
         Iterator iter = fIdRefTable.keySet().iterator();
         String key;
         while (iter.hasNext()) {
             key = (String) iter.next();
-            if (!fIdTable.containsKey(key)) {
+            if (!containsID(key)) {
                 if (missingIDs == null) {
-                    missingIDs = new HashSet();
+                    missingIDs = new LinkedHashSet();
                 }
                 missingIDs.add(key);
             }
@@ -107,6 +114,9 @@ public class ValidationState implements ValidationContext {
         return (missingIDs != null) ? missingIDs.iterator() : null;
     }
 
+    protected boolean containsID(String name) {
+        return fIdTable.containsKey(name);
+    }
     public void reset () {
         fExtraChecking = true;
         fFacetChecking = true;
@@ -204,5 +214,24 @@ public class ValidationState implements ValidationContext {
     
     public Locale getLocale() {
         return fLocale;
+    }
+    
+    // TypeValidatorHelper
+    
+    public void setTypeValidatorHelper(TypeValidatorHelper typeValidatorHelper) {
+        fTypeValidatorHelper = typeValidatorHelper;
+    }
+
+    public TypeValidatorHelper getTypeValidatorHelper() {
+        return fTypeValidatorHelper;
+    }
+    
+    // Datatype XML Version
+    public void setDatatypeXMLVersion(short xmlVersion) {
+        fXMLVersion = xmlVersion;
+    }
+    
+    public short getDatatypeXMLVersion() {
+        return fXMLVersion;
     }
 }

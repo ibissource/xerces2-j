@@ -17,7 +17,7 @@
 
 package org.apache.xerces.impl.xs;
 
-import org.apache.xerces.impl.dv.xs.SchemaDVFactoryImpl;
+import org.apache.xerces.impl.dv.xs.BaseSchemaDVFactory;
 import org.apache.xerces.impl.dv.xs.XSSimpleTypeDecl;
 
 /**
@@ -30,7 +30,7 @@ import org.apache.xerces.impl.dv.xs.XSSimpleTypeDecl;
  * @xerces.internal 
  * 
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: XSDeclarationPool.java 884565 2009-11-26 14:28:33Z knoaman $
  */
 public final class XSDeclarationPool {
     /** Chunk shift (8). */
@@ -73,8 +73,8 @@ public final class XSDeclarationPool {
     private XSAttributeUseImpl fAttributeUse[][] = new XSAttributeUseImpl[INITIAL_CHUNK_COUNT][];
     private int fAttributeUseIndex = 0;
     
-    private SchemaDVFactoryImpl dvFactory;
-    public void setDVFactory(SchemaDVFactoryImpl dvFactory) {
+    private BaseSchemaDVFactory dvFactory;
+    public void setDVFactory(BaseSchemaDVFactory dvFactory) {
         this.dvFactory = dvFactory;
     }
 

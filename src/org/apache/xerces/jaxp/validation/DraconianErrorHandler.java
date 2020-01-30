@@ -25,7 +25,7 @@ import org.xml.sax.SAXParseException;
  * {@link ErrorHandler} that throws all errors and fatal errors.
  * 
  * @author Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
- * @version $Id$
+ * @version $Id: DraconianErrorHandler.java 447235 2006-09-18 05:01:44Z mrglavas $
  */
 final class DraconianErrorHandler implements ErrorHandler {
 

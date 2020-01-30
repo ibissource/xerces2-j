@@ -80,7 +80,7 @@ import org.apache.xerces.xni.parser.XMLPullParserConfiguration;
  * @author Andy Clark, IBM
  * @author Neil Graham, IBM
  *
- * @version $Id$
+ * @version $Id: DTDConfiguration.java 713640 2008-11-13 04:46:23Z mrglavas $
  */
 public class DTDConfiguration
     extends BasicParserConfiguration 

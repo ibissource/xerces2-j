@@ -20,7 +20,7 @@ import org.apache.wml.WMLEmElement;
 
 /**
  * @xerces.internal
- * @version $Id$
+ * @version $Id: WMLEmElementImpl.java 665720 2008-06-09 15:28:43Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 public class WMLEmElementImpl extends WMLElementImpl implements WMLEmElement {

@@ -25,7 +25,7 @@ package org.apache.wml;
  * <p>'optgroup' element groups related 'option' elements into a
  * hierarchy. (Section 11.6.2.2, WAP WML Version 16-Jun-1999)</p>
  *
- * @version $Id$
+ * @version $Id: WMLOptgroupElement.java 447258 2006-09-18 05:41:23Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 

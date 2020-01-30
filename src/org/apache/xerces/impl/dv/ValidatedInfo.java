@@ -33,7 +33,7 @@ import org.apache.xerces.xs.XSValue;
  *
  * @author Neeraj Bajaj, Sun Microsystems, inc.
  *
- * @version $Id$
+ * @version $Id: ValidatedInfo.java 1026364 2010-10-22 15:17:23Z sandygao $
  */
 public class ValidatedInfo implements XSValue {
 

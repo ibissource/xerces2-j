@@ -21,7 +21,7 @@ import org.w3c.dom.ranges.RangeException;
 /**
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: RangeExceptionImpl.java 447266 2006-09-18 05:57:49Z mrglavas $
  */
 
 public class RangeExceptionImpl extends RangeException {

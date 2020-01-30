@@ -28,7 +28,7 @@ import org.w3c.dom.traversal.TreeWalker;
  *
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: TreeWalkerImpl.java 536630 2007-05-09 19:37:05Z mrglavas $
  */
 public class TreeWalkerImpl implements TreeWalker {
     

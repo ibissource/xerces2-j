@@ -31,7 +31,7 @@ import org.w3c.dom.DocumentType;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: PSVIDOMImplementationImpl.java 809737 2009-08-31 20:43:36Z mrglavas $
  * @since  PR-DOM-Level-1-19980818.
  */
 public class PSVIDOMImplementationImpl extends DOMImplementationImpl {

@@ -29,7 +29,7 @@ package org.apache.xerces.xni;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: QName.java 447247 2006-09-18 05:23:52Z mrglavas $
  */
 public class QName 
     implements Cloneable {

@@ -28,7 +28,7 @@ import org.apache.xerces.util.SymbolHash;
  *
  * @author Khaled Noaman, IBM
  *
- * @version $Id$
+ * @version $Id: ExtendedSchemaDVFactoryImpl.java 791463 2009-07-06 12:32:30Z mukulg $
  */
 public class ExtendedSchemaDVFactoryImpl extends BaseSchemaDVFactory {
 
@@ -43,11 +43,15 @@ public class ExtendedSchemaDVFactoryImpl extends BaseSchemaDVFactory {
         final String DURATION          = "duration";
         final String YEARMONTHDURATION = "yearMonthDuration";
         final String DAYTIMEDURATION   = "dayTimeDuration";
+        final String ERROR             = "error";
 
     	createBuiltInTypes(fBuiltInTypes, XSSimpleTypeDecl.fAnyAtomicType);
 
         // add anyAtomicType
         fBuiltInTypes.put(ANYATOMICTYPE, XSSimpleTypeDecl.fAnyAtomicType);
+        
+        // add error
+        fBuiltInTypes.put(ERROR, XSSimpleTypeDecl.fError);
 
         // add 2 duration types
         XSSimpleTypeDecl durationDV = (XSSimpleTypeDecl)fBuiltInTypes.get(DURATION);

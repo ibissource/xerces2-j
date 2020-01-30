@@ -29,14 +29,16 @@ import org.apache.xerces.xni.grammars.XMLGrammarPool;
  * its memory.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: WeakReferenceXMLSchema.java 598686 2007-11-27 16:49:14Z knoaman $
  */
 final class WeakReferenceXMLSchema extends AbstractXMLSchema {
     
     /** Weak reference to grammar pool. */
     private WeakReference fGrammarPool = new WeakReference(null);
 
-    public WeakReferenceXMLSchema() {}
+    public WeakReferenceXMLSchema(String xsdVersion) {
+    	super(xsdVersion);
+    }
     
     /*
      * XSGrammarPoolContainer methods

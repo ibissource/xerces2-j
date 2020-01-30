@@ -38,7 +38,7 @@ import org.apache.xerces.xs.ShortList;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: ValueStore.java 730488 2008-12-31 21:58:19Z knoaman $
  */
 public interface ValueStore {
     
@@ -66,6 +66,17 @@ public interface ValueStore {
      * @param args  the list of arguments for substitution.
      */
     public void reportError(String key, Object[] args);
+    
+    /**
+     * Sets the name of the element which holds the identity constraint
+     * @param elemenName The name of the element which holds the identity constraint.
+     */
+    public void setElementName(String elementName);
+    
+    /** 
+     * @return the name of the element which holds the identity constraint that is stored in this value store
+     */
+    public String getElementName();
     
 
 } // interface ValueStore

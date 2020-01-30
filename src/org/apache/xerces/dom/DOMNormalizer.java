@@ -85,7 +85,7 @@ import org.w3c.dom.Text;
  * 
  * @author Elena Litani, IBM
  * @author Neeraj Bajaj, Sun Microsystems, inc.
- * @version $Id$
+ * @version $Id: DOMNormalizer.java 1710696 2015-10-26 20:49:13Z mrglavas $
  */
 public class DOMNormalizer implements XMLDocumentHandler {
 

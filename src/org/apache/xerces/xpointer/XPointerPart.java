@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.apache.xerces.xpointer;
 
 import org.apache.xerces.xni.Augmentations;
@@ -31,7 +30,7 @@ import org.apache.xerces.xni.XNIException;
  *
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: XPointerPart.java 449487 2006-09-24 21:11:28Z mrglavas $
  */
 public interface XPointerPart {
 

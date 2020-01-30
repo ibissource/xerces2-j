@@ -31,7 +31,7 @@ import javax.xml.stream.events.DTD;
  * 
  * @author Lucian Holland
  *
- * @version $Id$
+ * @version $Id: DTDImpl.java 730472 2008-12-31 20:45:51Z mrglavas $
  */
 public final class DTDImpl extends XMLEventImpl implements DTD {
 

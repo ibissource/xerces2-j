@@ -110,7 +110,7 @@ import org.apache.xerces.xpointer.XPointerProcessor;
  * @author Peter McCracken, IBM
  * @author Michael Glavassevich, IBM
  *
- * @version $Id$
+ * @version $Id: XIncludeHandler.java 778246 2009-05-24 22:28:02Z mrglavas $
  *
  * @see XIncludeNamespaceSupport
  */

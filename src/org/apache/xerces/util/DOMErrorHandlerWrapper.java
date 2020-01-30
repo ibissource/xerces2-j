@@ -37,7 +37,7 @@ import org.w3c.dom.Node;
  * @see DOMErrorHandler
  *
  * @author Gopal Sharma, SUN Microsystems Inc.
- * @version $Id$
+ * @version $Id: DOMErrorHandlerWrapper.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 
 // REVISIT: current implementations wraps error several times:

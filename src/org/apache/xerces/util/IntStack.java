@@ -24,7 +24,7 @@ package org.apache.xerces.util;
  * XPathMatcher.
  * @author  Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: IntStack.java 447241 2006-09-18 05:12:57Z mrglavas $
  */
 public final class IntStack {
 

@@ -106,7 +106,7 @@ import org.w3c.dom.TypeInfo;
  * @author Arnaud  Le Hors, IBM
  * @author Joe Kesselman, IBM
  * @author Andy Clark, IBM 
- * @version $Id$
+ * @version $Id: AttrImpl.java 924246 2010-03-17 11:58:49Z mrglavas $
  * @since PR-DOM-Level-1-19980818.
  *
  */

@@ -25,7 +25,7 @@ package org.apache.wml;
  * <p>'fieldset' element groups related fields and tet 
  * (Section 11.6.4, WAP WML Version 16-Jun-1999)</p>
  *
- * @version $Id$
+ * @version $Id: WMLFieldsetElement.java 447258 2006-09-18 05:41:23Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 public interface WMLFieldsetElement extends WMLElement {

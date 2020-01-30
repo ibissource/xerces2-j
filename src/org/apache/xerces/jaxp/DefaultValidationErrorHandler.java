@@ -22,7 +22,7 @@ import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
 /**
- * @version $Id$
+ * @version $Id: DefaultValidationErrorHandler.java 447237 2006-09-18 05:03:10Z mrglavas $
  */
 
 class DefaultValidationErrorHandler extends DefaultHandler {

@@ -28,7 +28,7 @@ import java.util.Hashtable;
  *
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: DTDDVFactory.java 558581 2007-07-23 01:38:26Z mrglavas $
  */
 public abstract class DTDDVFactory {
 

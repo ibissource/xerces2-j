@@ -25,7 +25,7 @@ import org.apache.xerces.xs.XSIDCDefinition;
  * @xerces.internal 
  *
  * @author Andy Clark, IBM
- * @version $Id$
+ * @version $Id: KeyRef.java 730488 2008-12-31 21:58:19Z knoaman $
  */
 public class KeyRef
     extends IdentityConstraint {
@@ -43,8 +43,8 @@ public class KeyRef
 
     /** Constructs a keyref with the specified name. */
     public KeyRef(String namespace, String identityConstraintName,
-                  String elemName, UniqueOrKey key) {
-        super(namespace, identityConstraintName, elemName);
+                  UniqueOrKey key) {
+        super(namespace, identityConstraintName);
         fKey = key;
         type = IC_KEYREF;
     } // <init>(String,String,String)

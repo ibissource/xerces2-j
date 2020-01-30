@@ -28,7 +28,7 @@ import org.apache.xerces.xs.XSTypeDefinition;
  *
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: XSNamedMap4Types.java 726360 2008-12-14 05:04:38Z mrglavas $
  */
 public final class XSNamedMap4Types extends XSNamedMapImpl {
 

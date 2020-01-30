@@ -38,7 +38,7 @@ import org.apache.xerces.xni.parser.XMLDocumentSource;
  * @author Rahul Srivastava, Sun Microsystems Inc.
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: DefaultXMLDocumentHandler.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class DefaultXMLDocumentHandler implements XMLDocumentHandler, 
                                                   XMLDTDHandler, 

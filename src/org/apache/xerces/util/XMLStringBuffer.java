@@ -38,7 +38,7 @@ import org.apache.xerces.xni.XMLString;
  * @author Andy Clark, IBM
  * @author Eric Ye, IBM
  *
- * @version $Id$
+ * @version $Id: XMLStringBuffer.java 1507082 2013-07-25 18:14:29Z mrglavas $
  */
 public class XMLStringBuffer
     extends XMLString {

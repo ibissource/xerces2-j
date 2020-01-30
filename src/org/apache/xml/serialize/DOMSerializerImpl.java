@@ -67,7 +67,7 @@ import org.w3c.dom.ls.LSSerializerFilter;
  * @author Elena Litani, IBM
  * @author Gopal Sharma, Sun Microsystems
  * @author Arun Yadav, Sun Microsystems
- * @version $Id$
+ * @version $Id: DOMSerializerImpl.java 944788 2010-05-16 10:06:25Z mukulg $
  * 
  * @deprecated Replaced by org.apache.xml.serializer.dom3.LSSerializerImpl in Xerces 2.9.0.
  */
@@ -1044,7 +1044,7 @@ public class DOMSerializerImpl implements LSSerializer, DOMConfiguration {
             break;
         }        
         }
-        fLocator.fRelatedNode = null;
+        fLocator.fRelatedNode = null;    
     }
     
     private String _getXmlVersion(Node node) {

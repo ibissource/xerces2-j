@@ -24,7 +24,7 @@ import org.apache.xerces.xni.parser.XMLDocumentFilter;
  * 
  * @xerces.internal
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: RevalidationHandler.java 446761 2006-09-15 21:59:29Z mrglavas $
  */
 public interface RevalidationHandler extends XMLDocumentFilter {
 

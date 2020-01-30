@@ -25,7 +25,7 @@ import java.util.ResourceBundle;
  * <p>Used to format JAXP Validation API error messages using a specified locale.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: JAXPValidationMessageFormatter.java 813089 2009-09-09 19:40:36Z mrglavas $
  */
 final class JAXPValidationMessageFormatter {
 

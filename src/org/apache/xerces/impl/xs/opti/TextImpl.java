@@ -24,7 +24,7 @@ import org.w3c.dom.Node;
  * @xerces.internal  
  * 
  * @author Neil Graham, IBM
- * @version $Id$
+ * @version $Id: TextImpl.java 705597 2008-10-17 13:05:37Z mrglavas $
  */
 
 public class TextImpl extends DefaultText {

@@ -23,7 +23,7 @@ import org.apache.xerces.xni.grammars.XMLGrammarPool;
  * <p>Implementation of Schema for W3C XML Schemas.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: XMLSchema.java 598686 2007-11-27 16:49:14Z knoaman $
  */
 final class XMLSchema extends AbstractXMLSchema {
     
@@ -34,11 +34,12 @@ final class XMLSchema extends AbstractXMLSchema {
     private final boolean fFullyComposed;
     
     /** Constructors */
-    public XMLSchema(XMLGrammarPool grammarPool) {
-        this(grammarPool, true);
+    public XMLSchema(XMLGrammarPool grammarPool, String xsdVersion) {
+        this(grammarPool, true, xsdVersion);
     }
     
-    public XMLSchema(XMLGrammarPool grammarPool, boolean fullyComposed) {
+    public XMLSchema(XMLGrammarPool grammarPool, boolean fullyComposed, String xsdVersion) {
+        super(xsdVersion);
         fGrammarPool = grammarPool;
         fFullyComposed = fullyComposed;
     }

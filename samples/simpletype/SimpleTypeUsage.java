@@ -40,7 +40,7 @@ import org.apache.xerces.xs.XSTypeDefinition;
  * implementation directly as separate module.
  *
  * @author Neeraj Bajaj     Sun Microsystems, inc.
- * @version $Id$
+ * @version $Id: SimpleTypeUsage.java 950356 2010-06-02 03:43:43Z mrglavas $
  */
 
 public class SimpleTypeUsage{

@@ -45,7 +45,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  *
  * @author Neil Graham, IBM
  *
- * @version $Id$
+ * @version $Id: XMLGrammarPreparser.java 713640 2008-11-13 04:46:23Z mrglavas $
  */
 public class XMLGrammarPreparser {
 

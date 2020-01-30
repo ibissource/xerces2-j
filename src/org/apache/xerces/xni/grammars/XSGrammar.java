@@ -28,7 +28,7 @@ import org.apache.xerces.xs.XSModel;
  * 
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: XSGrammar.java 570135 2007-08-27 14:15:35Z mrglavas $
  */
 public interface XSGrammar extends Grammar {
 

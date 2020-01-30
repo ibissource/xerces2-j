@@ -20,7 +20,7 @@ package org.apache.xerces.impl.xs;
 /**
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: FilePathToURI.java 937830 2010-04-25 17:11:34Z mrglavas $
  */
 final class FilePathToURI {
 

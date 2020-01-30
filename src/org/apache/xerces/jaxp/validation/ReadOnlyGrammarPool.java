@@ -26,7 +26,7 @@ import org.apache.xerces.xni.grammars.XMLGrammarPool;
  * read-only view of the underlying pool.</p>
  * 
  * @author Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
- * @version $Id$
+ * @version $Id: ReadOnlyGrammarPool.java 447235 2006-09-18 05:01:44Z mrglavas $
  */
 final class ReadOnlyGrammarPool implements XMLGrammarPool {
     

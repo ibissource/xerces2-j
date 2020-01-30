@@ -27,7 +27,7 @@ import org.apache.xerces.xni.parser.XMLDocumentFilter;
  * 
  * @author Elena Litani, IBM
  *
- * @version $Id$
+ * @version $Id: XMLDTDValidatorFilter.java 446755 2006-09-15 21:56:27Z mrglavas $
  */
 public interface XMLDTDValidatorFilter 
     extends XMLDocumentFilter {

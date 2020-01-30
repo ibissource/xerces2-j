@@ -44,7 +44,7 @@ import org.w3c.dom.NamedNodeMap;
  *
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: DeferredElementImpl.java 447266 2006-09-18 05:57:49Z mrglavas $
  * @since  PR-DOM-Level-1-19980818.
  */
 public class DeferredElementImpl

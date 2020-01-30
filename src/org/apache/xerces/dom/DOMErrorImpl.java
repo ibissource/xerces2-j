@@ -36,7 +36,7 @@ import org.w3c.dom.DOMLocator;
  * @author Gopal Sharma, SUN Microsystems Inc.
  * @author Elena Litani, IBM
  *
- * @version $Id$
+ * @version $Id: DOMErrorImpl.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 
 // REVISIT: the implementation of ErrorReporter. 

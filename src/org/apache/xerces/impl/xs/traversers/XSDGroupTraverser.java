@@ -45,7 +45,7 @@ import org.w3c.dom.Element;
  * @author Rahul Srivastava, Sun Microsystems Inc.
  * @author Elena Litani, IBM
  * @author Lisa Martin,  IBM
- * @version $Id$
+ * @version $Id: XSDGroupTraverser.java 1396551 2012-10-10 11:42:43Z mukulg $
  */
 class  XSDGroupTraverser extends XSDAbstractParticleTraverser {
     
@@ -221,8 +221,10 @@ class  XSDGroupTraverser extends XSDAbstractParticleTraverser {
                 annotations = XSObjectListImpl.EMPTY_LIST;
             }
             group.fAnnotations = annotations;
+            
             // Add group declaration to grammar
-            if (grammar.getGlobalGroupDecl(group.fName) == null) {
+            if (grammar.getGlobalGroupDecl(group.fName) == null ||
+                DOMUtil.getLocalName(DOMUtil.getParent(elmNode)).equals(SchemaSymbols.ELT_REDEFINE)) {
                 grammar.addGlobalGroupDecl(group);
             }
 

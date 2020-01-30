@@ -28,7 +28,7 @@ import org.apache.xerces.xni.parser.XMLParseException;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: DefaultErrorHandler.java 449104 2006-09-22 22:03:29Z mrglavas $
  */
 public class DefaultErrorHandler
     implements XMLErrorHandler {

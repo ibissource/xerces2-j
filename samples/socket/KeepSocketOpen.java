@@ -86,7 +86,7 @@ import socket.io.WrappedOutputStream;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: KeepSocketOpen.java 1358666 2012-07-07 22:56:48Z mrglavas $
  */
 public class KeepSocketOpen {
 

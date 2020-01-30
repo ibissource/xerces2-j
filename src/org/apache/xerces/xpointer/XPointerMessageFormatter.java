@@ -29,7 +29,7 @@ import org.apache.xerces.util.MessageFormatter;
  * 
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: XPointerMessageFormatter.java 883493 2009-11-23 20:39:18Z knoaman $
  */
 final class XPointerMessageFormatter implements MessageFormatter {
 

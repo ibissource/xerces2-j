@@ -29,7 +29,7 @@ import java.util.ArrayList;
  * @xerces.internal
  * 
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: ValidationManager.java 883496 2009-11-23 20:46:00Z knoaman $
  */
 public class ValidationManager {
 

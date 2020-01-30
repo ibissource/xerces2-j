@@ -29,7 +29,7 @@ import org.w3c.dom.Node;
  * @xerces.internal
  *
  * @author Gopal Sharma, SUN Microsystems Inc.
- * @version $Id$
+ * @version $Id: DOMLocatorImpl.java 447266 2006-09-18 05:57:49Z mrglavas $
  */
  
 public class DOMLocatorImpl implements DOMLocator {

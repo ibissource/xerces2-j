@@ -24,7 +24,7 @@ package org.apache.wml;
  *
  * <p>The 'template' element declares a template for the cards in the deck.</p>
  *
- * @version $Id$
+ * @version $Id: WMLTemplateElement.java 447258 2006-09-18 05:41:23Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 

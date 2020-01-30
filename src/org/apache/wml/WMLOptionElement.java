@@ -24,7 +24,7 @@ package org.apache.wml;
  *
  * <p>'option' element specifies a choice in a 'select' element</p>
  *
- * @version $Id$
+ * @version $Id: WMLOptionElement.java 447258 2006-09-18 05:41:23Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 

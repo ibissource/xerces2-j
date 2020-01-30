@@ -114,7 +114,7 @@ import org.xml.sax.ext.LexicalHandler;
  * that new applications use the DOM Level 3 LSSerializer or JAXP's Transformation 
  * API for XML (TrAX) for serializing XML. See the Xerces documentation for more 
  * information.
- * @version $Revision$ $Date$
+ * @version $Revision: 923975 $ $Date: 2010-03-17 02:17:56 +0530 (Wed, 17 Mar 2010) $
  * @author <a href="mailto:arkin@intalio.com">Assaf Arkin</a>
  * @author <a href="mailto:rahul.srivastava@sun.com">Rahul Srivastava</a>
  * @author Elena Litani, IBM 

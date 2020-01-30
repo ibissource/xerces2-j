@@ -30,7 +30,7 @@ import java.lang.ref.SoftReference;
  *
  * @author Peter McCracken, IBM
  *
- * @version $Id$
+ * @version $Id: SoftReferenceSymbolTable.java 1358351 2012-07-06 19:04:57Z mrglavas $
  */
 /*
  * This class extends SymbolTable.  Logically, it would make more sense if it and SymbolTable

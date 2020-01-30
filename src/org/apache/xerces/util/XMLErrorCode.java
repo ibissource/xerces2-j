@@ -23,7 +23,7 @@ package org.apache.xerces.util;
  *
  * @author Naela Nissar, IBM
  * 
- * @version $Id$
+ * @version $Id: XMLErrorCode.java 447241 2006-09-18 05:12:57Z mrglavas $
  */
 final class XMLErrorCode {
 

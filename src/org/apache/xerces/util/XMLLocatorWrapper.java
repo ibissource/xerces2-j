@@ -24,7 +24,7 @@ import org.apache.xerces.xni.XMLLocator;
  * 
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: XMLLocatorWrapper.java 533423 2007-04-28 20:47:15Z mrglavas $
  */
 public final class XMLLocatorWrapper implements XMLLocator {
     

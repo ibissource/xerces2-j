@@ -32,7 +32,7 @@ import org.xml.sax.SAXParseException;
  *
  * @author Andy Clark, IBM
  * 
- * @version $Id$
+ * @version $Id: ErrorHandlerWrapper.java 447241 2006-09-18 05:12:57Z mrglavas $
  */
 public class ErrorHandlerWrapper
     implements XMLErrorHandler {

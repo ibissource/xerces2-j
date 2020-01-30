@@ -42,7 +42,7 @@ import org.w3c.dom.ls.LSInput;
  * 
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: XSLoaderImpl.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public final class XSLoaderImpl implements XSLoader, DOMConfiguration {
     

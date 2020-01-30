@@ -47,7 +47,7 @@ import org.apache.xerces.xni.parser.XMLParserConfiguration;
  * @author Andy Clark, IBM
  * @author Arnaud Le Hors, IBM
  *
- * @version $Id$
+ * @version $Id: DocumentTracer.java 447690 2006-09-19 02:41:53Z mrglavas $
  */
 public class DocumentTracer
     extends XMLDocumentParser

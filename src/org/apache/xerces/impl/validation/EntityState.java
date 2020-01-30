@@ -26,7 +26,7 @@ package org.apache.xerces.impl.validation;
  * @xerces.internal
  * 
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: EntityState.java 446719 2006-09-15 20:32:39Z mrglavas $
  */
 public interface EntityState {
     /**

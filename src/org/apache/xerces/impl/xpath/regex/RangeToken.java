@@ -22,7 +22,7 @@ package org.apache.xerces.impl.xpath.regex;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: RangeToken.java 965252 2010-07-18 16:05:34Z mrglavas $
  */
 final class RangeToken extends Token implements java.io.Serializable {
 

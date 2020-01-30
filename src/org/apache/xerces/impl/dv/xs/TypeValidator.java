@@ -35,7 +35,7 @@ import org.apache.xerces.util.XMLChar;
  * @author Neeraj Bajaj, Sun Microsystems, inc.
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: TypeValidator.java 1375611 2012-08-21 15:37:04Z mrglavas $
  */
 public abstract class TypeValidator {
     
@@ -47,9 +47,6 @@ public abstract class TypeValidator {
             catch (SecurityException ex) {}
             return Boolean.FALSE;
         }}) == Boolean.TRUE;
-
-    // which facets are allowed for this type
-    public abstract short getAllowedFacets();
 
     // convert a string to an actual value. for example,
     // for number types (decimal, double, float, and types derived from them),
@@ -142,6 +139,21 @@ public abstract class TypeValidator {
     // otherwise, return -1
     public static final int getDigit(char ch) {
         return isDigit(ch) ? ch - '0' : -1;
+    }
+    
+    //get the number of precision of the value
+    //the parameters are in compiled form (from getActualValue)
+    public int getPrecision(Object value){
+        return 0;
+    }
+
+    //whether this value has a precision. false indicate it's a special value.
+    public boolean hasPrecision(Object value){
+        return false;
+    }
+    
+    public boolean hasTimeZone(Object value){
+        return false;
     }
     
 } // interface TypeValidator

@@ -19,6 +19,8 @@ package org.apache.xerces.impl.dv;
 
 import java.util.Locale;
 
+import org.apache.xerces.impl.dv.xs.TypeValidatorHelper;
+
 /**
  * ValidationContext has all the information required for the
  * validation of: id, idref, entity, notation, qname
@@ -26,7 +28,7 @@ import java.util.Locale;
  * @xerces.internal 
  *
  * @author Sandy Gao, IBM
- * @version $Id$
+ * @version $Id: ValidationContext.java 1171147 2011-09-15 15:44:30Z knoaman $
  */
 public interface ValidationContext {
     // whether to validate against facets
@@ -60,4 +62,10 @@ public interface ValidationContext {
     
     // Locale
     public Locale getLocale();
+    
+    // TypeValidatorHelper
+    public TypeValidatorHelper getTypeValidatorHelper();
+    
+    // Datatype XML version
+    public short getDatatypeXMLVersion();
 }

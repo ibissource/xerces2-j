@@ -24,7 +24,7 @@ import java.math.BigInteger;
  * 
  * @author Naela Nissar, IBM
  * 
- * @version $Id$
+ * @version $Id: XSDecimal.java 447250 2006-09-18 05:27:17Z mrglavas $
  */
 public interface XSDecimal {
      

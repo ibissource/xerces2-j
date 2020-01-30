@@ -25,7 +25,7 @@ import org.apache.xerces.parsers.AbstractSAXParser;
  * 
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: CSVParser.java 447690 2006-09-19 02:41:53Z mrglavas $
  */
 public class CSVParser
     extends AbstractSAXParser {

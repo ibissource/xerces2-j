@@ -47,7 +47,7 @@ import org.w3c.dom.UserDataHandler;
  * @author Arnaud  Le Hors, IBM
  * @author Joe Kesselman, IBM
  * @author Andy Clark, IBM
- * @version $Id$
+ * @version $Id: DocumentTypeImpl.java 699902 2008-09-28 21:40:49Z mrglavas $
  * @since  PR-DOM-Level-1-19980818.
  */
 public class DocumentTypeImpl 

@@ -30,7 +30,7 @@ import org.apache.xerces.xni.XMLDocumentHandler;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: XMLDocumentSource.java 447244 2006-09-18 05:20:40Z mrglavas $
  */
 public interface XMLDocumentSource {
 

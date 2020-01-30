@@ -63,7 +63,7 @@ import org.w3c.dom.Text;
  * <p>DOM result builder.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: DOMResultBuilder.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 final class DOMResultBuilder implements DOMDocumentHandler {
 

@@ -86,7 +86,7 @@ import org.xml.sax.SAXNotSupportedException;
  *
  * @author Arun  Yadav,Sun Miscrosystem.
  * @author Peter McCracken, IBM
- * @version $Id$
+ * @version $Id: PSVIWriter.java 1062647 2011-01-24 04:45:26Z mrglavas $
  */
 public class PSVIWriter implements XMLComponent, XMLDocumentFilter {
 
@@ -1863,6 +1863,11 @@ public class PSVIWriter implements XMLComponent, XMLDocumentFilter {
         } else {
             sendIndentedElement("psv:substitutionGroupAffiliation");
             processPSVIElementRef("psv:elementDeclaration", elem.getSubstitutionGroupAffiliation());
+//            XSElementDeclaration[] subgroups = elem.getSubstitutionGroupAffiliations();
+//            for (int i=0; i<subgroups.length; i++) {
+//                XSElementDeclaration subgroup = subgroups[i];
+//                processPSVIElementRef("psv:elementDeclaration", subgroup);
+//            }
             sendUnIndentedElement("psv:substitutionGroupAffiliation");
         }
     }

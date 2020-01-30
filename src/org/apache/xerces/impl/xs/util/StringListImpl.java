@@ -30,7 +30,7 @@ import org.apache.xerces.xs.StringList;
  *
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: StringListImpl.java 776327 2009-05-19 14:29:33Z mrglavas $
  */
 public final class StringListImpl extends AbstractList implements StringList {
 

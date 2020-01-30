@@ -26,7 +26,7 @@ package org.apache.xerces.impl.dv;
  *
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: DatatypeValidator.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public interface DatatypeValidator {
 

@@ -38,7 +38,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  * 
  * @author Neil Graham, IBM 
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: XMLVersionDetector.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class XMLVersionDetector {
 

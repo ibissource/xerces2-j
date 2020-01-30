@@ -30,7 +30,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  * 
  * @author Michael Glavassevich, IBM
  *
- * @version $Id$
+ * @version $Id: XInclude11TextReader.java 447243 2006-09-18 05:15:27Z mrglavas $
  *
  * @see XIncludeHandler
  */

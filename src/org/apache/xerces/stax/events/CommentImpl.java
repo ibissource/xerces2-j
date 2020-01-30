@@ -29,7 +29,7 @@ import javax.xml.stream.events.Comment;
  * 
  * @author Lucian Holland
  *
- * @version $Id$
+ * @version $Id: CommentImpl.java 730472 2008-12-31 20:45:51Z mrglavas $
  */
 public final class CommentImpl extends XMLEventImpl implements Comment {
 

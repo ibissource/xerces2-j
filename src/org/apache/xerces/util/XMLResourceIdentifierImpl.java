@@ -26,7 +26,7 @@ import org.apache.xerces.xni.XMLResourceIdentifier;
  *
  * @author Andy Clark 
  *
- * @version $Id$
+ * @version $Id: XMLResourceIdentifierImpl.java 447241 2006-09-18 05:12:57Z mrglavas $
  */
 public class XMLResourceIdentifierImpl
     implements XMLResourceIdentifier {

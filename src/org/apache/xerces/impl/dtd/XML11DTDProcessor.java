@@ -38,7 +38,7 @@ import org.apache.xerces.xni.parser.XMLEntityResolver;
  *
  * @author Neil Graham, IBM
  *
- * @version $Id$
+ * @version $Id: XML11DTDProcessor.java 446755 2006-09-15 21:56:27Z mrglavas $
  */
 public class XML11DTDProcessor extends XMLDTDLoader{
 

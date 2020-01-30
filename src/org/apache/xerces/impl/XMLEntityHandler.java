@@ -31,7 +31,7 @@ import org.apache.xerces.xni.XNIException;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: XMLEntityHandler.java 446761 2006-09-15 21:59:29Z mrglavas $
  */
 public interface XMLEntityHandler {
 

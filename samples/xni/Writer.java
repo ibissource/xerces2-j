@@ -44,7 +44,7 @@ import org.apache.xerces.xni.parser.XMLPullParserConfiguration;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: Writer.java 447690 2006-09-19 02:41:53Z mrglavas $
  */
 public class Writer
     extends XMLDocumentParser

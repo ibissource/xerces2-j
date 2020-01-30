@@ -53,7 +53,7 @@ import java.util.Locale;
 * default port for a specific scheme). Rather, it only knows the
 * grammar and basic set of operations that can be applied to a URI.
 *
-* @version  $Id$
+* @version  $Id: URI.java 1226508 2012-01-02 18:45:36Z mrglavas $
 *
 **********************************************************************/
  public class URI implements Serializable {

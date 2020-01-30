@@ -52,7 +52,7 @@ import org.apache.xerces.xni.parser.XMLPullParserConfiguration;
  * include the replacement text of internal entities, and supply default attribute values".
  * 
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: NonValidatingConfiguration.java 713640 2008-11-13 04:46:23Z mrglavas $
  */
 public class NonValidatingConfiguration
     extends BasicParserConfiguration 

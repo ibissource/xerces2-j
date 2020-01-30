@@ -27,7 +27,7 @@ import org.w3c.dom.Element;
  * @xerces.internal
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: XSAnnotationInfo.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 final class XSAnnotationInfo {
 

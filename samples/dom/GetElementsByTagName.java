@@ -35,7 +35,7 @@ import org.xml.sax.SAXParseException;
  * @author Jeffrey Rodriguez, IBM
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: GetElementsByTagName.java 447683 2006-09-19 02:36:31Z mrglavas $
  */
 public class GetElementsByTagName {
 

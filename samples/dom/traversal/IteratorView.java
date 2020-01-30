@@ -60,7 +60,7 @@ import ui.DOMTreeFull;
  * which allow the user to create and view the progress of a NodeIterator
  * in the DOM tree.
  * 
- * @version $Id$
+ * @version $Id: IteratorView.java 1612915 2014-07-23 18:45:41Z mrglavas $
  */
 public class IteratorView 
     extends JFrame 

@@ -27,7 +27,7 @@ import org.apache.xerces.xni.NamespaceContext;
  * 
  * @author Peter McCracken, IBM
  * 
- * @version $Id$
+ * @version $Id: XIncludeNamespaceSupport.java 447243 2006-09-18 05:15:27Z mrglavas $
  */
 public class XIncludeNamespaceSupport extends MultipleScopeNamespaceSupport {
 

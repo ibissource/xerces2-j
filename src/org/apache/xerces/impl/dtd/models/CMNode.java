@@ -22,7 +22,7 @@ package org.apache.xerces.impl.dtd.models;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: CMNode.java 573322 2007-09-06 16:48:47Z peterjm $
  */
 public abstract class CMNode
 {

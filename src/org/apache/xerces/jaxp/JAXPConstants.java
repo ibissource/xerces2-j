@@ -26,7 +26,7 @@ package org.apache.xerces.jaxp;
  * in future JAXP spec versions, this interface can be removed.
  *
  * @author Edwin Goei
- * @version $Id$
+ * @version $Id: JAXPConstants.java 447237 2006-09-18 05:03:10Z mrglavas $
  */
 public interface JAXPConstants {
     static final String JAXP_SCHEMA_LANGUAGE =

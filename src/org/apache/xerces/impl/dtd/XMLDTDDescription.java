@@ -31,7 +31,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  * @xerces.internal
  * 
  * @author Neil Graham, IBM
- * @version $Id$
+ * @version $Id: XMLDTDDescription.java 883491 2009-11-23 20:32:14Z knoaman $
  */
 public class XMLDTDDescription extends XMLResourceIdentifierImpl
         implements org.apache.xerces.xni.grammars.XMLDTDDescription {

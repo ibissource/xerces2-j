@@ -79,7 +79,7 @@ import org.xml.sax.helpers.DefaultHandler;
  * and other events go the 2nd direct route.
  * 
  * @author Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
- * @version $Id$
+ * @version $Id: JAXPValidatorComponent.java 548088 2007-06-17 18:25:17Z mrglavas $
  */
 final class JAXPValidatorComponent 
     extends TeeXMLDocumentFilterImpl implements XMLComponent {

@@ -25,7 +25,7 @@ package org.apache.wml;
  * <p>'strong' strongly emphasis the text
  * (Section 11.8.1, WAP WML Version 16-Jun-1999)</p>
  *
- * @version $Id$
+ * @version $Id: WMLStrongElement.java 447258 2006-09-18 05:41:23Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 

@@ -24,7 +24,7 @@ package org.apache.xerces.impl.xs;
  *
  * @author Elena Litani, IBM
  *
- * @version $Id$
+ * @version $Id: XMLSchemaException.java 446734 2006-09-15 20:51:23Z mrglavas $
  */
 public class XMLSchemaException extends Exception {
 

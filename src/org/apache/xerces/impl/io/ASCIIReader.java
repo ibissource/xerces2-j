@@ -33,7 +33,7 @@ import org.apache.xerces.util.MessageFormatter;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: ASCIIReader.java 718096 2008-11-16 20:00:58Z mrglavas $
  */
 public final class ASCIIReader
     extends Reader {

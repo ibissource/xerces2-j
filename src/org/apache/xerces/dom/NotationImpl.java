@@ -42,7 +42,7 @@ import org.w3c.dom.Notation;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: NotationImpl.java 447266 2006-09-18 05:57:49Z mrglavas $
  * @since  PR-DOM-Level-1-19980818.
  */
 public class NotationImpl 

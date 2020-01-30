@@ -55,7 +55,7 @@ import org.apache.xerces.stax.events.StartElementImpl;
  * 
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: XMLEventFactoryImpl.java 730798 2009-01-02 17:37:02Z mrglavas $
  */
 public final class XMLEventFactoryImpl extends XMLEventFactory {
     

@@ -32,7 +32,7 @@ import dom.ParserWrapper;
 /**
  * Wraps the Xerces DOM parser.
  *
- * @version  $Id$
+ * @version  $Id: Xerces.java 699898 2008-09-28 21:31:55Z mrglavas $
  */
 public class Xerces 
     implements ParserWrapper, ParserWrapper.DocumentInfo, ErrorHandler {

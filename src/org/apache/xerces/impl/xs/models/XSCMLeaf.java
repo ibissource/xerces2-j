@@ -26,7 +26,7 @@ import org.apache.xerces.impl.dtd.models.CMStateSet;
  * @xerces.internal 
  *
  * @author Neil Graham, IBM
- * @version $Id$
+ * @version $Id: XSCMLeaf.java 572112 2007-09-02 19:11:51Z mrglavas $
  */
 public class XSCMLeaf
     extends CMNode {

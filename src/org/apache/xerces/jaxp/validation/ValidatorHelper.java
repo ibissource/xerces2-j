@@ -29,7 +29,7 @@ import org.xml.sax.SAXException;
  * specific source and result types.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: ValidatorHelper.java 447235 2006-09-18 05:01:44Z mrglavas $
  */
 interface ValidatorHelper {
     

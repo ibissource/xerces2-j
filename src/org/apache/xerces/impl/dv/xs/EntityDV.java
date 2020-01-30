@@ -17,8 +17,10 @@
 
 package org.apache.xerces.impl.dv.xs;
 
+import org.apache.xerces.impl.Constants;
 import org.apache.xerces.impl.dv.InvalidDatatypeValueException;
 import org.apache.xerces.impl.dv.ValidationContext;
+import org.apache.xerces.util.XML11Char;
 import org.apache.xerces.util.XMLChar;
 
 /**
@@ -29,16 +31,14 @@ import org.apache.xerces.util.XMLChar;
  * @author Neeraj Bajaj, Sun Microsystems, inc.
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: EntityDV.java 1171147 2011-09-15 15:44:30Z knoaman $
  */
 public class EntityDV extends TypeValidator {
 
-    public short getAllowedFacets(){
-        return (XSSimpleTypeDecl.FACET_LENGTH | XSSimpleTypeDecl.FACET_MINLENGTH | XSSimpleTypeDecl.FACET_MAXLENGTH | XSSimpleTypeDecl.FACET_PATTERN | XSSimpleTypeDecl.FACET_ENUMERATION | XSSimpleTypeDecl.FACET_WHITESPACE );
-    }
-
     public Object getActualValue(String content, ValidationContext context) throws InvalidDatatypeValueException {
-        if (!XMLChar.isValidNCName(content)) {
+        final boolean valid = (context.getDatatypeXMLVersion() == Constants.XML_VERSION_1_0)
+            ? XMLChar.isValidNCName(content) : XML11Char.isXML11ValidNCName(content);
+        if (!valid) {
             throw new InvalidDatatypeValueException("cvc-datatype-valid.1.2.1", new Object[]{content, "NCName"});
         }
 

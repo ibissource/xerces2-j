@@ -29,7 +29,7 @@ import org.apache.xerces.xs.datatypes.ByteList;
  * 
  * @author Ankit Pasricha, IBM
  * 
- * @version $Id$
+ * @version $Id: ByteListImpl.java 1024040 2010-10-18 22:08:41Z sandygao $
  */
 public class ByteListImpl extends AbstractList implements ByteList {
 

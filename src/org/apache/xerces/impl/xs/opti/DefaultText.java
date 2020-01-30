@@ -46,7 +46,7 @@ import org.w3c.dom.Text;
  * 
  * @author Neil Graham, IBM
  * 
- * @version $Id$
+ * @version $Id: DefaultText.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class DefaultText extends NodeImpl implements Text {
 

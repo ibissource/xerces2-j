@@ -25,7 +25,7 @@ import javax.xml.stream.Location;
  * 
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: EmptyLocation.java 730446 2008-12-31 19:12:38Z mrglavas $
  */
 public final class EmptyLocation implements Location {
     

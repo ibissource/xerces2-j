@@ -24,7 +24,7 @@ import org.apache.xerces.impl.dtd.XMLContentSpec;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: CMUniOp.java 572057 2007-09-02 18:03:20Z mrglavas $
  */
 public class CMUniOp extends CMNode
 {

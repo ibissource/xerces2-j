@@ -27,7 +27,7 @@ import javax.xml.stream.events.Namespace;
  * 
  * @author Lucian Holland
  *
- * @version $Id$
+ * @version $Id: NamespaceImpl.java 730478 2008-12-31 20:57:22Z mrglavas $
  */
 public final class NamespaceImpl extends AttributeImpl implements Namespace {
 

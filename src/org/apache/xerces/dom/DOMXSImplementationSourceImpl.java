@@ -31,7 +31,7 @@ import org.w3c.dom.DOMImplementationList;
  * @xerces.internal
  * 
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: DOMXSImplementationSourceImpl.java 883487 2009-11-23 20:28:10Z knoaman $
  */
 public class DOMXSImplementationSourceImpl
     extends DOMImplementationSourceImpl {

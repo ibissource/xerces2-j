@@ -36,7 +36,7 @@ import org.apache.xerces.impl.dv.ValidationContext;
  * 
  * @xerces.internal 
  * 
- * @version $Id$
+ * @version $Id: StringDatatypeValidator.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class StringDatatypeValidator implements DatatypeValidator {
 

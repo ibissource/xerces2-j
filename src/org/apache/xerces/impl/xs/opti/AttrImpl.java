@@ -32,7 +32,7 @@ import org.w3c.dom.TypeInfo;
  *
  * @author Rahul Srivastava, Sun Microsystems Inc.
  *
- * @version $Id$
+ * @version $Id: AttrImpl.java 982714 2010-08-05 17:54:35Z mrglavas $
  */
 public class AttrImpl extends NodeImpl 
                       implements Attr {

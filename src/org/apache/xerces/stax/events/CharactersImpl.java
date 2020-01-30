@@ -31,7 +31,7 @@ import org.apache.xerces.util.XMLChar;
  * 
  * @author Lucian Holland
  *
- * @version $Id$
+ * @version $Id: CharactersImpl.java 730472 2008-12-31 20:45:51Z mrglavas $
  */
 public final class CharactersImpl extends XMLEventImpl implements Characters {
 

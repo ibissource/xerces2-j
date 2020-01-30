@@ -49,7 +49,7 @@ import org.apache.xerces.xni.parser.XMLDocumentSource;
  * <p>StAX event result builder.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: StAXEventResultBuilder.java 699764 2008-09-28 02:59:14Z mrglavas $
  */
 final class StAXEventResultBuilder implements StAXDocumentHandler {
     

@@ -27,7 +27,7 @@ package org.apache.xerces.xni;
  * @see XMLDocumentHandler
  *
  * @author Andy Clark, IBM
- * @version $Id$
+ * @version $Id: XMLDocumentFragmentHandler.java 447247 2006-09-18 05:23:52Z mrglavas $
  */
 public interface XMLDocumentFragmentHandler {
 

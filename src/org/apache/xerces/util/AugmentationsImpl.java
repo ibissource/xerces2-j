@@ -34,7 +34,7 @@ import org.apache.xerces.xni.Augmentations;
  * <p>
  * 
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: AugmentationsImpl.java 883493 2009-11-23 20:39:18Z knoaman $
  */
 public class AugmentationsImpl implements Augmentations {
     

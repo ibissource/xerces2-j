@@ -24,7 +24,7 @@ package org.apache.xerces.util;
  * other classes (CachingParserPool, XMLGrammarCachingConfiguration).
  *
  * @author Andy Clark, IBM
- * @version $Id$
+ * @version $Id: SynchronizedSymbolTable.java 447241 2006-09-18 05:12:57Z mrglavas $
  */
 
 public final class SynchronizedSymbolTable

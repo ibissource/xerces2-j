@@ -24,7 +24,7 @@ import org.w3c.dom.Document;
  * <a href="http://www.wapforum.org/DTD/wml_1.1.xml">
  * http://www.wapforum.org/DTD/wml_1.1.xml</a></p>
  *
- * @version $Id$
+ * @version $Id: WMLDocument.java 699902 2008-09-28 21:40:49Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 

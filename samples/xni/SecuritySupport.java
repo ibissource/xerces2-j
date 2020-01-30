@@ -32,7 +32,7 @@ import java.security.PrivilegedExceptionAction;
  * 
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: SecuritySupport.java 950356 2010-06-02 03:43:43Z mrglavas $
  */
 final class SecuritySupport {
 

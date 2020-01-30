@@ -24,7 +24,7 @@ package org.apache.xerces.dom;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: DeferredProcessingInstructionImpl.java 447266 2006-09-18 05:57:49Z mrglavas $
  * @since  PR-DOM-Level-1-19980818.
  */
 public class DeferredProcessingInstructionImpl

@@ -37,7 +37,7 @@ import org.w3c.dom.Node;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: AttributeMap.java 883487 2009-11-23 20:28:10Z knoaman $
  */
 public class AttributeMap extends NamedNodeMapImpl {
     

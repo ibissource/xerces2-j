@@ -50,7 +50,7 @@ and Save Specification</a>.
  * @xerces.internal
  *
  * @author Gopal Sharma, SUN Microsystems Inc.
- * @version $Id$
+ * @version $Id: DOMInputImpl.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 
 // REVISIT:

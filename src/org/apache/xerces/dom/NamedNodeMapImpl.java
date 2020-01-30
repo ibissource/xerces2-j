@@ -53,7 +53,7 @@ import org.w3c.dom.Node;
  *
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: NamedNodeMapImpl.java 1829684 2018-04-21 03:10:31Z mukulg $
  * @since  PR-DOM-Level-1-19980818.
  */
 public class NamedNodeMapImpl
@@ -605,8 +605,8 @@ public class NamedNodeMapImpl
         throws IOException, ClassNotFoundException {
         in.defaultReadObject();
         if (nodes != null) {
-            // cast to Vector is required
-            nodes = new ArrayList((Vector)nodes);
+           // cast to Vector is required
+           nodes = new ArrayList((Vector)nodes);
         }
     }
 

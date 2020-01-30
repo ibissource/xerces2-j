@@ -43,7 +43,7 @@ import org.xml.sax.helpers.DefaultHandler;
  * 
  * @author Ankit Pasricha, IBM
  * 
- * @version $Id$
+ * @version $Id: DatatypeInterfaceUsage.java 1335923 2012-05-09 04:20:08Z mrglavas $
  */
 public class DatatypeInterfaceUsage extends DefaultHandler {
 

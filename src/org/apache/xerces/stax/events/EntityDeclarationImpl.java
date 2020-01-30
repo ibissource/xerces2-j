@@ -29,7 +29,7 @@ import javax.xml.stream.events.EntityDeclaration;
  * 
  * @author Lucian Holland
  *
- * @version $Id$
+ * @version $Id: EntityDeclarationImpl.java 730472 2008-12-31 20:45:51Z mrglavas $
  */
 public final class EntityDeclarationImpl extends XMLEventImpl implements
         EntityDeclaration {

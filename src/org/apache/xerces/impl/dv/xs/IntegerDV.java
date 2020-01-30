@@ -27,7 +27,7 @@ import org.apache.xerces.impl.dv.ValidationContext;
  *
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: IntegerDV.java 446745 2006-09-15 21:43:58Z mrglavas $
  */
 public class IntegerDV extends DecimalDV {
 

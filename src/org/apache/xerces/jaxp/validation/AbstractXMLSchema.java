@@ -27,7 +27,7 @@ import javax.xml.validation.ValidatorHandler;
  * <p>Abstract implementation of Schema for W3C XML Schemas.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: AbstractXMLSchema.java 598686 2007-11-27 16:49:14Z knoaman $
  */
 abstract class AbstractXMLSchema extends Schema implements
         XSGrammarPoolContainer {
@@ -37,9 +37,12 @@ abstract class AbstractXMLSchema extends Schema implements
      * validators created using this grammar pool container.
      */
     private final HashMap fFeatures;
+
+    private final String fXSDVersion;
     
-    public AbstractXMLSchema() {
+    public AbstractXMLSchema(String xsdVersion) {
         fFeatures = new HashMap();
+        fXSDVersion = xsdVersion;
     }
     
     /*
@@ -71,6 +74,13 @@ abstract class AbstractXMLSchema extends Schema implements
      */
     public final Boolean getFeature(String featureId) {
         return (Boolean) fFeatures.get(featureId);
+    }
+
+    /**
+     * Returns the XML Schema Version
+     */
+    public final String getXMLSchemaVersion() {
+    	return fXSDVersion;
     }
     
     /*

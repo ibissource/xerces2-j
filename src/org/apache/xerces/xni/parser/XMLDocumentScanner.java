@@ -36,7 +36,7 @@ import org.apache.xerces.xni.XNIException;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: XMLDocumentScanner.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public interface XMLDocumentScanner 
     extends XMLDocumentSource {

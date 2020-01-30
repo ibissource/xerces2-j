@@ -51,7 +51,7 @@ import org.xml.sax.SAXNotSupportedException;
 /**
  * @author Rajiv Mordani
  * @author Edwin Goei
- * @version $Id$
+ * @version $Id: DocumentBuilderImpl.java 1824207 2018-02-14 09:45:12Z mukulg $
  */
 public class DocumentBuilderImpl extends DocumentBuilder
         implements JAXPConstants
@@ -91,6 +91,10 @@ public class DocumentBuilderImpl extends DocumentBuilder
     /** Property identifier: security manager. */
     private static final String SECURITY_MANAGER =
         Constants.XERCES_PROPERTY_PREFIX + Constants.SECURITY_MANAGER_PROPERTY;
+    
+    /** Property identifier: XML Schema version. */
+    private static final String XML_SCHEMA_VERSION =
+        Constants.XERCES_PROPERTY_PREFIX + Constants.XML_SCHEMA_VERSION_PROPERTY;
     
     private final DOMParser domParser;
     private final Schema grammar;
@@ -159,8 +163,12 @@ public class DocumentBuilderImpl extends DocumentBuilder
             XMLParserConfiguration config = domParser.getXMLParserConfiguration();
             XMLComponent validatorComponent = null;
             /** For Xerces grammars, use built-in schema validator. **/
-            if (grammar instanceof XSGrammarPoolContainer) {
+            if (grammar instanceof XSGrammarPoolContainer) {  
+                String xmlSchemaVersion = ((XSGrammarPoolContainer) grammar).getXMLSchemaVersion();
                 validatorComponent = new XMLSchemaValidator();
+                if ((Constants.W3C_XML_SCHEMA11_NS_URI).equals(xmlSchemaVersion)) {
+                    validatorComponent.setProperty(XML_SCHEMA_VERSION, Constants.W3C_XML_SCHEMA11_NS_URI);
+                }
                 fSchemaValidationManager = new ValidationManager();
                 fUnparsedEntityHandler = new UnparsedEntityHandler(fSchemaValidationManager);
                 config.setDTDHandler(fUnparsedEntityHandler);

@@ -31,7 +31,7 @@ import org.apache.xerces.xni.parser.XMLParserConfiguration;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: NonValidatingParserConfiguration.java 447690 2006-09-19 02:41:53Z mrglavas $
  */
 public class NonValidatingParserConfiguration 
     extends StandardParserConfiguration {

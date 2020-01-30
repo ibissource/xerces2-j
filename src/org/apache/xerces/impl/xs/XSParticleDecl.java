@@ -31,7 +31,7 @@ import org.apache.xerces.xs.XSTerm;
  *
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: XSParticleDecl.java 965252 2010-07-18 16:05:34Z mrglavas $
  */
 public class XSParticleDecl implements XSParticle {
 

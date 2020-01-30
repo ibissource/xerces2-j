@@ -36,7 +36,7 @@ import org.apache.xerces.xs.XSObjectList;
  *
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: SchemaDVFactory.java 558582 2007-07-23 02:05:04Z mrglavas $
  */
 public abstract class SchemaDVFactory {
 

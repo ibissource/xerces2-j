@@ -53,7 +53,7 @@ import org.w3c.dom.Node;
  * @xerces.internal
  * 
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: EntityImpl.java 447266 2006-09-18 05:57:49Z mrglavas $
  * @since PR-DOM-Level-1-19980818.
  */
 public class EntityImpl 

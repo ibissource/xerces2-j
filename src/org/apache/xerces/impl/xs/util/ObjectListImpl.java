@@ -24,10 +24,10 @@ import org.apache.xerces.xs.datatypes.ObjectList;
 
 /**
  * Contains a list of Objects.
- * 
+ *
  * @xerces.internal
- * 
- * @version $Id$
+ *
+ * @version $Id: ObjectListImpl.java 884566 2009-11-26 14:30:01Z knoaman $
  */
 public final class ObjectListImpl extends AbstractList implements ObjectList {
 

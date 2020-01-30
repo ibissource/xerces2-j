@@ -25,7 +25,7 @@ package org.apache.wml;
  * <p>The meta element contains meta-info of an WML deck
  * (Section 11.3.2, WAP WML Version 16-Jun-1999)</p>
  *
- * @version $Id$
+ * @version $Id: WMLMetaElement.java 447258 2006-09-18 05:41:23Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 public interface WMLMetaElement extends WMLElement {

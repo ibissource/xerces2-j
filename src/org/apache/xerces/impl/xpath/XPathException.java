@@ -24,7 +24,7 @@ package org.apache.xerces.impl.xpath;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: XPathException.java 572107 2007-09-02 18:40:40Z mrglavas $
  */
 public class XPathException 
     extends Exception {

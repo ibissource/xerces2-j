@@ -40,7 +40,7 @@ package org.apache.xerces.xni.grammars;
  * @author Andy Clark, IBM
  * @author Neil Graham, IBM
  *
- * @version $Id$
+ * @version $Id: Grammar.java 447245 2006-09-18 05:22:10Z mrglavas $
  */
 
 public interface Grammar {

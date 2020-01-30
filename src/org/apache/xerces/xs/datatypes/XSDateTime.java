@@ -202,7 +202,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  * @author Ankit Pasricha, IBM
  * 
- * @version $Id$
+ * @version $Id: XSDateTime.java 447250 2006-09-18 05:27:17Z mrglavas $
  */
 public interface XSDateTime {
 	

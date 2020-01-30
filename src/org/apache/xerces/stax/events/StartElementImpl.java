@@ -40,10 +40,10 @@ import org.apache.xerces.stax.DefaultNamespaceContext;
  * 
  * @author Lucian Holland
  *
- * @version $Id$
+ * @version $Id: StartElementImpl.java 730798 2009-01-02 17:37:02Z mrglavas $
  */
 public final class StartElementImpl extends ElementImpl implements StartElement {
-    
+
     private static final Comparator QNAME_COMPARATOR = new Comparator() {
         public int compare(Object o1, Object o2) {
             if (o1.equals(o2)) {

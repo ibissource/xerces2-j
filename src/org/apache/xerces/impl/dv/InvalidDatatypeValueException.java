@@ -24,7 +24,7 @@ package org.apache.xerces.impl.dv;
  *
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: InvalidDatatypeValueException.java 446751 2006-09-15 21:54:06Z mrglavas $
  */
 public class InvalidDatatypeValueException extends DatatypeException {
 

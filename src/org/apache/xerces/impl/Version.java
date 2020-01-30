@@ -20,7 +20,7 @@ package org.apache.xerces.impl;
 /**
  * This class defines the version number of the parser.
  *
- * @version $Id$
+ * @version $Id: Version.java 446761 2006-09-15 21:59:29Z mrglavas $
  */
 public class Version {
 

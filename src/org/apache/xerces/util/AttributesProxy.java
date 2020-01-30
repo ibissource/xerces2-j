@@ -29,7 +29,7 @@ import org.xml.sax.ext.Attributes2;
  * @author Arnaud Le Hors, IBM
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: AttributesProxy.java 449487 2006-09-24 21:11:28Z mrglavas $
  */
 public final class AttributesProxy
     implements AttributeList, Attributes2 {

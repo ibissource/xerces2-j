@@ -32,7 +32,7 @@ import javax.xml.namespace.NamespaceContext;
  * 
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: DefaultNamespaceContext.java 730673 2009-01-02 06:15:25Z mrglavas $
  */
 public final class DefaultNamespaceContext implements NamespaceContext {
     

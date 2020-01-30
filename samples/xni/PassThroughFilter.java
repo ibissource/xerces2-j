@@ -40,7 +40,7 @@ import org.apache.xerces.xni.parser.XMLDocumentSource;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: PassThroughFilter.java 699898 2008-09-28 21:31:55Z mrglavas $
  */
 public class PassThroughFilter
     implements XMLDocumentHandler {

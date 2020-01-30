@@ -25,7 +25,7 @@ package org.apache.wml;
  * <p>'wml' is the root oot of a WML document.
  * (Section 11.2, WAP WML Version 16-Jun-1999)</p>
  *
- * @version $Id$
+ * @version $Id: WMLWmlElement.java 447258 2006-09-18 05:41:23Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 

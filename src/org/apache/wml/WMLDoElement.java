@@ -22,7 +22,7 @@ package org.apache.wml;
  * <a href="http://www.wapforum.org/DTD/wml_1.1.xml">
  * http://www.wapforum.org/DTD/wml_1.1.xml</a></p>
  *
- * @version $Id$
+ * @version $Id: WMLDoElement.java 447258 2006-09-18 05:41:23Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 

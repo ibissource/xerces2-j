@@ -62,7 +62,7 @@ import org.apache.xerces.xni.parser.XMLDocumentSource;
  * @author Elena Litani, IBM
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: XML11NSDocumentScannerImpl.java 495747 2007-01-12 21:48:00Z mrglavas $
  */
 public class XML11NSDocumentScannerImpl extends XML11DocumentScannerImpl {
 

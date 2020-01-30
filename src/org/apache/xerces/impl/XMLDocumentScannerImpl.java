@@ -64,7 +64,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  * @author Arnaud  Le Hors, IBM
  * @author Eric Ye, IBM
  *
- * @version $Id$
+ * @version $Id: XMLDocumentScannerImpl.java 572055 2007-09-02 17:55:43Z mrglavas $
  */
 public class XMLDocumentScannerImpl
     extends XMLDocumentFragmentScannerImpl {

@@ -43,7 +43,7 @@ import org.apache.xerces.xni.parser.XMLParserConfiguration;
  * @author Arnaud  Le Hors, IBM
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: AbstractXMLDocumentParser.java 447239 2006-09-18 05:08:26Z mrglavas $
  */
 public abstract class AbstractXMLDocumentParser
     extends XMLParser

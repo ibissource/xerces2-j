@@ -28,7 +28,7 @@ import org.w3c.dom.Element;
 
 /**
  * @xerces.internal
- * @version $Id$
+ * @version $Id: WMLDocumentImpl.java 890458 2009-12-14 19:49:34Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 public class WMLDocumentImpl extends DocumentImpl implements WMLDocument {

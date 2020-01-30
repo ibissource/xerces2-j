@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='US-ASCII'?>
-<!-- $Id$ -->
+<!-- $Id: design2html.xsl 317483 2001-08-23 00:35:39Z lehors $ -->
 <xsl:stylesheet xmlns:xsl='http://www.w3.org/1999/XSL/Transform' version='1.0'>
 
  <xsl:template match='design'>

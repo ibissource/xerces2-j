@@ -27,7 +27,7 @@ import org.apache.xerces.xni.XMLResourceIdentifier;
  *
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: XMLEntityDescription.java 446761 2006-09-15 21:59:29Z mrglavas $
  */
 public interface XMLEntityDescription extends XMLResourceIdentifier {
 	

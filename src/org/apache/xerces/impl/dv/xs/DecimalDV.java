@@ -32,13 +32,9 @@ import org.apache.xerces.xs.datatypes.XSDecimal;
  * @author Neeraj Bajaj, Sun Microsystems, inc.
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: DecimalDV.java 885800 2009-12-01 15:37:29Z knoaman $
  */
 public class DecimalDV extends TypeValidator {
-
-    public final short getAllowedFacets(){
-        return ( XSSimpleTypeDecl.FACET_PATTERN | XSSimpleTypeDecl.FACET_WHITESPACE | XSSimpleTypeDecl.FACET_ENUMERATION |XSSimpleTypeDecl.FACET_MAXINCLUSIVE |XSSimpleTypeDecl.FACET_MININCLUSIVE | XSSimpleTypeDecl.FACET_MAXEXCLUSIVE  | XSSimpleTypeDecl.FACET_MINEXCLUSIVE | XSSimpleTypeDecl.FACET_TOTALDIGITS | XSSimpleTypeDecl.FACET_FRACTIONDIGITS);
-    }
 
     public Object getActualValue(String content, ValidationContext context) throws InvalidDatatypeValueException {
         try {

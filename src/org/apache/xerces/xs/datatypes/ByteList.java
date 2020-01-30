@@ -26,7 +26,7 @@ import org.apache.xerces.xs.XSException;
  * 
  * @author Ankit Pasricha, IBM
  * 
- * @version $Id$
+ * @version $Id: ByteList.java 1024040 2010-10-18 22:08:41Z sandygao $
  */
 public interface ByteList extends List {
     

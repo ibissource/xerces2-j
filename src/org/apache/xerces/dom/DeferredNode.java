@@ -24,7 +24,7 @@ import org.w3c.dom.Node;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: DeferredNode.java 447266 2006-09-18 05:57:49Z mrglavas $
  */
 public interface DeferredNode extends Node {
 

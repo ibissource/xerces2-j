@@ -50,7 +50,7 @@ import org.xml.sax.helpers.XMLReaderFactory;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: Counter.java 944772 2010-05-16 08:28:15Z mukulg $
  */
 public class Counter
     extends DefaultHandler {

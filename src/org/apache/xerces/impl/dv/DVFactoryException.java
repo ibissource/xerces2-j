@@ -23,7 +23,7 @@ package org.apache.xerces.impl.dv;
  *
  * @xerces.internal 
  *
- * @version $Id$
+ * @version $Id: DVFactoryException.java 446751 2006-09-15 21:54:06Z mrglavas $
  */
 public class DVFactoryException extends RuntimeException {
     

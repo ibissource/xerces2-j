@@ -28,7 +28,7 @@ import org.apache.xerces.xs.StringList;
  *
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: PSVIErrorList.java 726309 2008-12-13 23:54:31Z mrglavas $
  */
 final class PSVIErrorList extends AbstractList implements StringList {
 

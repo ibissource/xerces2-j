@@ -32,7 +32,7 @@ import org.apache.xerces.xni.NamespaceContext;
  * 
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: JAXPNamespaceContextWrapper.java 1868214 2019-10-10 05:15:17Z mukulg $
  */
 public final class JAXPNamespaceContextWrapper implements NamespaceContext {
     
@@ -125,6 +125,10 @@ public final class JAXPNamespaceContextWrapper implements NamespaceContext {
     }
 
     public boolean declarePrefix(String prefix, String uri) {
+        return true;
+    }
+    
+    public boolean deletePrefix(String prefix) {
         return true;
     }
 

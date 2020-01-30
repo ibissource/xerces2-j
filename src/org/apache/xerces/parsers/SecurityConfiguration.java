@@ -41,7 +41,7 @@ import org.apache.xerces.xni.parser.XMLComponentManager;
  *
  * @author Neil Graham, IBM
  *
- * @version $Id$
+ * @version $Id: SecurityConfiguration.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class SecurityConfiguration extends XIncludeAwareParserConfiguration
 {

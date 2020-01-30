@@ -60,7 +60,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  * @author Ankit Pasricha, IBM
  * @author Arun Yadav, Sun Microsystems Inc.
  *
- * @version $Id$
+ * @version $Id: XIncludeTextReader.java 1478180 2013-05-01 20:39:23Z mrglavas $
  *
  * @see XIncludeHandler
  */

@@ -27,7 +27,7 @@ import java.util.Vector;
  * @xerces.internal  
  * 
  * @author Sandy Gao, IBM
- * @version $Id$
+ * @version $Id: XSGrammarBucket.java 1031717 2010-11-05 19:04:41Z sandygao $
  */
 public class XSGrammarBucket {
 

@@ -42,7 +42,7 @@ import org.apache.xerces.xni.parser.XMLParserConfiguration;
  * towards combining this functionality in a DOM or SAX context.
  *
  * @author Neil Graham, IBM
- * @version $Id$
+ * @version $Id: XMLGrammarBuilder.java 447690 2006-09-19 02:41:53Z mrglavas $
  */
 public class XMLGrammarBuilder {
 

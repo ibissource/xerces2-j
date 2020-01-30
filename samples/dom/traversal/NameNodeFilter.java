@@ -25,7 +25,7 @@ import org.w3c.dom.traversal.NodeFilter;
   * accept those node names which <b>match</b> (or explicitly <b>not match</b>) 
   * the set name value.
   * 
-  * @version $Id$
+  * @version $Id: NameNodeFilter.java 950356 2010-06-02 03:43:43Z mrglavas $
   */
  public class NameNodeFilter implements NodeFilter {
     

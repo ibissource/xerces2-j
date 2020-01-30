@@ -37,7 +37,7 @@ import org.xml.sax.SAXParseException;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: Writer.java 447683 2006-09-19 02:36:31Z mrglavas $
  */
 public class Writer {
 

@@ -76,7 +76,7 @@ import org.w3c.dom.events.EventTarget;
  *
  * @author Arnaud  Le Hors, IBM
  * @author Joe Kesselman, IBM
- * @version $Id$
+ * @version $Id: NodeImpl.java 1502576 2013-07-12 14:37:22Z mrglavas $
  * @since  PR-DOM-Level-1-19980818.
  */
 public abstract class NodeImpl

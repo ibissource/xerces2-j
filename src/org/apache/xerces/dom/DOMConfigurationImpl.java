@@ -59,7 +59,7 @@ import org.w3c.dom.ls.LSResourceResolver;
  *
  * @author Elena Litani, IBM
  * @author Neeraj Bajaj, Sun Microsystems.
- * @version $Id$
+ * @version $Id: DOMConfigurationImpl.java 884565 2009-11-26 14:28:33Z knoaman $
  */
 public class DOMConfigurationImpl extends ParserConfigurationSettings
     implements XMLParserConfiguration, DOMConfiguration {

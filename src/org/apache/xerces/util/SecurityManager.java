@@ -33,7 +33,7 @@ package org.apache.xerces.util;
  *
  * @author  Neil Graham, IBM
  *
- * @version $Id$
+ * @version $Id: SecurityManager.java 447241 2006-09-18 05:12:57Z mrglavas $
  */
 public final class SecurityManager {
 

@@ -33,7 +33,7 @@ import java.util.Enumeration;
  * should not save any reference to the structure.
  * 
  * @author Elena Litani, IBM
- * @version $Id$
+ * @version $Id: Augmentations.java 447247 2006-09-18 05:23:52Z mrglavas $
  */
 
 public interface Augmentations {

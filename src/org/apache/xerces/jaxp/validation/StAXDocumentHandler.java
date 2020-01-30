@@ -34,7 +34,7 @@ import org.apache.xerces.xni.XMLDocumentHandler;
  * <p>An extension to XMLDocumentHandler for building StAX structures.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: StAXDocumentHandler.java 683692 2008-08-07 19:45:55Z mrglavas $
  */
 interface StAXDocumentHandler extends XMLDocumentHandler {
     

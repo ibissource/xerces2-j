@@ -30,7 +30,7 @@ import org.apache.xerces.xni.parser.XMLDTDContentModelSource;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: XMLDTDContentModelHandler.java 447247 2006-09-18 05:23:52Z mrglavas $
  */
 public interface XMLDTDContentModelHandler {
 

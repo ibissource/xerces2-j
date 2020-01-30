@@ -61,7 +61,7 @@ import org.apache.xerces.xni.parser.XMLDocumentSource;
  *
  * @author Elena Litani, IBM
  *
- * @version $Id$
+ * @version $Id: XMLNSDocumentScannerImpl.java 495747 2007-01-12 21:48:00Z mrglavas $
  */
 public class XMLNSDocumentScannerImpl
 extends XMLDocumentScannerImpl {

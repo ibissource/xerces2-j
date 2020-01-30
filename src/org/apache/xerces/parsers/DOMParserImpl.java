@@ -75,7 +75,7 @@ import org.w3c.dom.traversal.NodeFilter;
  * @author Pavani Mukthipudi, Sun Microsystems Inc.
  * @author Elena Litani, IBM
  * @author Rahul Srivastava, Sun Microsystems Inc.
- * @version $Id$
+ * @version $Id: DOMParserImpl.java 884566 2009-11-26 14:30:01Z knoaman $
  */
 public class DOMParserImpl
     extends AbstractDOMParser implements LSParser, DOMConfiguration {

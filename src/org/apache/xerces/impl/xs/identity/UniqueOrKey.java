@@ -26,7 +26,7 @@ package org.apache.xerces.impl.xs.identity;
  * @xerces.internal 
  *
  * @author Andy Clark, IBM
- * @version $Id$
+ * @version $Id: UniqueOrKey.java 730488 2008-12-31 21:58:19Z knoaman $
  */
 public class UniqueOrKey 
     extends IdentityConstraint {
@@ -37,8 +37,8 @@ public class UniqueOrKey
 
     /** Constructs a unique or a key identity constraint. */
     public UniqueOrKey(String namespace, String identityConstraintName,
-                       String elemName, short type) {
-        super(namespace, identityConstraintName, elemName);
+                       short type) {
+        super(namespace, identityConstraintName);
         this.type = type;
     } // <init>(String,String)
 

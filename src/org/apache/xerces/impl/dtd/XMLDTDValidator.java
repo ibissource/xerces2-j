@@ -82,7 +82,7 @@ import org.apache.xerces.xni.parser.XMLDocumentSource;
  * @author Jeffrey Rodriguez IBM
  * @author Neil Graham, IBM
  *
- * @version $Id$
+ * @version $Id: XMLDTDValidator.java 1380447 2012-09-04 04:46:01Z mrglavas $
  */
 public class XMLDTDValidator
         implements XMLComponent, XMLDocumentFilter, XMLDTDValidatorFilter, RevalidationHandler {

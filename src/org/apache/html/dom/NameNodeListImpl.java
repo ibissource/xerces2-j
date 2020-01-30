@@ -29,7 +29,7 @@ import org.w3c.dom.NodeList;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: NameNodeListImpl.java 447255 2006-09-18 05:36:42Z mrglavas $
  * @since  PR-DOM-Level-1-19980818.
  * @see DeepNodeListImpl
  */

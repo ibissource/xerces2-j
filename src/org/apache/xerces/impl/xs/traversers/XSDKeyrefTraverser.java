@@ -32,7 +32,7 @@ import org.w3c.dom.Element;
  * @xerces.internal 
  *
  * @author Neil Graham, IBM
- * @version $Id$
+ * @version $Id: XSDKeyrefTraverser.java 884566 2009-11-26 14:30:01Z knoaman $
  */
 class XSDKeyrefTraverser extends XSDAbstractIDConstraintTraverser {
 
@@ -81,7 +81,7 @@ class XSDKeyrefTraverser extends XSDAbstractIDConstraintTraverser {
             return;
         }
 
-        KeyRef keyRef = new KeyRef(schemaDoc.fTargetNamespace, krName, element.fName, key);
+        KeyRef keyRef = new KeyRef(schemaDoc.fTargetNamespace, krName, key);
 
         // If errors occurred in traversing the identity constraint, then don't
         // add it to the schema, to avoid errors when processing the instance.

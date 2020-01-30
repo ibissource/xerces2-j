@@ -74,7 +74,7 @@ package org.apache.xerces.util;
  * @author Andy Clark
  * @author John Kim, IBM
  *
- * @version $Id$
+ * @version $Id: SymbolTable.java 1358351 2012-07-06 19:04:57Z mrglavas $
  */
 public class SymbolTable {
 

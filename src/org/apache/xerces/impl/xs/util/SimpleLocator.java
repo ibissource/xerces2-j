@@ -25,7 +25,7 @@ import org.apache.xerces.xni.XMLLocator;
  * @xerces.internal 
  * 
  * @author Sandy Gao, IBM
- * @version $Id$
+ * @version $Id: SimpleLocator.java 660073 2008-05-26 02:05:34Z mrglavas $
  */
 public final class SimpleLocator implements XMLLocator {
 

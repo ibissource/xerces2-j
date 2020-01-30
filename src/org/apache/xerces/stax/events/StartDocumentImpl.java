@@ -29,7 +29,7 @@ import javax.xml.stream.events.StartDocument;
  * 
  * @author Lucian Holland
  *
- * @version $Id$
+ * @version $Id: StartDocumentImpl.java 730472 2008-12-31 20:45:51Z mrglavas $
  */
 public final class StartDocumentImpl extends XMLEventImpl implements StartDocument {
 

@@ -32,7 +32,7 @@ import org.apache.xerces.xs.XSObjectList;
  * @author Neeraj Bajaj, Sun Microsystems, inc.
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: BaseDVFactory.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public class BaseDVFactory extends SchemaDVFactory {
 

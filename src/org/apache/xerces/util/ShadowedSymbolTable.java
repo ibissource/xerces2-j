@@ -27,7 +27,7 @@ package org.apache.xerces.util;
  * to the component using this table.
  * 
  * @author Andy Clark IBM
- * @version $Id$
+ * @version $Id: ShadowedSymbolTable.java 447241 2006-09-18 05:12:57Z mrglavas $
  */
 
 public final class ShadowedSymbolTable

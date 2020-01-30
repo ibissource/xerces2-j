@@ -39,7 +39,7 @@ import org.apache.xerces.xs.XSObject;
  * @author Sandy Gao, IBM
  * @author Michael Glavassevich, IBM
  *
- * @version $Id$
+ * @version $Id: XSNamedMapImpl.java 965316 2010-07-18 23:07:03Z mrglavas $
  */
 public class XSNamedMapImpl extends AbstractMap implements XSNamedMap {
 

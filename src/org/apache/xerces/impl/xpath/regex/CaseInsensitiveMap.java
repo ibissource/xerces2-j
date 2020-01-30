@@ -20,7 +20,7 @@ package org.apache.xerces.impl.xpath.regex;
 /**
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: CaseInsensitiveMap.java 834654 2009-11-10 20:32:56Z mrglavas $
  */
 final class CaseInsensitiveMap {
 

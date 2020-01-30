@@ -35,7 +35,7 @@ import org.apache.xerces.xs.XSValue;
  * @xerces.internal 
  *
  * @author Elena Litani IBM
- * @version $Id$
+ * @version $Id: AttributePSVImpl.java 1065754 2011-01-31 20:31:18Z mrglavas $
  */
 public class AttributePSVImpl implements AttributePSVI {
 

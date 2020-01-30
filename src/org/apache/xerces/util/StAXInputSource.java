@@ -26,7 +26,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
 /**
  * <p>An <code>XMLInputSource</code> analogue to <code>javax.xml.transform.stax.StAXSource</code>.</p>
  * 
- * @version $Id$
+ * @version $Id: StAXInputSource.java 1358677 2012-07-07 23:42:08Z mrglavas $
  */
 public final class StAXInputSource extends XMLInputSource {
     

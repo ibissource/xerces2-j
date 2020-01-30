@@ -68,7 +68,7 @@ import org.apache.xerces.xni.parser.XMLPullParserConfiguration;
  * @author John Kim, IBM
  * @author Michael Glavassevich, IBM
  *
- * @version $Id$
+ * @version $Id: XML11NonValidatingConfiguration.java 1375062 2012-08-20 15:30:53Z mrglavas $
  */
 public class XML11NonValidatingConfiguration extends ParserConfigurationSettings
     implements XMLPullParserConfiguration, XML11Configurable {

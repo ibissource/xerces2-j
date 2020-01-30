@@ -39,7 +39,7 @@ import org.w3c.dom.DOMImplementation;
  * This particular class, along with DocumentImpl, supports the DOM
  * Core, DOM Level 2 optional mofules, and Abstract Schemas (Experimental).
  * @deprecated 
- * @version $Id$
+ * @version $Id: ASDOMImplementationImpl.java 699902 2008-09-28 21:40:49Z mrglavas $
  * @since PR-DOM-Level-1-19980818.
  */
 public class ASDOMImplementationImpl extends DOMImplementationImpl 

@@ -22,7 +22,7 @@ import org.apache.xerces.xni.QName;
 /**
  * @xerces.internal
  * 
- * @version $Id$
+ * @version $Id: ContentModelValidator.java 446752 2006-09-15 21:55:19Z mrglavas $
  */
 public interface ContentModelValidator {
 

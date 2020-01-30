@@ -27,7 +27,7 @@ import org.w3c.dom.Element;
  * <p>All WML Elements are derived from this class that contains two
  * core attributes defined in the DTD.</p>
  *
- * @version $Id$
+ * @version $Id: WMLElement.java 447258 2006-09-18 05:41:23Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 

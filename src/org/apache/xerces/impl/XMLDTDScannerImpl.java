@@ -59,7 +59,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  * @author Glenn Marcy, IBM
  * @author Eric Ye, IBM
  *
- * @version $Id$
+ * @version $Id: XMLDTDScannerImpl.java 1514807 2013-08-16 17:29:22Z mrglavas $
  */
 public class XMLDTDScannerImpl
     extends XMLScanner

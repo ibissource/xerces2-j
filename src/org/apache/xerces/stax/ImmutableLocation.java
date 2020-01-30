@@ -26,7 +26,7 @@ import javax.xml.stream.Location;
  * 
  * @author Michael Glavassevich, IBM
  *
- * @version $Id$
+ * @version $Id: ImmutableLocation.java 730447 2008-12-31 19:13:07Z mrglavas $
  */
 public class ImmutableLocation implements Location {
     

@@ -61,7 +61,7 @@ import org.apache.xerces.xni.parser.XMLInputSource;
  * 
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: CSVConfiguration.java 447690 2006-09-19 02:41:53Z mrglavas $
  */
 public class CSVConfiguration
     extends AbstractConfiguration {

@@ -30,7 +30,7 @@ import java.text.CharacterIterator;
  * @see RegularExpression#matches(java.lang.String, int, int, Match)
  * @see RegularExpression#matches(java.lang.String, Match)
  * @author TAMURA Kent &lt;kent@trl.ibm.co.jp&gt;
- * @version $Id$
+ * @version $Id: Match.java 446721 2006-09-15 20:35:34Z mrglavas $
  */
 public class Match implements Cloneable {
     int[] beginpos = null;

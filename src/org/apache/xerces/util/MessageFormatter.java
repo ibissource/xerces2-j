@@ -29,7 +29,7 @@ import java.util.MissingResourceException;
  *
  * @author Andy Clark
  *
- * @version $Id$
+ * @version $Id: MessageFormatter.java 809243 2009-08-30 03:35:05Z mrglavas $
  */
 public interface MessageFormatter {
 

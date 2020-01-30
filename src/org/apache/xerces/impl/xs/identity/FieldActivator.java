@@ -27,7 +27,7 @@ package org.apache.xerces.impl.xs.identity;
  *
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: FieldActivator.java 520039 2007-03-19 18:34:38Z mrglavas $
  */
 public interface FieldActivator {
     

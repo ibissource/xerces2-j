@@ -35,7 +35,7 @@ import org.apache.xerces.xni.XMLString;
  *
  * @author Michael Glavassevich, IBM
  * @author Neil Graham, IBM
- * @version $Id$
+ * @version $Id: XML11EntityScanner.java 1707342 2015-10-07 17:34:28Z mrglavas $
  */
 public class XML11EntityScanner
     extends XMLEntityScanner {

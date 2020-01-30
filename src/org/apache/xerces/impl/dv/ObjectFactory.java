@@ -39,7 +39,7 @@ import java.util.Properties;
  * 
  * @xerces.internal 
  *
- * @version $Id$
+ * @version $Id: ObjectFactory.java 1391589 2012-09-28 18:40:44Z mrglavas $
  */
 final class ObjectFactory {
 

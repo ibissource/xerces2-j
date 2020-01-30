@@ -28,14 +28,9 @@ import org.apache.xerces.impl.dv.ValidationContext;
  * @author Neeraj Bajaj, Sun Microsystems, inc.
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: AnySimpleDV.java 885800 2009-12-01 15:37:29Z knoaman $
  */
 public class AnySimpleDV extends TypeValidator {
-
-    public short getAllowedFacets() {
-        // anySimpleType doesn't allow any facet, not even whiteSpace
-        return 0;
-    }
 
     public Object getActualValue(String content, ValidationContext context) throws InvalidDatatypeValueException {
         return content;

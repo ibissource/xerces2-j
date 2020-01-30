@@ -37,7 +37,7 @@ import org.w3c.dom.Node;
  * @author Rahul Srivastava, Sun Microsystems Inc.
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: SchemaDOM.java 982714 2010-08-05 17:54:35Z mrglavas $
  */
 public class SchemaDOM extends DefaultDocument {
     

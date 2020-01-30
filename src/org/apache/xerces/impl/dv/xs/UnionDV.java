@@ -28,13 +28,9 @@ import org.apache.xerces.impl.dv.ValidationContext;
  * @author Neeraj Bajaj, Sun Microsystems, inc.
  * @author Sandy Gao, IBM
  *
- * @version $Id$
+ * @version $Id: UnionDV.java 885800 2009-12-01 15:37:29Z knoaman $
  */
 public class UnionDV extends TypeValidator{
-
-    public short getAllowedFacets(){
-          return (XSSimpleTypeDecl.FACET_PATTERN | XSSimpleTypeDecl.FACET_ENUMERATION );
-    }
 
     // this method should never be called: XSSimpleTypeDecl is responsible for
     // calling the member types for the convertion

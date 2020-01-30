@@ -32,7 +32,7 @@ import org.apache.xerces.util.MessageFormatter;
  * 
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: UTF8Reader.java 718096 2008-11-16 20:00:58Z mrglavas $
  */
 public final class UTF8Reader
     extends Reader {

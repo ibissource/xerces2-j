@@ -20,7 +20,7 @@ import org.apache.wml.WMLTimerElement;
 
 /**
  * @xerces.internal
- * @version $Id$
+ * @version $Id: WMLTimerElementImpl.java 665720 2008-06-09 15:28:43Z mrglavas $
  * @author <a href="mailto:david@topware.com.tw">David Li</a>
  */
 public class WMLTimerElementImpl extends WMLElementImpl implements WMLTimerElement {

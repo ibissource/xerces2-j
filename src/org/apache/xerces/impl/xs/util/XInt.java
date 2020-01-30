@@ -21,7 +21,7 @@ package org.apache.xerces.impl.xs.util;
  * @xerces.internal  
  * 
  * @author Henry Zongaro, IBM
- * @version $Id$
+ * @version $Id: XInt.java 660075 2008-05-26 02:08:17Z mrglavas $
  */
 
 public final class XInt {

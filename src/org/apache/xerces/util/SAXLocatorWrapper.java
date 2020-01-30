@@ -27,7 +27,7 @@ import org.xml.sax.ext.Locator2;
  * 
  * @author Michael Glavassevich, IBM
  * 
- * @version $Id$
+ * @version $Id: SAXLocatorWrapper.java 699902 2008-09-28 21:40:49Z mrglavas $
  */
 public final class SAXLocatorWrapper implements XMLLocator {
     

@@ -23,7 +23,7 @@ import org.apache.xerces.xni.grammars.XMLGrammarPool;
  * <p>A container for grammar pools which only contain schema grammars.</p>
  * 
  * @author Michael Glavassevich, IBM
- * @version $Id$
+ * @version $Id: XSGrammarPoolContainer.java 656098 2008-05-14 03:52:33Z mrglavas $
  */
 public interface XSGrammarPoolContainer {
     
@@ -52,4 +52,12 @@ public interface XSGrammarPoolContainer {
      */
     public Boolean getFeature(String featureId);
     
+    /**
+     * <p>Returns the version of the schema components contained in this
+     * object.</p>
+     * 
+     * @return the version of the schema components contained in this
+     * object
+     */
+    public String getXMLSchemaVersion();
 }

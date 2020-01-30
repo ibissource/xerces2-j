@@ -37,7 +37,7 @@ import org.w3c.dom.Text;
  * 
  * @xerces.internal
  *
- * @version $Id$
+ * @version $Id: TextImpl.java 447266 2006-09-18 05:57:49Z mrglavas $
  * @since  PR-DOM-Level-1-19980818.
  */
 public class TextImpl 

@@ -46,7 +46,7 @@ import org.xml.sax.helpers.LocatorImpl;
  * @author Michael Glavassevich, IBM
  * @author Jack Z. Wang, IBM
  * 
- * @version $Id$
+ * @version $Id: SchemaContentHandler.java 778957 2009-05-27 01:39:46Z mrglavas $
  */
 final class SchemaContentHandler implements ContentHandler {
     

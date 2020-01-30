@@ -30,7 +30,7 @@ import javax.xml.stream.events.EntityReference;
  * 
  * @author Lucian Holland
  *
- * @version $Id$
+ * @version $Id: EntityReferenceImpl.java 730472 2008-12-31 20:45:51Z mrglavas $
  */
 public final class EntityReferenceImpl extends XMLEventImpl implements
         EntityReference {

@@ -73,7 +73,7 @@ import org.xml.sax.ext.Locator2Impl;
  * @author Arnaud Le Hors, IBM
  * @author Andy Clark, IBM
  *
- * @version $Id$
+ * @version $Id: AbstractSAXParser.java 1135018 2011-06-13 03:32:10Z mrglavas $
  */
 public abstract class AbstractSAXParser
     extends AbstractXMLDocumentParser
