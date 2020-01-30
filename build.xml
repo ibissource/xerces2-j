@@ -61,6 +61,14 @@ Authors:
     <property name='parser.version' value='2.12.1-xml-schema-1.1'/>
     <property name='parser_version' value='2_12_1-xml-schema-1.1'/>
 
+    <property name='maven.artifactId' value='ibis-xerces'/>
+    <property name='maven.version' value='${parser.version}-1'/>
+    <property name='maven.name' value='${maven.artifactId}-${maven.version}'/>
+    <property name='maven.name.jar' value='${maven.artifactId}-${maven.version}.jar'/>
+    <property name='maven.name.src' value='${maven.artifactId}-${maven.version}-sources.jar'/>
+    <property name='maven.name.doc' value='${maven.artifactId}-${maven.version}-javadoc.jar'/>
+    <property name='maven.name.pom' value='${maven.artifactId}-${maven.version}.pom'/>
+
     <property name='deprecatedjar.parser' value='xerces.jar'/>
     <property name='jar.apis' value='xml-apis.jar'/>
     <property name='jar.parser' value='xercesImpl.jar'/>
@@ -347,6 +355,14 @@ Authors:
       </manifest>
       <metainf dir="." includes="LICENSE,NOTICE"/>
     </jar>
+    <copy tofile="${build.dir}/maven/${maven.name.jar}" file="${build.dir}/${jar.parser}"/>
+
+    <copy tofile="${build.dir}/maven/${maven.name.pom}" file="pom-template.xml" filtering="true">
+      <filterset>
+        <filter id="1" token="MAVEN.VERSION" value="${maven.version}"/>
+        <filter id="2" token="MAVEN.ARTIFACTID" value="${maven.artifactId}"/>
+      </filterset>
+    </copy>
   </target>
 
   <!-- =================================================================== -->
@@ -528,6 +544,20 @@ Authors:
       bottom='${copyright}'
       additionalparam='${additional.param}'
       />
+
+    <mkdir dir='${build.dir}/maven/javadocs'/>
+    <javadoc packagenames='org.apache.xerces.*'
+      locale='en_US'
+      sourcepath='${build.src}' destdir='${build.dir}/maven/javadocs'
+      author='true' version='true'
+        windowtitle='Xerces2 Implementation' 
+        doctitle='Xerces2 Implementation'
+      bottom='${copyright}'
+      additionalparam='${additional.param}'
+      />
+    <jar destfile="${build.dir}/maven/${maven.name.doc}"
+         basedir="${build.dir}/maven/javadocs" 
+         includes="**"/>
   </target>
 
   <!-- =================================================================== -->
@@ -542,6 +572,7 @@ Authors:
     <mkdir dir="${distsrc.dir}/data"/>
     <mkdir dir="${distsrc.dir}/docs"/>
     <mkdir dir="${distsrc.dir}/samples"/>
+    <mkdir dir='${build.dir}/maven'/>
 
     <copy todir="${distsrc.dir}/src" >
         <fileset
@@ -592,6 +623,10 @@ Authors:
     <copy file="${basedir}/build.sh" tofile="${distsrc.dir}/build.sh" />
     <chmod file="${distsrc.dir}/build.sh" perm="ugo+rx" />
     <copy file="${basedir}/build.bat" tofile="${distsrc.dir}/build.bat" />
+
+    <jar destfile="${build.dir}/maven/${maven.name.src}"
+         basedir="${build.dir}" 
+         includes="${parser.shortname}-${parser_version}/**" excludes="*.class"/>
 
     <zip zipfile="${build.dir}/${parser.Name}-src.${parser.version}.zip" 
          basedir="${build.dir}"
