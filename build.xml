@@ -62,7 +62,7 @@ Authors:
     <property name='parser_version' value='2_12_1-xml-schema-1.1'/>
 
     <property name='maven.artifactId' value='ibis-xerces'/>
-    <property name='maven.version' value='${parser.version}-1'/>
+    <property name='maven.version' value='${parser.version}'/>
     <property name='maven.name' value='${maven.artifactId}-${maven.version}'/>
     <property name='maven.name.jar' value='${maven.artifactId}-${maven.version}.jar'/>
     <property name='maven.name.src' value='${maven.artifactId}-${maven.version}-sources.jar'/>
